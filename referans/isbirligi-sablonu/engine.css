@@ -1,0 +1,54 @@
+@import url("fonts/space-mono/400.css");
+@import url("fonts/space-mono/700.css");
+@import url("fonts/space-mono/400-italic.css");
+@import url("fonts/space-grotesk/700.css");
+@import url("fonts/space-grotesk/400.css");
+
+:root {
+  --bg: #201f1b;
+  --paper: #f3efe4;
+  --ink: #1c1b18;
+  --or: #ff5a1f;
+  --grey: #8c8880;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--bg); }
+body { font-family: "Space Mono", monospace; color: var(--ink); }
+
+#cam { position: absolute; inset: 0; transform-origin: 540px 900px; }
+#shadow { position: absolute; left: 70px; top: 140px; width: 940px; height: 1620px; filter: drop-shadow(0 18px 30px rgba(0,0,0,.45)); }
+#paper { position: absolute; inset: 0; background: var(--paper); overflow: hidden; }
+
+.hdr { position: absolute; left: 0; right: 0; top: 80px; text-align: center; font-weight: 700; font-size: 38px; letter-spacing: 14px; }
+.sub { position: absolute; left: 0; right: 0; top: 136px; text-align: center; font-size: 24px; letter-spacing: 6px; }
+.dash { position: absolute; left: 66px; right: 66px; height: 0; border-top: 3px dashed #a9a59b; }
+.row { position: absolute; left: 66px; right: 66px; display: flex; justify-content: space-between; font-weight: 700; font-size: 30px; letter-spacing: 4px; }
+#prog { position: absolute; left: 66px; top: 262px; height: 6px; width: 0; background: var(--or); }
+
+#stage { position: absolute; left: 0; right: 0; top: 300px; height: 900px; }
+.scene { position: absolute; inset: 0; opacity: 0; }
+
+#cap { position: absolute; left: 66px; right: 66px; top: 1230px; min-height: 96px; background: var(--ink); color: var(--paper);
+  font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 44px; line-height: 1.2; padding: 22px 28px; }
+#cap span { opacity: 0; }
+#cap span.on { opacity: 1; }
+#cap span.hl { color: var(--or); }
+
+.foot { position: absolute; left: 66px; right: 66px; top: 1440px; display: flex; justify-content: space-between; font-weight: 700; font-size: 34px; }
+.foot .dots { flex: 1; margin: 0 16px; border-bottom: 3px dotted #a9a59b; transform: translateY(-10px); }
+
+#grain { position: absolute; inset: 0; pointer-events: none; background-size: 1080px 1920px; }
+
+/* scene helpers */
+.abs { position: absolute; }
+.big { font-weight: 700; font-size: 92px; line-height: 1.05; letter-spacing: -2px; }
+.mid { font-weight: 700; font-size: 60px; line-height: 1.1; }
+.sm { font-size: 30px; letter-spacing: 2px; }
+.or { color: var(--or); }
+.w { display: inline-block; transform-origin: 50% 80%; }
+.ctr { left: 0; right: 0; text-align: center; }
+.stamp { border: 8px solid var(--or); color: var(--or); font-weight: 700; padding: 10px 26px; letter-spacing: 6px; border-radius: 8px; display: inline-block; }
+.tag { background: var(--ink); color: var(--paper); font-weight: 700; padding: 6px 18px; display: inline-block; }
+svg { overflow: visible; }
+.stroke { fill: none; stroke: var(--ink); stroke-width: 12; stroke-linecap: round; stroke-linejoin: round; }
+.stroke.o { stroke: var(--or); }
