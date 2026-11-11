@@ -1,0 +1,160 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../fonts/space-grotesk/700.css"><link rel="stylesheet" href="../../fonts/space-mono/700.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#201f1b}
+#cam{position:absolute;left:0;top:0;width:1080px;height:1920px;transform-origin:540px 960px}
+#rc{position:absolute;left:70px;top:150px;width:940px;height:1620px;background:#f3efe4;filter:drop-shadow(0 14px 18px rgba(0,0,0,.45))}
+.mono{font-family:"Space Mono";font-weight:700}
+.gk{font-family:"Space Grotesk";font-weight:700;color:#1c1b18;letter-spacing:-3px;line-height:.95}
+.o{color:#ff5a1f}
+.abs{position:absolute}
+svg{position:absolute;left:0;top:0;overflow:visible}
+svg text{font-family:"Space Mono";font-weight:700}
+</style></head><body>
+<div id="cam">
+ <div id="rc">
+  <div id="furn">
+   <div class="abs mono" style="left:0;right:0;top:40px;text-align:center;font-size:30px;letter-spacing:8px;color:#1c1b18">✻ KASA ÖNÜ ✻</div>
+   <div class="abs" style="left:60px;right:60px;top:96px;border-top:4px dashed #b9b4a8"></div>
+   <div class="abs mono" style="left:60px;top:116px;font-size:26px;color:#1c1b18">MARKET · 04</div>
+   <div class="abs mono" style="right:60px;top:116px;font-size:26px;color:#8c8880">FİŞ 0009</div>
+   <div class="abs" style="left:60px;right:60px;top:160px;height:6px;background:#e3ded2"><div id="prog" style="height:6px;background:#ff5a1f;width:0"></div></div>
+   <div class="abs mono" style="left:60px;right:60px;bottom:50px;font-size:24px;color:#8c8880;display:flex"><span>EMEK</span><span style="flex:1;border-bottom:3px dotted #b9b4a8;margin:0 14px 8px"></span><span>0 TL</span></div>
+  </div>
+  <svg id="sv" width="940" height="1620" viewBox="0 0 940 1620">
+   <defs><filter id="ps" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="6" dy="9" stdDeviation="5" flood-color="#243139" flood-opacity=".28"/></filter></defs>
+   <path id="floor" d="M-40 1262 H980" stroke="#1c1b18" stroke-width="10" stroke-linecap="round"/>
+
+   <g id="kiosks"></g>
+   <g id="kiosk" filter="url(#ps)">
+     <rect x="590" y="900" width="150" height="362" fill="#243139"/>
+     <rect x="560" y="860" width="210" height="60" rx="8" fill="#243139"/>
+     <rect x="600" y="730" width="130" height="120" rx="8" fill="#243139"/><rect x="612" y="742" width="106" height="96" rx="4" fill="#7C9DA5"/>
+     <rect x="520" y="846" width="90" height="16" rx="4" fill="#8c8880"/>
+     <path id="chk" d="M640 790 l18 18 l34 -40" stroke="#FFF8EB" stroke-width="10" fill="none" stroke-linecap="round"/>
+   </g>
+   <path id="beam" stroke="#ff5a1f" stroke-width="8" stroke-linecap="round"/>
+   <g id="bag" filter="url(#ps)"><path d="M790 1262 L800 1110 L900 1110 L910 1262Z" fill="#e6dfcd"/><path d="M820 1112 q30 -60 60 0" stroke="#e6dfcd" stroke-width="10" fill="none"/><g id="bagIn"><rect x="815" y="1060" width="40" height="70" fill="#E8B65C"/><rect x="852" y="1080" width="34" height="50" fill="#8A9B7C"/></g></g>
+   <g id="fig">
+     <g filter="url(#ps)"><path id="legs" fill="#243139"/><path id="shoes" fill="#1c1b18"/></g>
+     <g id="up" filter="url(#ps)">
+       <path d="M-58 14 L-50 -196 Q-46 -214 -20 -214 L26 -214 Q52 -212 54 -190 L60 14Z" fill="#8A9B7C"/>
+       <rect x="-6" y="-232" width="30" height="30" fill="#e9c9a6"/>
+       <circle cx="10" cy="-272" r="58" fill="#e9c9a6"/>
+       <path d="M-50 -268 Q-52 -336 10 -334 Q52 -332 62 -300 L20 -300 Q-10 -300 -16 -262 Q-20 -236 -42 -232 Q-50 -250 -50 -268Z" fill="#243139"/>
+       <circle cx="36" cy="-272" r="6" fill="#243139"/>
+       <path id="mouth" d="M30 -244 Q40 -238 50 -246" stroke="#243139" stroke-width="4" fill="none" stroke-linecap="round"/>
+     </g>
+   </g>
+   <g id="vest" filter="url(#ps)">
+     <path id="hanger" d="M0 -250 V-232 M-46 -208 L0 -232 L46 -208" stroke="#1c1b18" stroke-width="6" fill="none" stroke-linecap="round"/>
+     <path d="M-62 10 L-54 -196 Q-50 -216 -24 -216 L-6 -216 L4 -150 L14 -216 L30 -216 Q56 -214 58 -190 L64 10Z" fill="#ff5a1f"/>
+     <rect x="18" y="-150" width="40" height="22" fill="#FFF8EB"/><rect x="24" y="-143" width="28" height="7" fill="#1c1b18"/>
+   </g>
+   <g id="prod" filter="url(#ps)"><path d="M-30 0 L-28 -86 L30 -84 L29 0Z" fill="#E8B65C"/><rect x="-18" y="-64" width="36" height="26" fill="#FFF8EB"/></g>
+   <g id="arm" filter="url(#ps)"><rect x="-22" y="-14" width="44" height="196" rx="20" fill="#6f8062"/><circle cx="0" cy="186" r="24" fill="#e9c9a6"/></g>
+   <g id="card2" filter="url(#ps)"><rect x="-34" y="-22" width="68" height="44" rx="6" fill="#ff5a1f"/><rect x="-24" y="-10" width="20" height="14" fill="#E8B65C"/></g>
+   <g id="rcpt" filter="url(#ps)"><rect id="rcB" x="0" y="0" width="300" height="0" fill="#FFF8EB"/><g id="rcT"></g></g>
+   <text id="cnt" x="470" y="760" font-size="96" fill="#ff5a1f" text-anchor="middle"></text>
+
+  </svg>
+  <div id="tA" class="abs gk" style="left:50px;right:50px;top:270px;font-size:84px;text-align:center"></div>
+ </div>
+ <div id="hook" class="abs gk" style="left:90px;top:300px;width:900px"><div class="hw" style="font-size:150px">Sana üniforma</div><div class="hw o" style="font-size:176px">verdiler mi?</div></div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)), p=(t,a,d)=>cl((t-a)/d);
+const io=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2, oc=x=>1-Math.pow(1-x,3);
+const ob=x=>{const c1=1.7,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+const L=(a,b,k)=>a+(b-a)*k, st=t=>Math.floor(t*12)/12, R=Math.PI/180;
+const tr=(id,s)=>$(id).setAttribute('transform',s);
+const op=(id,v)=>{$(id).style.opacity=v};
+// kanca yazısı 900px'e sığsın
+let FIT=false;function fit(){if(FIT||!document.fonts.check('700 100px "Space Grotesk"'))return;FIT=true;document.querySelectorAll('#hook .hw').forEach(w=>{w.style.whiteSpace='nowrap';w.style.display='inline-block';let f=parseFloat(w.style.fontSize);while(w.offsetWidth>900&&f>60){f-=2;w.style.fontSize=f+'px'}w.style.display='block'})}
+
+const B={"q": 1.2, "start": 3.242, "urun": 4.03, "zincir": 9.222, "kasiyer": 13.192, "ozaman": 16.894, "END": 18.516}; const END=B.END;
+const P2=L(B.urun,B.zincir,.36), P3=L(B.urun,B.zincir,.7), K2=L(B.kasiyer,B.ozaman,.5);
+window.V={sfx:[[0.02,'thud'],[B.q+.3,'whoosh'],[B.start+.1,'thud'],[B.urun+.5,'pop'],[B.urun+.9,'pop'],[P2+.3,'scratch'],[P3+.4,'pop'],[B.zincir+.2,'ticks'],[B.kasiyer+.2,'ticks'],[K2+.6,'drop'],[B.ozaman+.3,'whoosh']]};
+const LINES=[[B.start,B.urun-.1,'Markette<br><span class="o">diyorum.</span>'],
+ [B.urun,P2-.05,'Ürünü<br><span class="o">sen okutuyorsun.</span>'],
+ [P2,P3-.05,'Poşeti<br><span class="o">sen dolduruyorsun.</span>'],
+ [P3,B.zincir-.1,'Ödemeyi<br><span class="o">sen alıyorsun.</span>'],
+ [B.zincir,B.kasiyer-.1,'50 mağaza,<br><span class="o">350+ kasa.</span>'],
+ [B.kasiyer,K2-.05,'Kasiyerin işini<br><span class="o">sen yaptın.</span>'],
+ [K2,B.ozaman-.1,'Fişte senin emeğin<br><span class="o">yazmıyor.</span>'],
+ [B.ozaman,END-.45,'O zaman<br><span class="o">soru şu:</span>']];
+const BIG=[[B.zincir,B.kasiyer-.1]], HITS=[0.02,B.start+.1,K2+.6];
+const FY=1260, fx=330;
+const mk=(x,s)=>`<g transform="translate(${x} ${FY}) scale(${s})" filter="url(#ps)"><rect x="-55" y="-300" width="110" height="300" fill="#243139"/><rect x="-46" y="-400" width="92" height="84" rx="6" fill="#243139"/><rect x="-38" y="-392" width="76" height="68" rx="3" fill="#7C9DA5"/></g>`;
+$('kiosks').innerHTML=[60,170,280,390,500,610,720,830].map((x,i)=>`<g id="kk${i}">${mk(x,.45)}</g>`).join('');
+const ROWS=[['OKUTMA','SEN'],['POŞET','SEN'],['ÖDEME','SEN'],['EMEK','—']];
+$('rcT').innerHTML=ROWS.map((r,i)=>`<g id="rr${i}"><text x="22" y="${60+i*62}" font-size="30" fill="${i==3?'#ff5a1f':'#1c1b18'}">${r[0]}</text><path d="M${22+r[0].length*19+12} ${52+i*62} H${232}" stroke="#b9b4a8" stroke-width="3" stroke-dasharray="3 9"/><text x="282" y="${60+i*62}" font-size="30" text-anchor="end" fill="${i==3?'#ff5a1f':'#1c1b18'}">${r[1]}</text></g>`).join('')+
+ `<ellipse id="ring" cx="152" cy="${50+3*62}" rx="0" ry="0" fill="none" stroke="#ff5a1f" stroke-width="6"/>`;
+function scene(t){
+  const hx=fx, hy=FY-250;
+  $('legs').setAttribute('d',`M${fx-46} ${FY} L${hx-52} ${hy} L${hx+52} ${hy} L${fx+44} ${FY}Z`);
+  $('shoes').setAttribute('d',`M${fx-50} ${FY} L${fx-50} ${FY-22} L${fx+62} ${FY-22} Q${fx+86} ${FY-18} ${fx+86} ${FY}Z`);
+  // sahne birlikte görünür; kioskar çoğalınca küçülür
+  const zin=io(p(t,B.zincir,.5))*(1-io(p(t,B.kasiyer,.4)));
+  tr('fig',`translate(0 0)`); ['fig','kiosk','bag','beam','prod','arm','card2','vest'].forEach(i=>op(i,1-zin));
+  // yelek: kancada askıyla iner, sallanır; start'ta üstüne düşer; ozaman'da kalkar
+  const down=oc(p(t,B.q+.2,.9)), drop=io(p(st(t),B.start,.25)), lift=io(p(st(t),B.ozaman+.3,.6));
+  const sw=(t<B.start)?Math.sin((t-B.q)*5)*10*(1-p(t,B.q+.2,1.6)*.6):0;
+  const vy=L(L(hy-700,hy-170,down),hy,drop)-lift*900;
+  tr('vest',`translate(${hx} ${vy}) rotate(${sw*(1-drop)})`); op('hanger',1-drop+lift);
+  $('vest').style.display=(t>B.q+.2&&t<B.ozaman+1)?'block':'none';
+  const sh=(t>B.start+.1&&t<B.start+.5)?Math.sin((t-B.start)*40)*3:0;
+  tr('up',`translate(${hx} ${hy}) rotate(${sh})`);
+  $('mouth').setAttribute('d',t>B.start&&t<B.ozaman?'M30 -240 Q40 -244 50 -240':'M30 -244 Q40 -238 50 -246');
+  // kol + ürün okutma + poşet + kart
+  const r1=io(p(t,B.urun+.1,.4))*(1-io(p(t,P2+.6,.3)));
+  const r2=io(p(t,P2+.1,.4))*(1-io(p(t,P3,.3)));
+  const r3=io(p(t,P3+.1,.4))*(1-io(p(t,B.zincir,.3)));
+  const arm=98*r1+60*r2+120*r3;
+  const shx=hx+4, shy=hy-172; tr('arm',`translate(${shx} ${shy}) rotate(${-arm})`);
+  const hand=[shx+186*Math.sin(arm*R), shy+186*Math.cos(arm*R)];
+  // ürün elde: tarayıcıya gider, sonra poşete
+  const toBag=io(p(t,P2+.1,.6));
+  const px=L(hand[0],870,toBag), py=L(hand[1]+40,1180,toBag);
+  tr('prod',`translate(${px} ${py}) scale(${1-.4*toBag})`); op('prod',(t>B.urun+.1&&t<P2+.7)?1:0);
+  const scan=(t>B.urun+.4&&t<B.urun+1.2)?1:0, bk=p(t,B.urun+.4,.8);
+  $('beam').setAttribute('d',`M${565} ${846} L${L(565,hand[0],1)} ${L(846,hand[1]-10,1)}`); op('beam',scan*(Math.sin(bk*Math.PI*6)>0?1:.3));
+  op('bagIn',t>P2+.6&&t<B.ozaman+.3?1-io(p(t,B.ozaman,.3)):0); tr('bag',`translate(0 ${t>P2+.6&&t<P2+.9?-8:0})`);
+  op('card2',r3>0.01?1:0); tr('card2',`translate(${hand[0]} ${hand[1]}) rotate(-20)`);
+  op('chk',t>P3+.5&&t<B.zincir+.3?1:0);
+  // 350+ kasa
+  [0,1,2,3,4,5,6,7].forEach(i=>{const k=ob(p(t,B.zincir+.1+i*.12,.3)); tr('kk'+i,`translate(0 ${(1-k)*80})`); op('kk'+i,(t>B.zincir+.1+i*.12?1:0)*(1-io(p(t,B.kasiyer,.4))))});
+  const cK=oc(p(t,B.zincir+.3,1.4)); $('cnt').textContent=t>B.zincir+.3&&t<B.kasiyer?Math.round(350*cK)+'+':'';
+  // fiş çıkar
+  const rk=io(p(t,B.kasiyer+.2,1.2)), rOut=io(p(t,B.ozaman,.35));
+  $('rcB').setAttribute('height',300*rk); tr('rcpt',`translate(${515} ${880}) scale(${1-rOut})`);
+  ROWS.forEach((r,i)=>op('rr'+i,rk*300>70+i*62?1:0)); op('rcpt',t>B.kasiyer+.2?1:0);
+  const rg=t>K2+.6?ob(p(t,K2+.6,.35)):0; $('ring').setAttribute('rx',145*rg); $('ring').setAttribute('ry',34*rg);
+}
+
+const HK=.45;
+window.seek=function(t){
+  fit();
+  const pull=io(p(t,B.start-.1,.6)), push=io(p(t,END-HK,HK));
+  let s=L(1.18,1,pull); s=L(s,1.18,push);
+  $('cam').style.transform=`scale(${s})`;
+  $('furn').style.opacity=pull*(1-push); $('prog').style.width=(cl(t/END)*100)+'%';
+  $('floor').style.opacity=pull*(1-push);
+  $('sv').style.transform=`translateY(${110*pull*(1-push)}px)`;
+  const hk=$('hook'); hk.style.display=(t<B.start+.3||t>=END-HK)?'block':'none';
+  hk.querySelectorAll('.hw').forEach((w,i)=>{let y=0,sc=1,o=1;
+    if(t<B.start+.3){y=-6*Math.sin(t*3)*(i?1:-1)*(1-p(t,1.0,.5));sc=1-io(p(t,B.start-.2+i*.05,.3))}
+    else{const k=oc(p(t,END-HK+i*.06,.33));y=(1-k)*80;o=cl(p(t,END-HK+i*.06,.1)*2)}
+    w.style.transform=`translateY(${y}px) scaleY(${sc})`;w.style.transformOrigin='0 85%';w.style.opacity=o});
+  scene(t,pull,push);
+  const tA=$('tA'); let txt='',t0=0;for(const [a,b2,x] of LINES) if(t>=a&&t<b2){txt=x;t0=a}
+  if(tA.dataset.t!==txt){tA.innerHTML=txt;tA.dataset.t=txt}
+  const k2=ob(p(t,t0,.4)); tA.style.opacity=txt?cl(p(t,t0,.1)*2)*(1-p(t,END-HK-.15,.15)):0;
+  tA.style.transform=`translateY(${(1-k2)*40}px) scale(${BIG.some(([a,b])=>t>=a&&t<b)?1.15:1})`;
+  const sh=HITS.some(a=>t>a&&t<a+.22)?Math.sin(t*90)*7:0;
+  $('rc').style.transform=`translateX(${sh}px)`;
+};
+seek(0);
+</script></body></html>
