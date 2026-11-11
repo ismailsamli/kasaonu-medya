@@ -1,0 +1,149 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../fonts/space-grotesk/700.css"><link rel="stylesheet" href="../../fonts/space-mono/700.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#201f1b}
+#cam{position:absolute;left:0;top:0;width:1080px;height:1920px;transform-origin:540px 960px}
+#rc{position:absolute;left:70px;top:150px;width:940px;height:1620px;background:#f3efe4;filter:drop-shadow(0 14px 18px rgba(0,0,0,.45))}
+.mono{font-family:"Space Mono";font-weight:700}
+.gk{font-family:"Space Grotesk";font-weight:700;color:#1c1b18;letter-spacing:-3px;line-height:.95}
+.o{color:#ff5a1f}
+.abs{position:absolute}
+svg{position:absolute;left:0;top:0;overflow:visible}
+svg text{font-family:"Space Mono";font-weight:700}
+</style></head><body>
+<div id="cam">
+ <div id="rc">
+  <div id="furn">
+   <div class="abs mono" style="left:0;right:0;top:40px;text-align:center;font-size:30px;letter-spacing:8px;color:#1c1b18">✻ KASA ÖNÜ ✻</div>
+   <div class="abs" style="left:60px;right:60px;top:96px;border-top:4px dashed #b9b4a8"></div>
+   <div class="abs mono" style="left:60px;top:116px;font-size:26px;color:#1c1b18">MAĞAZA · 02</div>
+   <div class="abs mono" style="right:60px;top:116px;font-size:26px;color:#8c8880">FİŞ 0007</div>
+   <div class="abs" style="left:60px;right:60px;top:160px;height:6px;background:#e3ded2"><div id="prog" style="height:6px;background:#ff5a1f;width:0"></div></div>
+   <div class="abs mono" style="left:60px;right:60px;bottom:50px;font-size:24px;color:#8c8880;display:flex"><span>AÇI</span><span style="flex:1;border-bottom:3px dotted #b9b4a8;margin:0 14px 8px"></span><span>76°</span></div>
+  </div>
+  <svg id="sv" width="940" height="1620" viewBox="0 0 940 1620">
+   <defs><filter id="ps" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="6" dy="9" stdDeviation="5" flood-color="#243139" flood-opacity=".28"/></filter></defs>
+   <path id="floor" d="M-40 1262 H980" stroke="#1c1b18" stroke-width="10" stroke-linecap="round"/>
+
+   <g transform="translate(470 1262) scale(1.3) translate(-470 -1262)">
+   <g id="minis"></g>
+   <path id="same" stroke="#8c8880" stroke-width="5" stroke-dasharray="18 14" fill="none"/>
+   <g id="lap" filter="url(#ps)">
+     <rect x="330" y="1226" width="300" height="22" rx="6" fill="#243139"/>
+     <rect x="380" y="1218" width="210" height="8" rx="3" fill="#8c8880"/>
+     <g id="lid"><rect x="0" y="-16" width="285" height="16" rx="6" fill="#243139"/><rect x="12" y="-2" width="258" height="6" rx="2" fill="#7C9DA5"/>
+       <g id="phone"><rect x="70" y="-34" width="110" height="20" rx="5" fill="#1c1b18"/><rect x="78" y="-31" width="94" height="14" rx="3" fill="#E8B65C"/><circle id="bub" cx="125" cy="-24" r="6" fill="#FFF8EB"/></g>
+     </g>
+   </g>
+   <path id="arc" stroke="#1c1b18" stroke-width="9" stroke-linecap="round" fill="none"/><circle id="arcD" r="12" fill="#ff5a1f"/>
+   <text id="arcT" font-size="46" text-anchor="middle" fill="#1c1b18"></text>
+   <g id="head" filter="url(#ps)"><circle cx="0" cy="0" r="62" fill="#e9c9a6"/><path d="M-60 -6 Q-66 -76 4 -72 Q60 -70 62 -30 L18 -32 Q-14 -34 -22 6Z" fill="#243139"/><circle cx="-30" cy="2" r="7" fill="#243139"/></g>
+   <path id="sight" stroke="#8c8880" stroke-width="5" stroke-dasharray="4 14" stroke-linecap="round" fill="none"/>
+   <g id="hand"><path id="arm" stroke="#a95a43" stroke-width="58" stroke-linecap="round" fill="none" filter="url(#ps)"/><circle id="palm" r="30" fill="#e9c9a6" filter="url(#ps)"/></g>
+   </g>
+   <g id="own" filter="url(#ps)"><rect x="-98" y="-36" width="196" height="72" fill="#ff5a1f" stroke="#1c1b18" stroke-width="5"/><text y="15" font-size="40" fill="#FFF8EB" text-anchor="middle">SENİN</text></g>
+
+  </svg>
+  <div id="tA" class="abs gk" style="left:50px;right:50px;top:270px;font-size:84px;text-align:center"></div>
+ </div>
+ <div id="hook" class="abs gk" style="left:90px;top:300px;width:900px"><div class="hw" style="font-size:150px">Sen de</div><div class="hw o" style="font-size:176px">dokundun mu?</div></div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)), p=(t,a,d)=>cl((t-a)/d);
+const io=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2, oc=x=>1-Math.pow(1-x,3);
+const ob=x=>{const c1=1.7,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+const L=(a,b,k)=>a+(b-a)*k, st=t=>Math.floor(t*12)/12, R=Math.PI/180;
+const tr=(id,s)=>$(id).setAttribute('transform',s);
+const op=(id,v)=>{$(id).style.opacity=v};
+// kanca yazısı 900px'e sığsın
+let FIT=false;function fit(){if(FIT||!document.fonts.check('700 100px "Space Grotesk"'))return;FIT=true;document.querySelectorAll('#hook .hw').forEach(w=>{w.style.whiteSpace='nowrap';w.style.display='inline-block';let f=parseFloat(w.style.fontSize);while(w.offsetWidth>900&&f>60){f-=2;w.style.fontSize=f+'px'}w.style.display='block'})}
+
+const B={"q": 1.2, "start": 2.846, "egik": 5.099, "sabah": 7.432, "yetmis": 10.334, "tam": 13.603, "uzan": 15.879, "el": 17.488, "sure": 22.233, "kurcala": 25.904, "bu": 28.485, "END": 30.938}; const END=B.END; B.s76=L(B.yetmis,B.tam,.5);
+window.V={sfx:[[0.02,'thud'],[B.start,'whoosh'],[B.egik+.1,'pop'],[B.sabah+.2,'ticks'],[B.yetmis+.1,'scratch'],[B.s76,'drop'],[B.tam+.1,'scratch'],[B.uzan,'whoosh'],[B.el+.35,'pop'],[B.el+.9,'drop'],[B.bu+.3,'whoosh']]};
+const LINES=[[B.start,B.egik-.1,'Apple mağazasındaki<br><span class="o">laptoplar.</span>'],
+ [B.egik,B.sabah-.1,'Hepsi aynı açıyla<br><span class="o">eğik.</span>'],
+ [B.sabah,B.yetmis-.1,'Her sabah<br><span class="o">su terazisiyle.</span>'],
+ [B.yetmis,B.s76-.05,'Önce <span class="o">70°</span>'],
+ [B.s76,B.tam-.1,'Sonra <span class="o">76°</span>'],
+ [B.tam,B.uzan-.1,'Tam göremeyeceğin<br><span class="o">kadar eğik.</span>'],
+ [B.uzan,B.el-.1,'Düzeltmek için<br><span class="o">uzanıyorsun.</span>'],
+ [B.el,(B.sure||B.bu)-.1,'Bir değdi mi,<br><span class="o">artık senin.</span>'],
+ ...(B.sure?[[B.sure,B.kurcala-.1,'Süre sınırı<br><span class="o">yok.</span>'],[B.kurcala,B.bu-.1,'Kurcaladıkça<br><span class="o">bırakamıyorsun.</span>']]:[]),
+ [B.bu,END-.45,'İçeri giren herkese<br><span class="o">aynı soru:</span>']];
+const BIG=[[B.s76,B.tam-.1]], HITS=[0.02,B.s76];
+const FY=1262, HX=330, HY=1226;
+const mini=(x)=>`<g transform="translate(${x} ${FY}) scale(.5)" filter="url(#ps)"><rect x="0" y="-36" width="300" height="22" rx="6" fill="#243139"/><g transform="translate(0 -36) rotate(-70)"><rect x="0" y="-16" width="285" height="16" rx="6" fill="#243139"/></g></g>`;
+$('minis').innerHTML=mini(-10)+mini(150);
+function scene(t){
+  // açı: 70 -> 76, dokununca 105, sonda yine 70
+  let th=70+6*io(p(t,B.s76,.5))*(1-io(p(t,B.bu+.2,.6)));
+  const open=io(p(st(t),B.el+.45,.6))*(1-io(p(st(t),B.bu+.3,.6))); th+=(105-th)*open;
+  if(B.sure&&t>B.sure&&t<B.bu) th+=6*Math.sin((t-B.sure)*7)*io(p(t,B.sure,.4));
+  // laptop girişi
+  const inK=oc(p(st(t),B.start,.6));
+  
+  tr('lid',`translate(${HX} ${HY}) rotate(${-th})`);
+  // minyatürler + aynı açı çizgisi
+  const mIn=oc(p(st(t),B.egik,.5)), mOut=io(p(t,B.sabah+.2,.4))*(1-0);
+  tr('minis',`translate(${-420*(1-mIn)} 0)`); op('minis',(t>B.egik?1:0)*(1-.55*io(p(t,B.sabah,.4)))*(1-io(p(t,B.bu,.4))));
+  const sk=io(p(t,B.egik+.3,.6)), sOff=io(p(t,B.sabah,.3)); const a=-70*R, len=L(0,900,sk);
+  $('same').setAttribute('d',`M${-5} ${FY-18+40} L${-5+len*Math.cos(a)*0+len} ${FY-18+40}`);
+  $('same').setAttribute('d',[ -10,150,HX/1].map((x,i)=>{const hx=i<2?x:HX, hy=i<2?FY-18:HY, l=(i<2?142:285)*sk;return `M${hx} ${hy} L${hx+l*Math.cos(a)} ${hy+l*Math.sin(a)}`}).join(' '));
+  op('same',(t>B.egik+.3?1:0)*(1-sOff)*.9);
+  // su terazisi telefonu
+  const ph=ob(p(t,B.sabah+.1,.4)), phOut=io(p(t,B.yetmis+.1,.3));
+  const bx=125+28*Math.sin((t-B.sabah)*9)*Math.exp(-(t-B.sabah)*1.6);
+  $('bub').setAttribute('cx',bx); tr('phone',`translate(0 ${-30*(1-ph)})`); op('phone',(t>B.sabah+.1?ph:0)*(1-phOut));
+  // açı yayı
+  const ak=io(p(t,B.yetmis+.1,.6)), aOff=io(p(t,B.tam-.2,.3)), r=150, th2=th*ak;
+  const ex=HX+r*Math.cos(-th2*R), ey=HY+r*Math.sin(-th2*R);
+  $('arc').setAttribute('d',`M${HX+r} ${HY} A ${r} ${r} 0 0 0 ${ex} ${ey}`); $('arcD').setAttribute('cx',ex); $('arcD').setAttribute('cy',ey);
+  const aon=t>B.yetmis+.1&&t<B.tam; ['arc','arcD'].forEach(i=>op(i,aon?1-aOff:0));
+  const lt=t>=B.s76?'76°':'70°'; if($('arcT').textContent!==lt)$('arcT').textContent=lt;
+  $('arcT').setAttribute('x',HX+235*Math.cos(-th2/2*R)); $('arcT').setAttribute('y',HY+235*Math.sin(-th2/2*R)+16);
+  $('arcT').setAttribute('fill',t>=B.s76?'#ff5a1f':'#1c1b18'); op('arcT',aon?ak*(1-aOff):0);
+  // kafa ve bakış: ekranı göremiyor
+  const hd=oc(p(st(t),B.tam,.5)), hdOut=io(p(st(t),B.el+1.2,.5));
+  tr('head',`translate(${L(1200,820,hd*(1-hdOut))} ${FY-430})`);
+  const sv=io(p(t,B.tam+.4,.5)), sOff2=io(p(t,B.uzan,.3));
+  const lc=[HX+200*Math.cos(-th*R)+14, HY+200*Math.sin(-th*R)+10];
+  $('sight').setAttribute('d',`M${790} ${FY-430} L${L(790,lc[0],sv)} ${L(FY-430,lc[1],sv)}`); op('sight',(t>B.tam+.4?1:0)*(1-sOff2));
+  // el: kancada yaklaşır-kaçar, uzan'da uzanır, değer, sonra çekilir
+  const tease=(t>B.q&&t<B.start+.2)?Math.sin(Math.PI*p(t,B.q+.1,B.start-B.q))*(.55+.08*Math.sin(t*14)):0;
+  const reach=io(p(st(t),B.uzan+.1,.9))*(1-io(p(st(t),B.bu+.2,.6)));
+  const tip=[HX+272*Math.cos(-th*R)+10, HY+272*Math.sin(-th*R)+14];
+  let k=Math.max(tease,reach); const sx=1060, sy=FY-250;
+  const hx=L(sx+80,tip[0]+22,k), hy=L(sy,tip[1]+8,k);
+  $('arm').setAttribute('d',`M${sx+140} ${sy+40} L${hx+20} ${hy+6}`); $('palm').setAttribute('cx',hx); $('palm').setAttribute('cy',hy);
+  op('hand',k>0.001?1:0);
+  // SENİN etiketi
+  const ow=ob(p(t,B.el+.9,.4)), owOut=io(p(t,B.bu,.3));
+  tr('own',`translate(${470+(HX+150-470)*1.3} ${1262+(FY-560-1262)*1.3}) rotate(-6) scale(${t>B.el+.9?ow*(1-owOut):0})`);
+}
+
+const HK=.45;
+window.seek=function(t){
+  fit();
+  const pull=io(p(t,B.start-.1,.6)), push=io(p(t,END-HK,HK));
+  let s=L(1.18,1,pull); s=L(s,1.18,push);
+  $('cam').style.transform=`scale(${s})`;
+  $('furn').style.opacity=pull*(1-push); $('prog').style.width=(cl(t/END)*100)+'%';
+  $('floor').style.opacity=pull*(1-push);
+  $('sv').style.transform=`translateY(${110*pull*(1-push)}px)`;
+  const hk=$('hook'); hk.style.display=(t<B.start+.3||t>=END-HK)?'block':'none';
+  hk.querySelectorAll('.hw').forEach((w,i)=>{let y=0,sc=1,o=1;
+    if(t<B.start+.3){y=-6*Math.sin(t*3)*(i?1:-1)*(1-p(t,1.0,.5));sc=1-io(p(t,B.start-.2+i*.05,.3))}
+    else{const k=oc(p(t,END-HK+i*.06,.33));y=(1-k)*80;o=cl(p(t,END-HK+i*.06,.1)*2)}
+    w.style.transform=`translateY(${y}px) scaleY(${sc})`;w.style.transformOrigin='0 85%';w.style.opacity=o});
+  scene(t,pull,push);
+  const tA=$('tA'); let txt='',t0=0;for(const [a,b2,x] of LINES) if(t>=a&&t<b2){txt=x;t0=a}
+  if(tA.dataset.t!==txt){tA.innerHTML=txt;tA.dataset.t=txt}
+  const k2=ob(p(t,t0,.4)); tA.style.opacity=txt?cl(p(t,t0,.1)*2)*(1-p(t,END-HK-.15,.15)):0;
+  tA.style.transform=`translateY(${(1-k2)*40}px) scale(${BIG.some(([a,b])=>t>=a&&t<b)?1.15:1})`;
+  const sh=HITS.some(a=>t>a&&t<a+.22)?Math.sin(t*90)*7:0;
+  $('rc').style.transform=`translateX(${sh}px)`;
+};
+seek(0);
+</script></body></html>

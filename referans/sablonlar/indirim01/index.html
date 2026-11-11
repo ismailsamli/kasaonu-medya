@@ -1,0 +1,126 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../fonts/space-grotesk/700.css"><link rel="stylesheet" href="../../fonts/space-mono/700.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#201f1b}
+#cam{position:absolute;left:0;top:0;width:1080px;height:1920px;transform-origin:540px 960px}
+#rc{position:absolute;left:70px;top:150px;width:940px;height:1620px;background:#f3efe4;filter:drop-shadow(0 14px 18px rgba(0,0,0,.45))}
+.mono{font-family:"Space Mono";font-weight:700}
+.gk{font-family:"Space Grotesk";font-weight:700;color:#1c1b18;letter-spacing:-3px;line-height:.95}
+.o{color:#ff5a1f}
+.abs{position:absolute}
+svg{position:absolute;left:0;top:0;overflow:visible}
+svg text{font-family:"Space Mono";font-weight:700}
+</style></head><body>
+<div id="cam">
+ <div id="rc">
+  <div id="furn">
+   <div class="abs mono" style="left:0;right:0;top:40px;text-align:center;font-size:30px;letter-spacing:8px;color:#1c1b18">✻ KASA ÖNÜ ✻</div>
+   <div class="abs" style="left:60px;right:60px;top:96px;border-top:4px dashed #b9b4a8"></div>
+   <div class="abs mono" style="left:60px;top:116px;font-size:26px;color:#1c1b18">İNDİRİM · 07</div>
+   <div class="abs mono" style="right:60px;top:116px;font-size:26px;color:#8c8880">FİŞ 0012</div>
+   <div class="abs" style="left:60px;right:60px;top:160px;height:6px;background:#e3ded2"><div id="prog" style="height:6px;background:#ff5a1f;width:0"></div></div>
+   <div class="abs mono" style="left:60px;right:60px;bottom:50px;font-size:24px;color:#8c8880;display:flex"><span>KURAL</span><span style="flex:1;border-bottom:3px dotted #b9b4a8;margin:0 14px 8px"></span><span>10 GÜN</span></div>
+  </div>
+  <svg id="sv" width="940" height="1620" viewBox="0 0 940 1620">
+   <defs><filter id="ps" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="6" dy="9" stdDeviation="5" flood-color="#243139" flood-opacity=".28"/></filter></defs>
+   <path id="floor" d="M-40 1262 H980" stroke="#1c1b18" stroke-width="10" stroke-linecap="round"/>
+
+   <g id="tagW"><g id="tag" filter="url(#ps)">
+     <path d="M-230 -150 L170 -150 L250 0 L170 150 L-230 150Z" fill="#FFF8EB" stroke="#1c1b18" stroke-width="6"/><circle cx="170" cy="0" r="16" fill="#f3efe4" stroke="#1c1b18" stroke-width="5"/>
+     <text id="old" x="-20" y="-48" font-size="48" fill="#8c8880" text-anchor="middle"></text><path id="oldS" stroke="#1c1b18" stroke-width="8" stroke-linecap="round"/>
+     <text id="pr" x="-20" y="66" font-size="74" fill="#1c1b18" text-anchor="middle">1.000 TL</text>
+   </g></g>
+   <g id="ban" filter="url(#ps)"><rect x="-200" y="-46" width="400" height="92" fill="#ff5a1f" stroke="#1c1b18" stroke-width="5"/><text y="18" font-size="52" fill="#FFF8EB" text-anchor="middle" letter-spacing="6">İNDİRİM!</text></g>
+   <g id="cal"></g>
+   <path id="calL" stroke="#1c1b18" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle id="calD" r="12" fill="#ff5a1f"/>
+   <text id="calT" font-size="30" fill="#ff5a1f" text-anchor="middle">EN DÜŞÜK</text>
+   <g id="fine" filter="url(#ps)"><rect x="-210" y="-80" width="420" height="160" fill="#ff5a1f" stroke="#1c1b18" stroke-width="6"/><text y="-12" font-size="46" fill="#FFF8EB" text-anchor="middle" letter-spacing="5">CEZA</text><text y="50" font-size="40" fill="#1c1b18" text-anchor="middle">≈ 40 MİLYON TL</text></g>
+   <g id="xx"><path d="M-70 -70 L70 70 M70 -70 L-70 70" stroke="#ff5a1f" stroke-width="18" stroke-linecap="round"/></g>
+
+  </svg>
+  <div id="tA" class="abs gk" style="left:50px;right:50px;top:270px;font-size:84px;text-align:center"></div>
+ </div>
+ <div id="hook" class="abs gk" style="left:90px;top:300px;width:900px"><div class="hw" style="font-size:150px">Seni de önce şişirip</div><div class="hw o" style="font-size:176px">sonra mı indirdiler?</div></div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)), p=(t,a,d)=>cl((t-a)/d);
+const io=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2, oc=x=>1-Math.pow(1-x,3);
+const ob=x=>{const c1=1.7,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+const L=(a,b,k)=>a+(b-a)*k, st=t=>Math.floor(t*12)/12, R=Math.PI/180;
+const tr=(id,s)=>$(id).setAttribute('transform',s);
+const op=(id,v)=>{$(id).style.opacity=v};
+// kanca yazısı 900px'e sığsın
+let FIT=false;function fit(){if(FIT||!document.fonts.check('700 100px "Space Grotesk"'))return;FIT=true;document.querySelectorAll('#hook .hw').forEach(w=>{w.style.whiteSpace='nowrap';w.style.display='inline-block';let f=parseFloat(w.style.fontSize);while(w.offsetWidth>900&&f>60){f-=2;w.style.fontSize=f+'px'}w.style.display='block'})}
+
+const B={"q": 1.2, "start": 4.021, "bin": 4.806, "kural": 11.775, "agustos": 13.446, "ceza": 18.56, "yani": 20.753, "sepet": 25.358, "END": 27.946}; const END=B.END;
+const P1=L(B.bin,B.kural,.25), P2=L(B.bin,B.kural,.55), P3=L(B.bin,B.kural,.72);
+window.V={sfx:[[0.02,'thud'],[B.q+.2,'whoosh'],[B.start,'pop'],[P1,'ticks'],[P2,'scratch'],[P3,'thud'],[B.agustos+.2,'ticks'],[L(B.ceza,B.yani,.35),'thud'],[B.yani+.6,'drop'],[B.sepet+.3,'whoosh']]};
+const LINES=[[B.start,B.bin-.1,'Fiyatı<br><span class="o">diyorum.</span>'],
+ [B.bin,P2-.05,'Önce<br><span class="o">şişir...</span>'],
+ [P2,B.kural-.1,'...sonra<br><span class="o">"indirim".</span>'],
+ [B.kural,B.agustos-.1,'Bu oyunun artık<br><span class="o">kuralı var.</span>'],
+ [B.agustos,B.ceza-.1,'Eski fiyat =<br><span class="o">son 10 günün en düşüğü</span>'],
+ [B.ceza,B.yani-.1,'Uymayana<br><span class="o">~40 milyon ceza.</span>'],
+ [B.yani,B.sepet-.1,'10 günde görmediysen<br><span class="o">indirim değil.</span>'],
+ [B.sepet,END-.45,'Sepete atmadan<br><span class="o">bir kere sor:</span>']];
+const BIG=[[B.agustos,B.ceza-.1]], HITS=[0.02,P3,L(B.ceza,B.yani,.35)];
+const PX=[1000,1000,950,1000,1000,980,1000,1000,1000,1000];
+$('cal').innerHTML=PX.map((v,i)=>`<g id="d${i}"><rect x="${110+i*72}" y="1080" width="60" height="60" rx="8" fill="${i==2?'#E8B65C':'#FFF8EB'}" stroke="#1c1b18" stroke-width="4"/><text x="${140+i*72}" y="1122" font-size="24" text-anchor="middle" fill="#1c1b18">${i+1}</text></g>`).join('');
+function scene(t){
+  // kanca: etiket balon gibi şişer
+  const inf=(t>B.q&&t<B.start+.3)?Math.sin(Math.PI*p(t,B.q+.1,B.start-B.q+.2)):0;
+  const wob=inf*4*Math.sin(t*16);
+  const kural=io(p(t,B.kural,.5))*(1-io(p(t,B.sepet,.5)));
+  const ty=L(820,760,kural), ts=L(1,.72,kural);
+  tr('tagW',`translate(470 ${ty}) scale(${ts*(1+.35*inf)} ${ts*(1+.28*inf)}) rotate(${wob})`);
+  // bin'de: 1.500 sayar, üstü çizilir, altında 1.000 indirimli
+  const up=oc(p(t,P1,.5));
+  const showOld=t>=P1&&t<B.sepet;
+  $('old').textContent=showOld?Math.round(L(1000,1500,up)).toLocaleString('tr-TR')+' TL':'';
+  const sk=io(p(t,P2,.4)); $('oldS').setAttribute('d',`M-170 -66 L${L(-170,130,sk)} -66`); op('oldS',t>P2&&t<B.sepet?1:0);
+  $('pr').textContent='1.000 TL'; op('pr',(t<P1||t>=P2)?1:0.15);
+  $('pr').setAttribute('fill',t>=P3&&t<B.sepet?'#ff5a1f':'#1c1b18');
+  const bk=ob(p(t,P3,.35)), bOut=io(p(t,B.kural,.3));
+  tr('ban',`translate(470 ${560}) rotate(-6) scale(${t>P3?bk*(1-bOut):0})`);
+  // 10 günlük takvim + çizgi
+  const ck=p(t,B.agustos+.2,1.6), cOut=io(p(t,B.yani,.3));
+  PX.forEach((v,i)=>{const k=ob(p(t,B.agustos+.1+i*.06,.3)); tr('d'+i,`translate(0 ${(1-k)*60})`); op('d'+i,(t>B.agustos+.1+i*.06?1:0)*(1-cOut))});
+  const pts=PX.map((v,i)=>[140+i*72,1040-(v-940)*1.2]); const n=Math.max(1,Math.ceil(ck*pts.length));
+  $('calL').setAttribute('d','M'+pts.slice(0,n).map(p=>p.join(' ')).join(' L')); const lp=pts[n-1];
+  $('calD').setAttribute('cx',lp[0]); $('calD').setAttribute('cy',lp[1]);
+  const con=t>B.agustos+.2&&t<B.yani+.3; ['calL','calD'].forEach(i=>op(i,con?1-cOut:0));
+  $('calT').setAttribute('x',pts[2][0]); $('calT').setAttribute('y',1180); op('calT',con&&ck>.4?1-cOut:0);
+  // ceza damgası
+  const fs=L(B.ceza,B.yani,.35), fp=p(t,fs-.12,.12), fOut=io(p(t,B.yani,.3));
+  tr('fine',`translate(470 1110) rotate(-6) scale(${t>fs-.12?L(2,1,io(fp))*(1-fOut):0})`);
+  // yani: eski fiyata çarpı
+  const xk=ob(p(t,B.yani+.6,.35)), xOut=io(p(t,B.sepet,.3));
+  tr('xx',`translate(${470-20*ts} ${ty-50*ts}) scale(${t>B.yani+.6?xk*(1-xOut):0})`);
+}
+
+const HK=.45;
+window.seek=function(t){
+  fit();
+  const pull=io(p(t,B.start-.1,.6)), push=io(p(t,END-HK,HK));
+  let s=L(1.18,1,pull); s=L(s,1.18,push);
+  $('cam').style.transform=`scale(${s})`;
+  $('furn').style.opacity=pull*(1-push); $('prog').style.width=(cl(t/END)*100)+'%';
+  $('floor').style.opacity=pull*(1-push);
+  $('sv').style.transform=`translateY(${110*pull*(1-push)}px)`;
+  const hk=$('hook'); hk.style.display=(t<B.start+.3||t>=END-HK)?'block':'none';
+  hk.querySelectorAll('.hw').forEach((w,i)=>{let y=0,sc=1,o=1;
+    if(t<B.start+.3){y=-6*Math.sin(t*3)*(i?1:-1)*(1-p(t,1.0,.5));sc=1-io(p(t,B.start-.2+i*.05,.3))}
+    else{const k=oc(p(t,END-HK+i*.06,.33));y=(1-k)*80;o=cl(p(t,END-HK+i*.06,.1)*2)}
+    w.style.transform=`translateY(${y}px) scaleY(${sc})`;w.style.transformOrigin='0 85%';w.style.opacity=o});
+  scene(t,pull,push);
+  const tA=$('tA'); let txt='',t0=0;for(const [a,b2,x] of LINES) if(t>=a&&t<b2){txt=x;t0=a}
+  if(tA.dataset.t!==txt){tA.innerHTML=txt;tA.dataset.t=txt}
+  const k2=ob(p(t,t0,.4)); tA.style.opacity=txt?cl(p(t,t0,.1)*2)*(1-p(t,END-HK-.15,.15)):0;
+  tA.style.transform=`translateY(${(1-k2)*40}px) scale(${BIG.some(([a,b])=>t>=a&&t<b)?1.15:1})`;
+  const sh=HITS.some(a=>t>a&&t<a+.22)?Math.sin(t*90)*7:0;
+  $('rc').style.transform=`translateX(${sh}px)`;
+};
+seek(0);
+</script></body></html>

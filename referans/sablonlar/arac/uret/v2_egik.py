@@ -34,7 +34,8 @@ const LINES=[[B.start,B.egik-.1,'Apple mağazasındaki<br><span class="o">laptop
  [B.s76,B.tam-.1,'Sonra <span class="o">76°</span>'],
  [B.tam,B.uzan-.1,'Tam göremeyeceğin<br><span class="o">kadar eğik.</span>'],
  [B.uzan,B.el-.1,'Düzeltmek için<br><span class="o">uzanıyorsun.</span>'],
- [B.el,B.bu-.1,'Bir değdi mi,<br><span class="o">artık senin.</span>'],
+ [B.el,(B.sure||B.bu)-.1,'Bir değdi mi,<br><span class="o">artık senin.</span>'],
+ ...(B.sure?[[B.sure,B.kurcala-.1,'Süre sınırı<br><span class="o">yok.</span>'],[B.kurcala,B.bu-.1,'Kurcaladıkça<br><span class="o">bırakamıyorsun.</span>']]:[]),
  [B.bu,END-.45,'İçeri giren herkese<br><span class="o">aynı soru:</span>']];
 const BIG=[[B.s76,B.tam-.1]], HITS=[0.02,B.s76];
 const FY=1262, HX=330, HY=1226;
@@ -44,6 +45,7 @@ function scene(t){
   // açı: 70 -> 76, dokununca 105, sonda yine 70
   let th=70+6*io(p(t,B.s76,.5))*(1-io(p(t,B.bu+.2,.6)));
   const open=io(p(st(t),B.el+.45,.6))*(1-io(p(st(t),B.bu+.3,.6))); th+=(105-th)*open;
+  if(B.sure&&t>B.sure&&t<B.bu) th+=6*Math.sin((t-B.sure)*7)*io(p(t,B.sure,.4));
   // laptop girişi
   const inK=oc(p(st(t),B.start,.6));
   
@@ -87,6 +89,6 @@ function scene(t){
 }
 '''.replace('__B__', json.dumps(B))
 
-build('/home/claude/kasaonu-medya/referans/sablonlar/egik01/index.html', 'MAĞAZA · 02', 'FİŞ 0007', 'AÇI', '76°',
+build('/home/claude/kasaonu-medya/referans/sablonlar/'+(sys.argv[2] if len(sys.argv)>2 else 'egik01')+'/index.html', 'MAĞAZA · 02', 'FİŞ 0007', 'AÇI', '76°',
       'Sen de', 'dokundun mu?', SVG, SCENE)
 print('ok')

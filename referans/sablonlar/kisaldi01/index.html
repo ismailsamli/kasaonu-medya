@@ -1,0 +1,130 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../fonts/space-grotesk/700.css"><link rel="stylesheet" href="../../fonts/space-mono/700.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#201f1b}
+#cam{position:absolute;left:0;top:0;width:1080px;height:1920px;transform-origin:540px 960px}
+#rc{position:absolute;left:70px;top:150px;width:940px;height:1620px;background:#f3efe4;filter:drop-shadow(0 14px 18px rgba(0,0,0,.45))}
+.mono{font-family:"Space Mono";font-weight:700}
+.gk{font-family:"Space Grotesk";font-weight:700;color:#1c1b18;letter-spacing:-3px;line-height:.95}
+.o{color:#ff5a1f}
+.abs{position:absolute}
+svg{position:absolute;left:0;top:0;overflow:visible}
+svg text{font-family:"Space Mono";font-weight:700}
+</style></head><body>
+<div id="cam">
+ <div id="rc">
+  <div id="furn">
+   <div class="abs mono" style="left:0;right:0;top:40px;text-align:center;font-size:30px;letter-spacing:8px;color:#1c1b18">✻ KASA ÖNÜ ✻</div>
+   <div class="abs" style="left:60px;right:60px;top:96px;border-top:4px dashed #b9b4a8"></div>
+   <div class="abs mono" style="left:60px;top:116px;font-size:26px;color:#1c1b18">RULO · 06</div>
+   <div class="abs mono" style="right:60px;top:116px;font-size:26px;color:#8c8880">FİŞ 0011</div>
+   <div class="abs" style="left:60px;right:60px;top:160px;height:6px;background:#e3ded2"><div id="prog" style="height:6px;background:#ff5a1f;width:0"></div></div>
+   <div class="abs mono" style="left:60px;right:60px;bottom:50px;font-size:24px;color:#8c8880;display:flex"><span>YAPRAK</span><span style="flex:1;border-bottom:3px dotted #b9b4a8;margin:0 14px 8px"></span><span>9,5 CM</span></div>
+  </div>
+  <svg id="sv" width="940" height="1620" viewBox="0 0 940 1620">
+   <defs><filter id="ps" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="6" dy="9" stdDeviation="5" flood-color="#243139" flood-opacity=".28"/></filter></defs>
+   <path id="floor" d="M-40 1262 H980" stroke="#1c1b18" stroke-width="10" stroke-linecap="round"/>
+
+   <g id="roll">
+     <rect x="250" y="760" width="440" height="16" rx="8" fill="#243139"/>
+     <path id="sheet" fill="#FFF8EB" filter="url(#ps)"/>
+     <g filter="url(#ps)"><rect x="330" y="680" width="280" height="190" rx="40" fill="#FFF8EB"/><rect x="330" y="740" width="280" height="6" fill="#e6dfcd"/><rect x="330" y="800" width="280" height="6" fill="#e6dfcd"/></g>
+     <path id="perf" stroke="#b9b4a8" stroke-width="4" stroke-dasharray="6 10"/>
+   </g>
+   <g id="ztag" filter="url(#ps)"><rect x="-120" y="-44" width="240" height="88" fill="#ff5a1f" stroke="#1c1b18" stroke-width="5"/><text y="14" font-size="38" fill="#FFF8EB" text-anchor="middle">ZAM YOK</text></g>
+   <g id="leaf"><rect id="lf" fill="#FFF8EB" filter="url(#ps)"/><path id="wL" stroke="#1c1b18" stroke-width="9" stroke-linecap="round"/><circle id="wD" r="12" fill="#ff5a1f"/><text id="wT" font-size="40" text-anchor="middle" fill="#1c1b18"></text>
+     <path id="hL" stroke="#1c1b18" stroke-width="9" stroke-linecap="round"/><circle id="hD" r="12" fill="#ff5a1f"/><text id="hT" font-size="40" text-anchor="start" fill="#1c1b18"></text></g>
+   <g id="xsec" filter="url(#ps)"><circle id="xo" cx="470" cy="900" r="190" fill="#FFF8EB"/><circle cx="470" cy="900" r="150" fill="none" stroke="#e6dfcd" stroke-width="4"/><circle cx="470" cy="900" r="115" fill="none" stroke="#e6dfcd" stroke-width="4"/><circle id="core" cx="470" cy="900" r="60" fill="#C56B50"/><circle id="hole" cx="470" cy="900" r="40" fill="#f3efe4"/></g>
+   <path id="cL" stroke="#ff5a1f" stroke-width="9" stroke-linecap="round"/><text id="cT" font-size="38" fill="#ff5a1f" text-anchor="middle"></text>
+   <g id="pack" filter="url(#ps)"><rect x="250" y="760" width="440" height="300" rx="20" fill="#7C9DA5"/><g fill="#FFF8EB"><circle cx="360" cy="860" r="70"/><circle cx="580" cy="860" r="70"/><circle cx="360" cy="980" r="0"/></g><rect x="300" y="960" width="340" height="60" fill="#FFF8EB"/><text x="470" y="1002" font-size="34" text-anchor="middle" fill="#1c1b18">AYNI PAKET</text></g>
+   <g id="shelf" filter="url(#ps)"><rect x="-230" y="-110" width="460" height="220" fill="#FFF8EB" stroke="#1c1b18" stroke-width="5"/>
+     <text x="-200" y="-56" font-size="30" fill="#1c1b18">TUVALET KAĞIDI</text><text x="190" y="40" font-size="70" fill="#1c1b18" text-anchor="end">FİYAT</text>
+     <text id="unit" x="-200" y="84" font-size="26" fill="#8c8880">BİRİM FİYAT</text></g>
+   <ellipse id="ring" fill="none" stroke="#ff5a1f" stroke-width="7"/>
+
+  </svg>
+  <div id="tA" class="abs gk" style="left:50px;right:50px;top:270px;font-size:84px;text-align:center"></div>
+ </div>
+ <div id="hook" class="abs gk" style="left:90px;top:300px;width:900px"><div class="hw" style="font-size:150px">Seninki de mi</div><div class="hw o" style="font-size:176px">kısaldı?</div></div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)), p=(t,a,d)=>cl((t-a)/d);
+const io=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2, oc=x=>1-Math.pow(1-x,3);
+const ob=x=>{const c1=1.7,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+const L=(a,b,k)=>a+(b-a)*k, st=t=>Math.floor(t*12)/12, R=Math.PI/180;
+const tr=(id,s)=>$(id).setAttribute('transform',s);
+const op=(id,v)=>{$(id).style.opacity=v};
+// kanca yazısı 900px'e sığsın
+let FIT=false;function fit(){if(FIT||!document.fonts.check('700 100px "Space Grotesk"'))return;FIT=true;document.querySelectorAll('#hook .hw').forEach(w=>{w.style.whiteSpace='nowrap';w.style.display='inline-block';let f=parseFloat(w.style.fontSize);while(w.offsetWidth>900&&f>60){f-=2;w.style.fontSize=f+'px'}w.style.display='block'})}
+
+const B={"q": 1.2, "start": 2.872, "kur": 5.103, "eni": 9.117, "rulo": 13.629, "paket": 16.973, "birim": 20.333, "etiket": 24.562, "END": 27.586}; const END=B.END; const BOY=L(B.eni,B.rulo,.45);
+window.V={sfx:[[0.02,'thud'],[B.q+.3,'scratch'],[B.start,'whoosh'],[B.kur+.3,'pop'],[B.eni+.2,'scratch'],[BOY+.1,'scratch'],[B.rulo+.2,'whoosh'],[B.rulo+1,'drop'],[B.paket+.2,'pop'],[B.birim+.3,'whoosh'],[B.birim+1.2,'pop'],[B.etiket+.3,'whoosh']]};
+const LINES=[[B.start,B.kur-.1,'Tuvalet<br><span class="o">kağıdı.</span>'],
+ [B.kur,B.eni-.1,'Zam yerine<br><span class="o">yaprak küçüldü.</span>'],
+ [B.eni,BOY-.05,'Eni: 10 cm<br><span class="o">→ 9,5 cm</span>'],
+ [BOY,B.rulo-.1,'Boyu: 12,5 cm<br><span class="o">→ 12,3 cm</span>'],
+ [B.rulo,B.paket-.1,'Rulonun içi<br><span class="o">genişledi.</span>'],
+ [B.paket,B.birim-.1,'Paket aynı, fiyat aynı,<br><span class="o">kağıt az.</span>'],
+ [B.birim,B.etiket-.1,'Fiyata değil<br><span class="o">birim fiyata bak.</span>'],
+ [B.etiket,END-.45,'Etiket söylemez,<br><span class="o">rulo söyler:</span>']];
+const BIG=[[B.eni,B.rulo-.1]], HITS=[0.02,B.rulo+1];
+const show=(id,a,b,base='')=>{const k=ob(p(t_,a,.35)),o=io(p(t_,b,.3));const s=t_>a&&t_<b+.35?k*(1-o):0;tr(id,`${base} translate(470 900) scale(${s}) translate(-470 -900)`);return s};
+let t_=0;
+function scene(t){ t_=t;
+  // rulo ve sarkan yaprak: kancada kısalır, sonra eski haline döner
+  const shr=(t>B.q&&t<B.start+.4)?Math.sin(Math.PI*p(t,B.q+.1,B.start-B.q+.2)):0;
+  const len=440-230*shr+(shr>0?10*Math.sin(t*18)*shr:0);
+  $('sheet').setAttribute('d',`M560 860 L610 860 L606 ${860+len} L556 ${860+len-8}Z`);
+  $('perf').setAttribute('d',`M558 ${860+len*.5} L608 ${860+len*.5}`);
+  const rollOn=(t<B.eni)||(t>=B.etiket); const rIn=t<B.eni?1-io(p(t,B.eni-.3,.3)):io(p(t,B.etiket,.4));
+  tr('roll',`translate(470 900) scale(${rIn}) translate(-470 -900)`); op('roll',rollOn?1:0);
+  const zk=ob(p(t,B.kur+.3,.35)), zOut=io(p(t,B.eni-.3,.3));
+  tr('ztag',`translate(720 1120) rotate(-8) scale(${t>B.kur+.3?zk*(1-zOut):0})`);
+  // tek yaprak ölçümü
+  const ls=show('leaf',B.eni,B.rulo);
+  const w=L(400,380,io(p(t,B.eni+.6,.6))), h=L(500,492,io(p(t,BOY+.3,.6))), x=470-w/2, y=900-h/2;
+  $('lf').setAttribute('x',x); $('lf').setAttribute('y',y); $('lf').setAttribute('width',w); $('lf').setAttribute('height',h);
+  const wk=io(p(t,B.eni+.1,.5)); $('wL').setAttribute('d',`M${x} ${y-40} L${x+w*wk} ${y-40}`); $('wD').setAttribute('cx',x+w*wk); $('wD').setAttribute('cy',y-40);
+  $('wT').textContent=t>B.eni+.9?'9,5 cm':'10 cm'; $('wT').setAttribute('x',470); $('wT').setAttribute('y',y-64); $('wT').setAttribute('fill',t>B.eni+.9?'#ff5a1f':'#1c1b18');
+  const hk=io(p(t,BOY,.5)); $('hL').setAttribute('d',`M${x+w+40} ${y} L${x+w+40} ${y+h*hk}`); $('hD').setAttribute('cx',x+w+40); $('hD').setAttribute('cy',y+h*hk);
+  $('hT').textContent=t>BOY+.6?'12,3':'12,5'; $('hT').setAttribute('x',x+w+58); $('hT').setAttribute('y',900); $('hT').setAttribute('fill',t>BOY+.6?'#ff5a1f':'#1c1b18'); op('hT',hk); op('hL',hk); op('hD',hk);
+  // kesit: göbek büyür
+  show('xsec',B.rulo,B.paket);
+  const ck=io(p(t,B.rulo+.6,.8)); $('core').setAttribute('r',60+50*ck); $('hole').setAttribute('r',40+50*ck);
+  $('cL').setAttribute('d',`M${470-60} 900 L${470-60-50*ck} 900 M${470+60} 900 L${470+60+50*ck} 900`); op('cL',t>B.rulo+.6&&t<B.paket?1:0);
+  $('cT').textContent='göbek büyüdü'; $('cT').setAttribute('x',470); $('cT').setAttribute('y',1190); op('cT',t>B.rulo+.6&&t<B.paket?ck:0);
+  // paket
+  show('pack',B.paket,B.birim);
+  // raf etiketi + birim fiyat halkası
+  const sk=ob(p(t,B.birim,.35)), sOut=io(p(t,B.etiket,.3));
+  tr('shelf',`translate(470 900) rotate(-2) scale(${t>B.birim?sk*(1-sOut)*1.15:0})`);
+  const rg=t>B.birim+1.2&&t<B.etiket+.3?ob(p(t,B.birim+1.2,.35))*(1-sOut):0;
+  $('ring').setAttribute('cx',470-90*1.15+20); $('ring').setAttribute('cy',900+76*1.15); $('ring').setAttribute('rx',190*rg); $('ring').setAttribute('ry',38*rg);
+}
+
+const HK=.45;
+window.seek=function(t){
+  fit();
+  const pull=io(p(t,B.start-.1,.6)), push=io(p(t,END-HK,HK));
+  let s=L(1.18,1,pull); s=L(s,1.18,push);
+  $('cam').style.transform=`scale(${s})`;
+  $('furn').style.opacity=pull*(1-push); $('prog').style.width=(cl(t/END)*100)+'%';
+  $('floor').style.opacity=pull*(1-push);
+  $('sv').style.transform=`translateY(${110*pull*(1-push)}px)`;
+  const hk=$('hook'); hk.style.display=(t<B.start+.3||t>=END-HK)?'block':'none';
+  hk.querySelectorAll('.hw').forEach((w,i)=>{let y=0,sc=1,o=1;
+    if(t<B.start+.3){y=-6*Math.sin(t*3)*(i?1:-1)*(1-p(t,1.0,.5));sc=1-io(p(t,B.start-.2+i*.05,.3))}
+    else{const k=oc(p(t,END-HK+i*.06,.33));y=(1-k)*80;o=cl(p(t,END-HK+i*.06,.1)*2)}
+    w.style.transform=`translateY(${y}px) scaleY(${sc})`;w.style.transformOrigin='0 85%';w.style.opacity=o});
+  scene(t,pull,push);
+  const tA=$('tA'); let txt='',t0=0;for(const [a,b2,x] of LINES) if(t>=a&&t<b2){txt=x;t0=a}
+  if(tA.dataset.t!==txt){tA.innerHTML=txt;tA.dataset.t=txt}
+  const k2=ob(p(t,t0,.4)); tA.style.opacity=txt?cl(p(t,t0,.1)*2)*(1-p(t,END-HK-.15,.15)):0;
+  tA.style.transform=`translateY(${(1-k2)*40}px) scale(${BIG.some(([a,b])=>t>=a&&t<b)?1.15:1})`;
+  const sh=HITS.some(a=>t>a&&t<a+.22)?Math.sin(t*90)*7:0;
+  $('rc').style.transform=`translateX(${sh}px)`;
+};
+seek(0);
+</script></body></html>

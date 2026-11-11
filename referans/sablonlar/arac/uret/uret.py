@@ -31,6 +31,39 @@ VIDS = {
    'Ürünü sen okutuyorsun, poşeti sen dolduruyorsun, ödemeyi sen alıyorsun.',
    'Bir zincir elli mağazasına üç yüz elliden fazla böyle kasa kurdu.',
    'Kasiyerin işini sen yaptın ama fişte senin emeğin yazmıyor.', 'O zaman soru şu:']),
+ 'egik02': ('v2_egik.py', ['q','start','egik','sabah','yetmis','tam','uzan','el','sure','kurcala','bu'], [
+   'Sen de dokundun mu?','Apple mağazasındaki laptoplara diyorum.','Hepsi aynı açıyla eğik duruyor.',
+   'Çalışanlar her sabah su terazisiyle ayarlıyor.','Önce yetmiş dereceydi, sonra yetmiş altıya çektiler.',
+   'Ekranı tam göremeyeceğin kadar eğik.','Düzeltmek için uzanıyorsun.',
+   'Amaç tam bu: elin bir kere değdi mi, o cihaz artık senin gibi geliyor.',
+   'Mağaza da sana süre sınırı koymuyor, istediğin kadar kurcala.','Çünkü kurcaladıkça bırakmak zorlaşıyor.',
+   'Kapıdan çıkarken tek soru kalıyor:']),
+ 'kasa01': ('v5_kasa.py', ['q','start','raf','susup','kanun','yani','foto','sor'], [
+   'Kasada sana fazla mı çıktı?','Fiyatı diyorum.','Rafta yetmiş dokuz doksan yazıyor, kasada seksen dokuz doksan çıkıyor.',
+   'Çoğu kişi fark etse de susup ödüyor.','Oysa kanun açık: raf ile kasa farklıysa düşük olan geçerli.',
+   'Yani on lirayı geri almak için tek cümle yeter: rafta böyle yazıyor.','Etiketin fotoğrafını çek, fişi sakla.',
+   'O yüzden kasadan çıkmadan bir kere kendine sor:']),
+ 'kisaldi01': ('v6_kisaldi.py', ['q','start','kur','eni','rulo','paket','birim','etiket'], [
+   'Seninki de mi kısaldı?','Tuvalet kağıdından bahsediyorum.','Kur yükselince bazı üreticiler zam yapmak yerine yaprağı küçülttü.',
+   'Eni on santimden dokuz buçuğa, boyu on iki buçuktan on iki üçe indi.','Rulonun içi de genişledi, yani daha az kağıt sarıldı.',
+   'Paket aynı, fiyat aynı, sen daha azını alıyorsun.','Bu yüzden paketin fiyatına değil, etiketin köşesindeki birim fiyata bak.',
+   'Etiket söylemez ama rulo söyler:']),
+ 'indirim01': ('v7_indirim.py', ['q','start','bin','kural','agustos','ceza','yani','sepet'], [
+   'Seni de önce şişirip sonra mı indirdiler?','Fiyatı diyorum.',
+   'Bin liralık ürüne önce bin beş yüz yazılıyor, sonra üstü çiziliyor, altına büyük harflerle indirim.',
+   'Bu oyunun artık kuralı var.','Ağustostan beri indirimden önceki fiyat, son on günün en düşük fiyatı olmak zorunda.',
+   'Uymayana kırk milyona yakın ceza var.','Yani üstü çizili fiyatı son on günde hiç görmediysen, o indirim değil.',
+   'Sepete atmadan önce bir kere sor:']),
+ 'araba01': ('v8_araba.py', ['q','start','ilk','cunku','sonra','deneme','uc','dolunca','araba'], [
+   'Büyüdükçe daha çok dolduruyorsun, değil mi?','Market arabasını diyorum.','İlk araba bin dokuz yüz otuz yedide çıktı.',
+   'Çünkü market sahibi bir şey fark etmişti: sepet dolunca insan alışverişi bitiriyor.','Sonra arabalar büyüdü.',
+   'Bir denemede araba iki katına çıkınca insanlar beş ürün yerine yedi ürün aldı.','Üç şey alacaksan arabayı bırak, sepeti al.',
+   'Sepet dolunca durursun.','Araba ise hep aynı şeyi fısıldar:']),
+ 'incel01': ('v9_incel.py', ['q','start','almanya','paket','milim','takilan','bizde','arka','gram','ve'], [
+   'Seninki de mi inceldi?','Çikolatayı diyorum.',"Almanya'da ünlü bir çikolata önce zamlandı, sonra yüz gramdan doksan grama indi.",
+   'Paket aynı, tasarım aynı.','Çikolata sadece bir milim inceldi.','Takılan olmadı, ta ki biri mahkemeye taşıyana kadar.',
+   'Bizde de görüldü: rafta altmış gram yazan çubuk kraker, paketin üstünde elli iki çıktı.',
+   'Paketin önüne değil, arkasına bak.','Gramı orada yazar.','Ve hep aynı şeyi sorar:']),
 }
 
 
@@ -69,7 +102,7 @@ def beats(vid, voice):
 def render(vid, voice):
     gen, B, w, gaps, D = beats(vid, voice)
     print(vid, 'ses', round(D, 2), 'sn | vuruşlar', B)
-    subprocess.check_call(['python3', f'/home/claude/uret/{gen}', json.dumps(B)], cwd='/home/claude/uret')
+    subprocess.check_call(['python3', f'/home/claude/uret/{gen}', json.dumps(B), vid], cwd='/home/claude/uret')
     html = Path(S) / vid / 'index.html'
     out = Path(f'/home/claude/uret/{vid}.mp4'); silent = Path(f'/home/claude/uret/_{vid}_s.mp4')
     n = int(B['END'] * FPS)
