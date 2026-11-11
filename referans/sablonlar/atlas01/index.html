@@ -1,0 +1,216 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../fonts/space-grotesk/700.css"><link rel="stylesheet" href="../../fonts/space-mono/700.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#201f1b}
+#cam{position:absolute;left:0;top:0;width:1080px;height:1920px;transform-origin:540px 960px}
+#rc{position:absolute;left:70px;top:150px;width:940px;height:1620px;background:#f3efe4;filter:drop-shadow(0 14px 18px rgba(0,0,0,.45))}
+.mono{font-family:"Space Mono";font-weight:700}
+.gk{font-family:"Space Grotesk";font-weight:700;color:#1c1b18;letter-spacing:-3px;line-height:.95}
+.o{color:#ff5a1f}
+.abs{position:absolute}
+svg{position:absolute;left:0;top:0;overflow:visible}
+.tag{display:inline-block;font-family:"Space Mono";font-weight:700;font-size:30px;letter-spacing:5px;padding:6px 16px;color:#FFF8EB}
+</style></head><body>
+<div id="cam">
+ <div id="rc">
+  <div id="furn">
+   <div class="abs mono" style="left:0;right:0;top:40px;text-align:center;font-size:30px;letter-spacing:8px;color:#1c1b18">✻ KASA ÖNÜ ✻</div>
+   <div class="abs" style="left:60px;right:60px;top:96px;border-top:4px dashed #b9b4a8"></div>
+   <div class="abs mono" style="left:60px;top:116px;font-size:26px;color:#1c1b18">REKLAM KAVGASI · 01</div>
+   <div class="abs mono" style="right:60px;top:116px;font-size:26px;color:#8c8880">FİŞ 0004</div>
+   <div class="abs" style="left:60px;right:60px;top:160px;height:6px;background:#e3ded2"><div id="prog" style="height:6px;background:#ff5a1f;width:0"></div></div>
+   <div class="abs mono" style="left:60px;right:60px;bottom:50px;font-size:24px;color:#8c8880;display:flex"><span>2005</span><span style="flex:1;border-bottom:3px dotted #b9b4a8;margin:0 14px 8px"></span><span>77 CM</span></div>
+  </div>
+  <svg id="sv" width="940" height="1620" viewBox="0 0 940 1620">
+   <defs><filter id="ps" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="6" dy="9" stdDeviation="5" flood-color="#243139" flood-opacity=".28"/></filter>
+     <pattern id="tk" width="20" height="40" patternUnits="userSpaceOnUse"><path d="M0 0 H40 M0 20 H22" stroke="#1c1b18" stroke-width="4"/></pattern></defs>
+   <!-- runway -->
+   <g id="runway"><path d="M-40 1180 H980" stroke="#1c1b18" stroke-width="10" stroke-linecap="round"/><path id="dash" d="M-40 1215 H980" stroke="#8c8880" stroke-width="8" stroke-dasharray="40 30"/></g>
+   <!-- clock -->
+   <g id="clock" filter="url(#ps)"><circle r="120" fill="#FFF8EB" stroke="#1c1b18" stroke-width="10"/><path id="chh" stroke="#1c1b18" stroke-width="12" stroke-linecap="round"/><path id="cmh" stroke="#ff5a1f" stroke-width="8" stroke-linecap="round"/><circle r="10" fill="#1c1b18"/></g>
+   <!-- planes: pivot at rear wheel (0,0); nose to the right -->
+   <g id="pB"><g class="body" filter="url(#ps)">
+     <path d="M-30 -40 L-10 -150 L50 -150 L80 -60 Z" fill="#E8B65C"/>
+     <path d="M-60 -40 Q-60 -110 30 -110 L430 -110 Q520 -100 540 -60 Q520 -20 430 -20 L-30 -20 Q-60 -20 -60 -40Z" fill="#FFF8EB"/>
+     <path d="M-60 -60 H520" stroke="#E8B65C" stroke-width="12"/>
+     <path d="M180 -60 L320 30 L360 30 L280 -60Z" fill="#d9d3c4"/>
+     <g fill="#7C9DA5"><circle cx="120" cy="-80" r="10"/><circle cx="160" cy="-80" r="10"/><circle cx="200" cy="-80" r="10"/><circle cx="240" cy="-80" r="10"/><circle cx="280" cy="-80" r="10"/><circle cx="320" cy="-80" r="10"/><circle cx="360" cy="-80" r="10"/></g>
+     <path d="M470 -96 Q510 -90 524 -66 L470 -66Z" fill="#243139"/>
+     <circle cx="20" cy="0" r="18" fill="#243139"/><circle cx="420" cy="0" r="18" fill="#243139"/></g>
+     <text id="pBn" x="240" y="-130" text-anchor="middle" font-family="Space Mono" font-weight="700" font-size="30" fill="#1c1b18">PEGASUS</text></g>
+   <g id="pA"><g class="body" filter="url(#ps)">
+     <path d="M-30 -40 L-10 -150 L50 -150 L80 -60 Z" fill="#C56B50"/>
+     <path d="M-60 -40 Q-60 -110 30 -110 L430 -110 Q520 -100 540 -60 Q520 -20 430 -20 L-30 -20 Q-60 -20 -60 -40Z" fill="#FFF8EB"/>
+     <path d="M-60 -60 H520" stroke="#C56B50" stroke-width="12"/>
+     <path d="M180 -60 L320 30 L360 30 L280 -60Z" fill="#d9d3c4"/>
+     <g fill="#7C9DA5"><circle cx="120" cy="-80" r="10"/><circle cx="160" cy="-80" r="10"/><circle cx="200" cy="-80" r="10"/><circle cx="240" cy="-80" r="10"/><circle cx="280" cy="-80" r="10"/><circle cx="320" cy="-80" r="10"/><circle cx="360" cy="-80" r="10"/></g>
+     <path d="M470 -96 Q510 -90 524 -66 L470 -66Z" fill="#243139"/>
+     <circle cx="20" cy="0" r="18" fill="#243139"/><circle cx="420" cy="0" r="18" fill="#243139"/></g>
+     <text x="240" y="-130" text-anchor="middle" font-family="Space Mono" font-weight="700" font-size="30" fill="#1c1b18">ATLASJET</text></g>
+   <!-- warning light + medal -->
+   <g id="warn"><path d="M-60 40 L0 -64 L60 40Z" fill="#ff5a1f" stroke="#1c1b18" stroke-width="8" stroke-linejoin="round"/><text y="26" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="70" fill="#FFF8EB">!</text></g>
+   <g id="medal" filter="url(#ps)"><path d="M-40 -150 L-10 -40 L10 -40 L40 -150Z" fill="#7C9DA5"/><circle r="70" fill="#d9d3c4" stroke="#8c8880" stroke-width="8"/><text y="26" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="80" fill="#1c1b18">2.</text></g>
+   <!-- cabin seats -->
+   <g id="cabin" filter="url(#ps)">
+     <g transform="translate(180 1200)"><path d="M0 0 L20 -380 L90 -380 L80 -120 L240 -120 L240 0Z" fill="#243139"/><rect x="-10" y="-20" width="260" height="40" rx="10" fill="#7C9DA5"/></g>
+     <g transform="translate(560 1200)"><path d="M0 0 L20 -380 L90 -380 L80 -120 L240 -120 L240 0Z" fill="#243139"/><rect x="-10" y="-20" width="260" height="40" rx="10" fill="#7C9DA5"/></g>
+   </g>
+   <path id="htape" d="M270 900 H640" stroke="#E8B65C" stroke-width="44" fill="none"/>
+   <path id="hline" d="M270 960 H640" stroke="#1c1b18" stroke-width="10" stroke-linecap="round" fill="none"/><text id="hnum" x="455" y="860" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="80" fill="#ff5a1f"></text>
+   <!-- newspapers -->
+   <g id="papers"></g>
+   <!-- crowd with tea -->
+   <g id="crowd"></g>
+   <!-- calendar -->
+   <g id="cal" filter="url(#ps)"><rect x="-150" y="-170" width="300" height="320" rx="16" fill="#FFF8EB"/><rect x="-150" y="-170" width="300" height="80" rx="16" fill="#ff5a1f"/>
+     <text id="calY" y="60" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="110" fill="#1c1b18">2005</text></g>
+  </svg>
+  <div id="lab" class="abs" style="left:0;right:0;top:250px;text-align:center"></div>
+  <div id="tA" class="abs gk" style="left:50px;right:50px;top:300px;font-size:76px;text-align:center"></div>
+ </div>
+ <!-- HOOK layer (page coords; drawn above receipt so it can fill the frame) -->
+ <div id="hook" class="abs gk" style="left:90px;top:300px;width:900px"><div class="hw" style="font-size:200px">Bizimki</div><div class="hw o" style="font-size:250px">77 cm.</div></div>
+ <svg id="tapeL" width="1080" height="1920" viewBox="0 0 1080 1920">
+   <defs><filter id="ps2" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="6" dy="10" stdDeviation="6" flood-color="#243139" flood-opacity=".3"/></filter></defs>
+   <g id="tapeG" filter="url(#ps2)">
+     <path id="tpY" fill="none" stroke="#E8B65C" stroke-width="74" stroke-linecap="butt"/>
+     <path id="tpE" fill="none" stroke="#1c1b18" stroke-width="5"/>
+     <path id="tpT" fill="none" stroke="#1c1b18" stroke-width="22" stroke-dasharray="4 14"/>
+     <path id="tpH" fill="none" stroke="#8c8880" stroke-width="20" stroke-linecap="round"/>
+     <g id="tcase"><rect x="-120" y="-110" width="240" height="220" rx="44" fill="#ff5a1f" stroke="#1c1b18" stroke-width="7"/><circle r="62" fill="#d9d3c4" stroke="#1c1b18" stroke-width="7"/><circle r="15" fill="#1c1b18"/></g>
+   </g>
+   <text id="tapeN" font-family="Space Grotesk" font-weight="700" font-size="72" fill="#ff5a1f" text-anchor="middle"></text>
+   <g id="spark"><path d="M0 -40 V-18 M0 18 V40 M-40 0 H-18 M18 0 H40 M-28 -28 L-14 -14 M14 14 L28 28 M-28 28 L-14 14 M14 -14 L28 -28" stroke="#ff5a1f" stroke-width="7" stroke-linecap="round"/></g>
+ </svg>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)), p=(t,a,d)=>cl((t-a)/d);
+const io=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2, oc=x=>1-Math.pow(1-x,3);
+const ob=x=>{const c1=1.7,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+const L=(a,b,k)=>a+(b-a)*k;
+const END=34.75, T=35.2;
+const st=t=>Math.floor(t*12)/12;
+function setG(id,tr,o=1){const g=$(id);g.setAttribute('transform',tr);g.style.opacity=o}
+function drawP(el,k){el.setAttribute('pathLength',1);el.style.strokeDasharray='1 1';el.style.strokeDashoffset=1-k;el.style.opacity=k>0?1:0}
+// newspapers + crowd
+const NP=[['BİZİMKİ 77 CM!',-8],['"TAM ZAMANINDA KALKIYOR"',6],['KALKMIYORSA UYARIRIZ',-4]];
+$('papers').innerHTML=NP.map((n,i)=>`<g class="np" filter="url(#ps)"><rect x="-300" y="-110" width="600" height="220" fill="#FFF8EB" stroke="#d9d3c4" stroke-width="3"/><rect x="-270" y="-90" width="540" height="14" fill="#1c1b18"/><text y="0" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="${i==1?40:50}" fill="#1c1b18">${n[0]}</text><path d="M-270 40 H270 M-270 64 H200 M-270 88 H240" stroke="#b9b4a8" stroke-width="8"/></g>`).join('');
+$('crowd').innerHTML=[0,1,2,3,4].map(i=>`<g class="cw" filter="url(#ps)"><path d="M-60 0 Q-60 -90 0 -90 Q60 -90 60 0Z" fill="${['#7C9DA5','#8A9B7C','#243139','#C56B50','#7C9DA5'][i]}"/><circle cy="-130" r="44" fill="#e9c9a6"/><circle cx="-14" cy="-134" r="5" fill="#243139"/><circle cx="14" cy="-134" r="5" fill="#243139"/><g transform="translate(46 -40)"><path d="M-14 -40 L14 -40 L10 0 L-10 0Z" fill="#FFF8EB" stroke="#1c1b18" stroke-width="4"/><path d="M-12 -28 L12 -28 L10 0 L-10 0Z" fill="#C56B50"/></g></g>`).join('');
+window.seek=function(t){
+  // ---------- camera
+  const pull=io(p(t,9.5,.6)), push=io(p(t,END-.45,.45));
+  let s=L(1.18,1,pull); s=L(s,1.18,push);
+  $('cam').style.transform=`scale(${s})`;
+  $('furn').style.opacity=pull*(1-push); $('prog').style.width=(cl(t/END)*100)+'%';
+  // ---------- HOOK text (frame 0 complete)
+  const hk=$('hook'); const hookOn=t<2.0||t>=END-.45; hk.style.display=hookOn?'block':'none';
+  hk.querySelectorAll('.hw').forEach((w,i)=>{let y=0,sc=1,o=1;
+    if(t<2.0){y=-6*Math.sin(t*3)*(i?1:-1);const c=io(p(t,1.6+i*.05,.3));sc=1-c}
+    else{const k=oc(p(t,END-.45+i*.08,.3));y=(1-k)*80;o=cl(p(t,END-.45+i*.08,.1)*2)}
+    w.style.transform=`translateY(${y}px) scaleY(${sc})`;w.style.transformOrigin='0 85%';w.style.opacity=o});
+  // ---------- TAPE MEASURE (hook object; the ima lives here)
+  // pivot = case centre (page coords). angle 0 = horizontal to the right, -90 = straight up.
+  const PX=300, PY=1380, PXcm=8.0;
+  let cm=24, ang=0, sag=0;
+  if(t<1.9){cm=L(24,77,oc(p(t,0,1.45)))}                                   // Atlasjet: 77, horizontal (koltuk arası)
+  else if(t<4.5){cm=L(77,52,io(p(t,1.95,.5)))}                             // Pegasus: "77 değil..." shorter
+  else if(t<6.3){cm=52; ang=-88*io(p(t,4.6,1.2))}                          // "...ama tam zamanında kalkıyor" -> rises
+  else if(t<9.5){cm=77; const a1=Math.sin(Math.PI*p(t,6.6,.6)),a2=Math.sin(Math.PI*p(t,7.4,.6));
+     ang=L(-88,0,io(p(t,6.3,.35)))-35*a1-48*a2; sag=t>8.0?1:Math.max(0,(t-6.6)/1.4)}   // Atlasjet: tries, droops
+  else if(t>=31.7){cm=L(0,24,oc(p(t,31.7,END-31.7)))}
+  else cm=0;
+  if(t>=6.3&&t<6.65) cm=L(52,77,io(p(t,6.3,.35)));
+  const showTape=t<9.9||t>=31.7;
+  $('tapeL').style.display=showTape?'block':'none';
+  const len=cm*PXcm, r=ang*Math.PI/180;
+  const ex=PX+Math.cos(r)*len, ey=PY+Math.sin(r)*len;
+  // droop: control point pulls tip down
+  const droopY=sag*Math.min(len*.4,190)*(t>8.0?1+0.1*Math.sin((t-8)*6):1);
+  const mx=PX+Math.cos(r)*len*.55, my=PY+Math.sin(r)*len*.55;
+  const tipX=ex, tipY=ey+droopY*1.1;
+  const d=`M${PX} ${PY} Q${mx} ${my} ${tipX} ${tipY}`;
+  ['tpY','tpE','tpT'].forEach(id=>$(id).setAttribute('d',d));
+  $('tpE').setAttribute('transform','translate(0 -37)');
+  $('tpH').setAttribute('d',`M${tipX} ${tipY-40} L${tipX} ${tipY+40}`); $('tpH').setAttribute('transform',`rotate(${ang+ (sag? 40*sag:0)} ${tipX} ${tipY})`);
+  $('tcase').setAttribute('transform',`translate(${PX} ${PY}) rotate(${t<9.5?Math.sin(t*20)*(t<1.45?1.2:0):0})`);
+  $('tapeN').setAttribute('x',tipX+(ang>-45?0:90)); $('tapeN').setAttribute('y',tipY-(ang>-45?70:0));
+  $('tapeN').textContent=(t>0.2&&t<9.5&&cm>1)?Math.round(cm):'';
+  const lock=t>1.45&&t<1.95; $('spark').setAttribute('transform',`translate(${tipX} ${tipY}) scale(${lock?ob(p(t,1.45,.3)):0})`);
+  const tout=t<31.7?io(p(t,9.45,.4)):0, tin=t>=31.7?1-oc(p(t,31.7,.5)):0;
+  $('tapeG').setAttribute('transform',`translate(0 ${tout*700+tin*700})`);
+  $('tapeN').style.opacity=1-tout;
+  // ---------- planes & clock (1.9 – 9.5)
+  const showPl=t>1.9&&t<9.9;
+  $('runway').style.display=(t>9.55&&t<12.5)||(t>18.0&&t<22.9)?'block':'none';
+  $('dash').setAttribute('stroke-dashoffset',-t*120);
+  // Pegasus plane: enters 1.95, nose lifts on "kalkıyor" (4.6–6.0) exactly with the clock
+  const bIn=oc(p(st(t),1.95,.6));
+  const lift=io(p(t,4.6,1.3)); const takeoff=io(p(t,5.6,.9));
+  let bTr=`translate(${L(-700,110,bIn)+takeoff*300} ${1180-takeoff*520}) rotate(${-14*lift}) scale(1.05)`;
+  // Atlasjet plane: 6.38 – 9.4, tries to lift, droops twice
+  const aIn=oc(p(st(t),6.25,.5));
+  const tries=(x)=>{const a=p(t,6.7,.55),b=p(t,7.4,.55);return -10*Math.sin(Math.PI*a)-14*Math.sin(Math.PI*b)};
+  const droop=t>8.0?3*Math.sin((t-8)*6)*Math.exp(-(t-8)*2):0;
+  let aTr=`translate(${L(1100,110,aIn)} 1180) rotate(${t>6.6?tries()+droop+4*p(t,8.0,.3):0}) scale(1.05)`;
+  // late scene 18–22.6: both planes face each other
+  const late=t>18.0&&t<22.9; const lk=oc(p(st(t),18.1,.5)), lout=io(p(t,22.5,.35));
+  if(late){bTr=`translate(${L(-600,40,lk)-lout*900} 1180) scale(.62)`; aTr=`translate(${L(1500,900,lk)+lout*900} 1180) scale(-.62 .62)`}
+  const park=t>9.55&&t<12.5; if(park){const pk=oc(p(st(t),9.6,.5)),po=io(p(t,12.2,.3));bTr=`translate(${L(-500,90,pk)} ${1180-po*900}) scale(.6)`;aTr=`translate(${L(1400,530,pk)} ${1180-po*900}) scale(.6)`}
+  $('pB').setAttribute('transform',bTr); $('pB').style.display=late||park?'block':'none';
+  $('pA').setAttribute('transform',aTr); $('pA').style.display=late||park?'block':'none';
+  $('pA').style.opacity=1;
+  // clock
+  const cOn=t>2.1&&t<6.4; const ck=ob(p(t,2.1,.45));
+  setG('clock',`translate(700 600) scale(${cOn?ck*(1-io(p(t,6.1,.3))):0})`);
+  const ca=L(-60,0,io(p(t,3.0,1.8)))*Math.PI/180*6; // minute hand reaches 12 exactly at 4.8
+  $('cmh').setAttribute('d',`M0 0 L${Math.sin(ca)*95} ${-Math.cos(ca)*95}`);
+  $('chh').setAttribute('d',`M0 0 L${Math.sin(Math.PI*1.5)*60} ${-Math.cos(Math.PI*1.5)*60}`);
+  // warning light + medal
+  const wOn=t>6.7&&t<9.9; setG('warn',`translate(700 640) scale(${wOn?ob(p(t,6.7,.3)):0})`, (Math.floor(t*4)%2?1:.55)*(1-p(t,9.5,.35)));
+  const mOn=t>8.1&&t<9.9; const md=oc(p(t,8.1,.5));
+  setG('medal',`translate(420 ${L(-200,760,md)}) rotate(${(1-md)*30+6*Math.sin((t-8.1)*8)*Math.exp(-(t-8.1)*3)})`, mOn?1-p(t,9.5,.35):0);
+  // ---------- cabin seats + horizontal tape (12.5 – 18.1)
+  const cbOn=t>12.4&&t<18.1; $('cabin').style.display=cbOn?'block':'none';
+  const cbk=oc(p(st(t),12.5,.6)), cbo=io(p(t,17.8,.35));
+  setG('cabin',`translate(0 ${(1-cbk)*700+cbo*700})`);
+  const hk2=io(p(t,13.2,1.6)); const hx=L(270,640,hk2);
+  $('htape').setAttribute('d',`M270 900 H${hx}`); $('htape').style.opacity=cbOn&&t>13.2?1-cbo:0;
+  $('hline').setAttribute('d',`M270 960 H${hx}`); $('hline').style.opacity=$('htape').style.opacity; $('hnum').textContent=Math.round(77*hk2)+' cm'; $('hnum').style.opacity=$('htape').style.opacity;
+  // seats wobble on "anlamadı"
+  if(t>16.3&&t<17.8){$('cabin').setAttribute('transform',`translate(${Math.sin(t*30)*6} ${(1-cbk)*700})`)}
+  // ---------- newspapers (19.5 – 28.6) and crowd (23 – 28.6)
+  const nps=document.querySelectorAll('#papers .np');
+  nps.forEach((n,i)=>{const a=[18.3,21.3,23.0][i];const k=oc(p(st(t),a,.4));const out=io(p(t,28.4,.4));
+    n.setAttribute('transform',`translate(${470+(i-1)*20} ${L(-300,560+i*70,k)+out*1300}) rotate(${NP[i][1]})`); n.style.opacity=t>a?1:0;});
+  $('papers').style.display=t>18.2&&t<28.9?'block':'none';
+  const cws=document.querySelectorAll('#crowd .cw');
+  cws.forEach((c,i)=>{const k=oc(p(st(t),23.0+i*.12,.45));const out=io(p(t,28.4,.4));const bob=Math.sin(t*5+i)*4;
+    c.setAttribute('transform',`translate(${110+i*180} ${L(1800,1330,k)+out*500+bob})`)});
+  $('crowd').style.display=t>22.9&&t<28.9?'block':'none';
+  // ---------- calendar 28.8 – 31.4
+  const calOn=t>28.7&&t<31.6; const ck2=ob(p(t,28.8,.4));
+  setG('cal',`translate(470 760) scale(${calOn?ck2*(1-io(p(t,31.3,.3))):0})`);
+  $('calY').textContent=String(Math.round(L(2005,2026,io(p(t,29.0,1.6)))));
+  // ---------- labels + kinetic text inside receipt
+  const lab=$('lab'), tA=$('tA');
+  const labs=[[0.0,1.9,'ATLASJET','#C56B50'],[1.9,6.3,'PEGASUS','#E8B65C'],[6.38,9.5,'ATLASJET','#C56B50']];
+  let lb='';for(const [a,b,x,c] of labs) if(t>=a&&t<b) lb=`<span class="tag" style="background:${c};color:#1c1b18">${x}</span>`;
+  if(lab.innerHTML!==lb) lab.innerHTML=lb;
+  const lines=[[1.95,4.2,'"Bizimki 77 cm <span class="o">değil...</span>'],[4.2,6.3,'...ama tam zamanında <span class="o">kalkıyor."</span>'],
+    [6.38,8.05,'"Kalkmıyorsa sizi <span class="o">uyarırız,</span>'],[8.05,9.5,'çünkü biz <span class="o">ikinciyiz."</span>'],
+    [9.63,12.4,'Bu bir dedikodu değil.<br><span class="o">Reklam.</span>'],[12.58,16.2,'77 cm = <span class="o">koltuk arası.</span>'],
+    [16.27,17.95,'Türkiye koltuğu <span class="o">anlamadı.</span>'],[18.16,21.15,'Ali Sabancı <span class="o">cevabı yapıştırdı.</span>'],
+    [21.25,22.75,'Atlasjet <span class="o">boş durmadı.</span>'],[22.87,26.6,'Gazeteler yazdı,<br>millet <span class="o">konuştu.</span>'],
+    [26.7,28.6,'<span class="o">Bedava</span> reklam.'],[28.82,31.5,'Yıllar geçti...'],[31.66,33.6,'Herkes o lafı <span class="o">hatırlıyor:</span>'],[33.6,END-.45,'Bizimki...']];
+  let txt='',ts0=0;for(const [a,b,x] of lines) if(t>=a&&t<b){txt=x;ts0=a}
+  if(tA.dataset.t!==txt){tA.innerHTML=txt;tA.dataset.t=txt}
+  const k2=ob(p(t,ts0,.4)); tA.style.opacity=txt?cl(p(t,ts0,.1)*2):0; tA.style.transform=`translateY(${(1-k2)*40}px) scale(${t>26.7&&t<28.6?1.25:1})`;
+  tA.style.top=(t>12.4&&t<18.1)?'250px':(t>18.1&&t<22.9)?'260px':'300px';
+  lab.style.top=t<1.9?'700px':'220px';
+  // shake on hits
+  const sh=[[0.02],[1.45],[6.7],[8.6],[26.7]].some(([a])=>t>a&&t<a+.22)?Math.sin(t*90)*7:0;
+  $('rc').style.transform=`translateX(${sh}px)`;
+};
+</script></body></html>

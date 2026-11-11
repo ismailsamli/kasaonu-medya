@@ -1,0 +1,172 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../fonts/space-grotesk/700.css"><link rel="stylesheet" href="../../fonts/space-mono/700.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#201f1b}
+#cam{position:absolute;left:0;top:0;width:1080px;height:1920px;transform-origin:540px 900px}
+#rc{position:absolute;left:70px;top:150px;width:940px;height:1620px;background:#f3efe4;filter:drop-shadow(0 14px 18px rgba(0,0,0,.45))}
+.mono{font-family:"Space Mono";font-weight:700}
+.gk{font-family:"Space Grotesk";font-weight:700;color:#1c1b18;letter-spacing:-3px;line-height:.95}
+.o{color:#ff5a1f}
+.abs{position:absolute}
+svg{position:absolute;left:0;top:0;overflow:visible}
+</style></head><body>
+<div id="cam">
+ <div id="rc">
+  <div id="furn">
+   <div class="abs mono" style="left:0;right:0;top:40px;text-align:center;font-size:30px;letter-spacing:8px;color:#1c1b18">✻ KASA ÖNÜ ✻</div>
+   <div class="abs" style="left:60px;right:60px;top:96px;border-top:4px dashed #b9b4a8"></div>
+   <div class="abs mono" style="left:60px;top:116px;font-size:26px;color:#1c1b18">BOY MESELESİ · 01</div>
+   <div class="abs mono" style="right:60px;top:116px;font-size:26px;color:#8c8880">FİŞ 0003</div>
+   <div class="abs" style="left:60px;right:60px;top:160px;height:6px;background:#e3ded2"><div id="prog" style="height:6px;background:#ff5a1f;width:0"></div></div>
+   <div class="abs mono" style="left:60px;right:60px;bottom:50px;font-size:24px;color:#8c8880;display:flex"><span>SANDVİÇ</span><span style="flex:1;border-bottom:3px dotted #b9b4a8;margin:0 14px 8px"></span><span>30 CM?</span></div>
+  </div>
+  <svg id="sv" width="940" height="1620" viewBox="0 0 940 1620">
+   <defs><filter id="ps" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="6" dy="9" stdDeviation="5" flood-color="#243139" flood-opacity=".28"/></filter></defs>
+   <!-- sandwich scene -->
+   <g id="sand" filter="url(#ps)">
+     <path d="M90 760 Q90 690 170 680 L770 676 Q850 684 850 752 L850 770 L90 774Z" fill="#E8B65C"/>
+     <path d="M140 700 q20 -8 40 0 M260 696 q20 -8 40 0 M380 694 q20 -8 40 0 M500 694 q20 -8 40 0 M620 696 q20 -8 40 0 M740 698 q20 -8 40 0" stroke="#c99a45" stroke-width="7" fill="none" stroke-linecap="round"/>
+     <path d="M84 770 Q120 800 160 774 Q200 806 240 774 Q280 806 320 774 Q360 806 400 774 Q440 806 480 774 Q520 806 560 774 Q600 806 640 774 Q680 806 720 774 Q760 806 800 774 Q830 800 856 770 L856 790 L84 792Z" fill="#8A9B7C"/>
+     <path d="M100 790 H840 V812 H100Z" fill="#C56B50"/><path d="M110 812 L830 812 L820 834 L120 834Z" fill="#f2c94c"/>
+     <path d="M90 834 L850 834 Q850 880 790 884 L150 886 Q90 882 90 834Z" fill="#E8B65C"/>
+   </g>
+   <!-- ruler -->
+   <g id="ruler" filter="url(#ps)"><rect x="60" y="930" width="820" height="110" fill="#FFF8EB"/>
+     <g id="ticks"></g></g>
+   <path id="meas" d="M90 1070 H850" stroke="#1c1b18" stroke-width="12" stroke-linecap="round" fill="none"/>
+   <circle id="tip" r="15" fill="#ff5a1f"/>
+   <!-- 30 CM sticker -->
+   <g id="stk"><circle r="110" fill="#ff5a1f"/><circle r="94" fill="none" stroke="#FFF8EB" stroke-width="5" stroke-dasharray="10 8"/>
+     <text y="-6" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="74" fill="#FFF8EB">30</text><text y="44" text-anchor="middle" font-family="Space Mono" font-weight="700" font-size="34" fill="#FFF8EB">CM</text></g>
+   <!-- phone frame -->
+   <g id="phone" filter="url(#ps)"><rect x="-230" y="-330" width="460" height="660" rx="50" fill="none" stroke="#243139" stroke-width="30"/>
+     <rect x="-60" y="-312" width="120" height="16" rx="8" fill="#243139"/>
+     <g id="shr" transform="translate(150 260)"><circle r="44" fill="#ff5a1f"/><path d="M-16 10 L16 -14 M16 -14 L2 -14 M16 -14 L16 0" stroke="#FFF8EB" stroke-width="8" stroke-linecap="round" fill="none"/></g></g>
+   <rect id="flash" x="0" y="0" width="940" height="1620" fill="#ffffff" opacity="0"/>
+   <!-- gavel -->
+   <g id="court"><g filter="url(#ps)"><path d="M220 1180 H720 V1210 H220Z" fill="#243139"/><path d="M300 1210 H640 V1240 H300Z" fill="#7C9DA5"/></g>
+     <g id="gavel" filter="url(#ps)"><rect x="-30" y="-150" width="60" height="300" rx="10" fill="#C56B50"/><rect x="-110" y="-200" width="220" height="110" rx="26" fill="#8c4a33"/></g></g>
+   <!-- oven + breads -->
+   <g id="oven"><g filter="url(#ps)"><rect x="110" y="560" width="720" height="560" rx="30" fill="#243139"/><rect x="160" y="620" width="620" height="440" rx="16" fill="#C56B50" opacity=".85"/>
+     <rect x="160" y="620" width="620" height="440" rx="16" fill="none" stroke="#FFF8EB" stroke-width="6" opacity=".4"/></g>
+     <g id="breads" filter="url(#ps)">
+       <path class="br" d="M0 0 Q0 -40 40 -44 L0 -44 Q-40 -40 -40 0 Z" fill="#E8B65C"/>
+       <path class="br" d="M0 0 Q0 -40 40 -44 L0 -44 Q-40 -40 -40 0 Z" fill="#E8B65C"/>
+       <path class="br" d="M0 0 Q0 -40 40 -44 L0 -44 Q-40 -40 -40 0 Z" fill="#E8B65C"/></g></g>
+   <path id="bars" d="M140 1240" stroke="#1c1b18" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+   <g id="blab"></g>
+   <!-- hands grabbing -->
+   <g id="hands" filter="url(#ps)"><g class="hd"><rect x="-26" y="0" width="52" height="300" fill="#7C9DA5"/><ellipse cy="0" rx="46" ry="38" fill="#e9c9a6"/></g>
+     <g class="hd"><rect x="-26" y="0" width="52" height="300" fill="#8A9B7C"/><ellipse cy="0" rx="46" ry="38" fill="#e9c9a6"/></g>
+     <g class="hd"><rect x="-26" y="0" width="52" height="300" fill="#243139"/><ellipse cy="0" rx="46" ry="38" fill="#e9c9a6"/></g></g>
+  </svg>
+  <div id="tA" class="abs gk" style="left:60px;right:60px;top:220px;font-size:66px;text-align:center"></div>
+  <div id="num" class="abs gk" style="left:40px;right:40px;top:330px;font-size:170px;text-align:center"></div>
+ </div>
+ <div id="hook" class="abs gk" style="left:100px;top:420px;width:900px">
+  <div class="hw" style="font-size:250px">30 cm</div><div class="hw" style="font-size:190px">dedi.</div><div class="hw o" style="font-size:250px">28</div><div class="hw o" style="font-size:190px">çıktı.</div>
+ </div>
+ <svg id="hruler" width="1080" height="1920" viewBox="0 0 1080 1920"><g id="hrg"><rect x="-20" y="1460" width="1200" height="150" fill="#FFF8EB" stroke="#1c1b18" stroke-width="6"/><g id="hticks"></g><path id="hmark" stroke="#ff5a1f" stroke-width="14" stroke-linecap="round"/></g></svg>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)), p=(t,a,d)=>cl((t-a)/d);
+const io=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2, oc=x=>1-Math.pow(1-x,3);
+const ob=x=>{const c1=1.7,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+const L=(a,b,k)=>a+(b-a)*k;
+const END=29.2, T=29.65;
+const st=t=>Math.floor(t*12)/12;
+// ruler ticks (receipt ruler: 0..30 cm over 760px from x=90)
+const cmX=c=>90+c*(760/30);
+let tk='';for(let c=0;c<=30;c++){const x=cmX(c);tk+=`<path d="M${x} 930 V${c%5?962:985}" stroke="#1c1b18" stroke-width="${c%5?3:5}"/>`+(c%10===0?`<text x="${x}" y="1020" text-anchor="middle" font-family="Space Mono" font-weight="700" font-size="26" fill="#1c1b18">${c}</text>`:'')}
+$('ticks').innerHTML=tk;
+// hook ruler ticks (page coords)
+let ht='';for(let c=0;c<=34;c++){const x=40+c*30;ht+=`<path d="M${x} 1460 V${c%5?1500:1530}" stroke="#1c1b18" stroke-width="${c%5?4:7}"/>`+(c%10===0?`<text x="${x}" y="1580" text-anchor="middle" font-family="Space Mono" font-weight="700" font-size="34" fill="#1c1b18">${c}</text>`:'')}
+$('hticks').innerHTML=ht;
+function drawP(el,k){el.setAttribute('pathLength',1);el.style.strokeDasharray='1 1';el.style.strokeDashoffset=1-k;el.style.opacity=k>0?1:0}
+function setG(id,tr,o=1){const g=$(id);g.setAttribute('transform',tr);g.style.opacity=o}
+window.seek=function(t){
+  // camera
+  const pull=io(p(t,3.1,.5)), push=io(p(t,END-.5,.5));
+  let s=L(1.18,1,pull); s=L(s,1.18,push);
+  $('cam').style.transform=`scale(${s})`;
+  $('furn').style.opacity=pull*(1-push); $('prog').style.width=(cl(t/END)*100)+'%';
+  // ---------- HOOK (frame 0 complete, ruler moving from frame 0)
+  const hookOn=t<3.6||t>=END-.5; $('hook').style.display=hookOn?'block':'none'; $('hruler').style.display=hookOn?'block':'none';
+  const hws=$('hook').querySelectorAll('.hw');
+  hws.forEach((w,i)=>{let y=0,sc=1,o=1;
+    if(t<3.6){y=8*Math.sin(t*3+i*.8)*(i%2?1:-1)*Math.min(1,t*2);const c=io(p(t,3.0+i*.06,.35));sc=1-c;}
+    else{const k=oc(p(t,END-.5+i*.06,.35));y=(1-k)*90;o=cl(p(t,END-.5+i*.06,.1)*2)}
+    w.style.transform=`translateY(${y}px) scaleY(${sc})`;w.style.transformOrigin='0 85%';w.style.opacity=o});
+  // hook ruler: slides continuously (moving object at frame 0), mark sweeps to 28 on "ölçtüm"
+  const slide=t<3.6?(t*40)%30:0, hout=io(p(t,3.0,.4)), hin=1-io(p(t,END-.5,.5));
+  const hoff=t<3.6? hout*400 : (END-t>0?hin*400:0);
+  $('hrg').setAttribute('transform',`translate(${-slide} ${hoff}) rotate(-2 540 1530)`);
+  const mk=io(p(t,1.3,1.4)); const mx=40+L(0,28,mk)*30+slide;
+  $('hmark').setAttribute('d',`M40 1445 H${t<1.3?40:mx}`); $('hmark').style.opacity=t>1.3&&t<3.6?1:0;
+  // ---------- sandwich + ruler scene (3.3 – 17.9 and 24.3 – 28)
+  const sOn=(t>3.2&&t<18.1)||(t>24.2&&t<END-.3);
+  const sIn=t<18.1?oc(p(st(t),3.25,.6)):oc(p(st(t),24.3,.5));
+  const sOut=t<18.1?io(p(t,17.8,.35)):io(p(t,END-.6,.35));
+  $('sand').style.display=sOn?'block':'none';
+  setG('sand',`translate(${(1-sIn)*1000 - sOut*1000} 0)`);
+  $('ruler').style.display=(t>9.6&&t<18.1)?'block':'none';
+  setG('ruler',`translate(0 ${(1-oc(p(st(t),9.9,.5)))*700 + io(p(t,17.8,.35))*700})`);
+  // ink line measures the sandwich: 9.9-14.4, stops at 28cm
+  const m=io(p(t,10.4,3.2)); const ml=$('meas'); const lenK=L(0,28/30,m);
+  ml.setAttribute('d',`M90 1070 H${cmX(28*m)}`); ml.style.opacity=(t>10.4&&t<18.0)?1:0;
+  $('tip').setAttribute('cx',cmX(28*m));$('tip').setAttribute('cy',1070);$('tip').style.opacity=ml.style.opacity;
+  // sticker 30 CM
+  const stOn=(t>6.5&&t<13.4)||(t>24.4&&t<END-.3);
+  const stk=t<20?ob(p(t,6.6,.4)):ob(p(t,24.5,.35));
+  const fall=t<20?io(p(t,13.3,.5)):0;
+  setG('stk',`translate(${780} ${640+fall*900}) rotate(${-12+fall*80}) scale(${(stOn||(fall>0&&fall<1))?Math.max(stk,0.001)*(t>24?1.25:1):0})`);
+  // phone frame (photo shared) 12.0-14.6
+  const ph=ob(p(t,11.95,.45)), phOut=io(p(t,14.5,.4));
+  $('phone').style.display=(t>11.9&&t<14.95)?'block':'none';
+  setG('phone',`translate(470 830) scale(${L(1.6,1,ph)})`, cl(p(t,11.95,.15)*3)*(1-phOut));
+  $('flash').setAttribute('opacity',t>12.3&&t<12.6?(1-p(t,12.3,.3))*.85:0);
+  $('shr').setAttribute('transform',`translate(150 260) scale(${ob(p(t,13.4,.35))})`);
+  // court: gavel 14.85-17.9
+  const cOn=t>14.7&&t<18.1; $('court').style.display=cOn?'block':'none';
+  const cin=oc(p(st(t),14.8,.4));
+  const swing=t<15.2?-50*(1-p(t,14.9,.3)):t<15.5?0:0;
+  const gz=t>15.2&&t<15.35?1:0;
+  setG('court',`translate(0 ${(1-cin)*800 + io(p(t,17.8,.35))*800})`);
+  $('gavel').setAttribute('transform',`translate(560 1020) rotate(${t<15.2?L(-55,10,io(p(t,14.95,.25))):L(10,-25,oc(p(t,15.3,.6)))} 0 150)`);
+  // oven + breads 18.3-24.1
+  const oOn=t>18.15&&t<24.3; $('oven').style.display=oOn?'block':'none';
+  const oin=oc(p(st(t),18.25,.5)), oout=io(p(t,24.0,.35));
+  setG('oven',`translate(${(1-oin)*-1000 + oout*-1000} -120)`);
+  const rise=io(p(t,20.9,1.1)); const lens=[260,300,240];
+  document.querySelectorAll('#breads .br').forEach((b,i)=>{const w=L(150,lens[i],rise),h=L(30,70,rise),y=760+i*130;
+    b.setAttribute('d',`M${470-w} ${y} Q${470-w} ${y-h} ${470-w+60} ${y-h} L${470+w-60} ${y-h} Q${470+w} ${y-h} ${470+w} ${y} Z`)});
+  // bars (ink line measures each bread) 22.3-24.0, labels 28/30/29
+  const bk=io(p(t,22.35,1.4));
+  const bx=[[470-260,470+260,1170],[470-300,470+300,1225],[470-240,470+240,1280]];
+  let d='',lab='';bx.forEach(([a,b,y],i)=>{const e=cl(bk*3-i);if(e>0){d+=`M${a} ${y} H${L(a,b,io(e))} `;lab+=`<text x="${b+30}" y="${y+14}" font-family="Space Grotesk" font-weight="700" font-size="44" fill="${i===1?'#ff5a1f':'#1c1b18'}" opacity="${cl(e*2-1)}">${['28','30','29'][i]}</text>`}});
+  $('bars').setAttribute('d',d||'M0 0');$('bars').style.opacity=(t>22.3&&t<24.3)?1-io(p(t,24.0,.3)):0;
+  $('blab').innerHTML=(t>22.3&&t<24.3)?lab:'';$('blab').setAttribute('transform','translate(0 -120)');$('bars').setAttribute('transform','translate(0 -120)');
+  // hands grab sandwich 26.25-27.4
+  const hOn=t>26.1&&t<END-.3; $('hands').style.display=hOn?'block':'none';
+  document.querySelectorAll('#hands .hd').forEach((h,i)=>{const k=ob(p(st(t),26.3+i*.25,.45)), k2=io(p(t,27.45,.4));
+    h.setAttribute('transform',`translate(${250+i*220} ${L(1500,860,k)+k2*800}) rotate(${(i-1)*-10})`)});
+  // ---------- kinetic text inside receipt
+  const tA=$('tA'), num=$('num');
+  const lines=[[3.4,5.3,'Sandviçten <span class="o">bahsediyorum.</span>'],[5.3,9.6,'Meşhur <span class="o">30\'luk</span> sandviç.'],
+    [9.9,11.95,'Bir genç cetveli dayadı...'],[11.95,13.4,'...ve <span class="o">paylaştı.</span>'],[14.85,16.5,'Olay <span class="o">mahkemeye</span> gitti.'],
+    [16.7,18.1,'Mahkeme ne dedi?'],[18.3,20.75,'"Ekmek fırında <span class="o">farklı</span> kabarır,'],[20.75,22.2,'hep aynı boy olamaz."'],
+    [24.34,26.1,'Ama adı <span class="o">30 cm</span> olunca...'],[26.1,27.6,'kimse <span class="o">ölçmeden</span> alıyor.'],[27.6,END-.5,'Çünkü...']];
+  let txt='',ts0=0;for(const [a,b,x] of lines) if(t>=a&&t<b){txt=x;ts0=a}
+  if(tA.dataset.t!==txt){tA.innerHTML=txt;tA.dataset.t=txt}
+  const tk2=ob(p(t,ts0,.4));tA.style.opacity=txt?cl(p(t,ts0,.1)*2):0;tA.style.transform=`translateY(${(1-tk2)*40}px)`;
+  // big numbers
+  num.style.opacity=0;
+  if(t>=13.4&&t<14.85){num.style.opacity=1;num.style.color='#ff5a1f';num.style.fontSize='190px';num.style.top='300px';num.textContent=Math.round(L(30,28,io(p(t,13.4,.6))))+' cm';num.style.transform=`scale(${.7+.3*ob(p(t,13.4,.35))})`}
+  if(t>=22.34&&t<24.2){num.style.opacity=1;num.style.color='#1c1b18';num.style.fontSize='96px';num.style.top='200px';num.innerHTML='Boy her zaman<br><span class="o">tutmaz.</span>';num.style.transform=`scale(${.8+.2*ob(p(t,22.34,.35))})`;tA.style.opacity=0}
+  // shake on slams
+  const sh=[[0.05],[13.4],[15.25],[24.5]].some(([a])=>t>a&&t<a+.25)?Math.sin(t*90)*7:0;
+  $('rc').style.transform=`translateX(${sh}px)`;
+};
+</script></body></html>
