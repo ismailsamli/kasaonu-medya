@@ -64,6 +64,14 @@ VIDS = {
    'Paket aynı, tasarım aynı.','Çikolata sadece bir milim inceldi.','Takılan olmadı, ta ki biri mahkemeye taşıyana kadar.',
    'Bizde de görüldü: rafta altmış gram yazan çubuk kraker, paketin üstünde elli iki çıktı.',
    'Paketin önüne değil, arkasına bak.','Gramı orada yazar.','Ve hep aynı şeyi sorar:']),
+ 'tavuk01': ('v10_tavuk.py', ['q','start','bir','iki','uc','dort','ama','biri'], [
+   'Senin tavuğun kimin parasıyla yumurtluyor?','Bir baba dört oğluna yüzer lira verip gidin zengin olun demiş.',
+   'Birincisi bir tavuk almış: günde bir yumurta, yılda üç yüz altmış beş lira.',
+   'İkincisi tavuğu almamış, kiralamış: aynı parayla beş tavuk, yılda bin sekiz yüz.',
+   'Üçüncüsü yumurtaları önceden peşin satmış, o parayla yetmiş sekiz tavuk kiralamış.',
+   'Dördüncüsü kardeşlerinin parasını toplamış, üstüne krediyle yedi yüz tavuğa çıkmış: yılda iki yüz bin.',
+   'Ama bir salgın gelse: birincisi bir tavuk kaybeder, dördüncüsü her şeyini, kardeşlerininkini de.',
+   'Biri sana paranı ver, katlayayım derse tek şey sor:']),
 }
 
 
