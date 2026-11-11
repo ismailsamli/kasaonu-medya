@@ -1,0 +1,188 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../fonts/space-grotesk/700.css"><link rel="stylesheet" href="../../fonts/space-mono/700.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#201f1b}
+#cam{position:absolute;left:0;top:0;width:1080px;height:1920px;transform-origin:540px 960px}
+#rc{position:absolute;left:70px;top:150px;width:940px;height:1620px;background:#f3efe4;filter:drop-shadow(0 14px 18px rgba(0,0,0,.45))}
+.mono{font-family:"Space Mono";font-weight:700}
+.gk{font-family:"Space Grotesk";font-weight:700;color:#1c1b18;letter-spacing:-3px;line-height:.95}
+.o{color:#ff5a1f}
+.abs{position:absolute}
+svg{position:absolute;left:0;top:0;overflow:visible}
+</style></head><body>
+<div id="cam">
+ <div id="rc">
+  <div id="furn">
+   <div class="abs mono" style="left:0;right:0;top:40px;text-align:center;font-size:30px;letter-spacing:8px;color:#1c1b18">✻ KASA ÖNÜ ✻</div>
+   <div class="abs" style="left:60px;right:60px;top:96px;border-top:4px dashed #b9b4a8"></div>
+   <div class="abs mono" style="left:60px;top:116px;font-size:26px;color:#1c1b18">MARKET · 01</div>
+   <div class="abs mono" style="right:60px;top:116px;font-size:26px;color:#8c8880">FİŞ 0005</div>
+   <div class="abs" style="left:60px;right:60px;top:160px;height:6px;background:#e3ded2"><div id="prog" style="height:6px;background:#ff5a1f;width:0"></div></div>
+   <div class="abs mono" style="left:60px;right:60px;bottom:50px;font-size:24px;color:#8c8880;display:flex"><span>ALT RAF</span><span style="flex:1;border-bottom:3px dotted #b9b4a8;margin:0 14px 8px"></span><span>80 TL</span></div>
+  </div>
+  <svg id="sv" width="940" height="1620" viewBox="0 0 940 1620">
+   <defs><filter id="ps" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="6" dy="9" stdDeviation="5" flood-color="#243139" flood-opacity=".28"/></filter></defs>
+   <!-- floor -->
+   <path id="floor" d="M-40 1262 H980" stroke="#1c1b18" stroke-width="10" stroke-linecap="round"/>
+   <!-- shelf (paper) -->
+   <g id="shelf">
+     <g filter="url(#ps)">
+       <rect x="462" y="548" width="436" height="714" fill="#e6dfcd"/>
+       <rect x="450" y="540" width="16" height="722" fill="#243139"/><rect x="894" y="540" width="16" height="722" fill="#243139"/>
+       <g fill="#243139"><rect x="450" y="690" width="460" height="14"/><rect x="450" y="860" width="460" height="14"/><rect x="450" y="1030" width="460" height="14"/><rect x="450" y="1200" width="460" height="14"/></g>
+     </g>
+     <g id="sign" filter="url(#ps)"><path d="M440 474 L920 470 L916 542 L444 540Z" fill="#C56B50"/><text x="680" y="522" text-anchor="middle" font-family="Space Mono" font-weight="700" font-size="40" letter-spacing="10" fill="#FFF8EB">MARKET</text></g>
+     <g id="prods"></g>
+     <g id="bExp"></g>
+     <g id="spark"><path d="M0 -40 V-18 M0 18 V40 M-40 0 H-18 M18 0 H40 M-28 -28 L-14 -14 M14 14 L28 28 M-28 28 L-14 14 M14 -14 L28 -28" stroke="#ff5a1f" stroke-width="7" stroke-linecap="round"/></g>
+     <g id="coins"></g>
+     <g id="tag180" filter="url(#ps)"><rect x="-88" y="-32" width="176" height="64" fill="#FFF8EB" stroke="#1c1b18" stroke-width="4"/><text id="n180" y="15" text-anchor="middle" font-family="Space Mono" font-weight="700" font-size="42" fill="#1c1b18">180 TL</text></g>
+     <g id="tag80" filter="url(#ps)"><rect x="-88" y="-32" width="176" height="64" fill="#ff5a1f" stroke="#1c1b18" stroke-width="4"/><text id="n80" y="15" text-anchor="middle" font-family="Space Mono" font-weight="700" font-size="42" fill="#FFF8EB">80 TL</text></g>
+   </g>
+   <!-- figure (paper, side view, faces right) -->
+   <g id="fig">
+     <g filter="url(#ps)"><path id="legs" fill="#243139"/><path id="shoes" fill="#1c1b18"/></g>
+     <g id="up" filter="url(#ps)">
+       <path d="M-58 14 L-50 -196 Q-46 -214 -20 -214 L26 -214 Q52 -212 54 -190 L60 14Z" fill="#C56B50"/>
+       <rect x="-6" y="-232" width="30" height="30" fill="#e9c9a6"/>
+       <circle cx="10" cy="-272" r="58" fill="#e9c9a6"/>
+       <path d="M-50 -268 Q-52 -336 10 -334 Q52 -332 62 -300 L20 -300 Q-10 -300 -16 -262 Q-20 -236 -42 -232 Q-50 -250 -50 -268Z" fill="#243139"/>
+       <circle cx="36" cy="-272" r="6" fill="#243139"/>
+       <path d="M30 -244 Q40 -238 50 -246" stroke="#243139" stroke-width="4" fill="none" stroke-linecap="round"/>
+     </g>
+   </g>
+   <g id="bCheap"></g>
+   <g id="arm" filter="url(#ps)"><rect x="-22" y="-14" width="44" height="196" rx="20" fill="#a95a43"/><circle cx="0" cy="186" r="24" fill="#e9c9a6"/></g>
+   <!-- ink line -->
+   <path id="ln" stroke="#1c1b18" stroke-width="10" stroke-linecap="round" fill="none"/><circle id="dot" r="14" fill="#ff5a1f"/>
+   <text id="lnL" text-anchor="middle" font-family="Space Mono" font-weight="700" font-size="21" fill="#8c8880"></text>
+  </svg>
+  <div id="tA" class="abs gk" style="left:50px;right:50px;top:270px;font-size:84px;text-align:center"></div>
+ </div>
+ <div id="hook" class="abs gk" style="left:104px;top:290px;width:900px"><div class="hw" style="font-size:164px">Eğilmeden</div><div class="hw o" style="font-size:200px">olmuyor.</div></div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)), p=(t,a,d)=>cl((t-a)/d);
+const io=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2, oc=x=>1-Math.pow(1-x,3);
+const ob=x=>{const c1=1.7,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+const L=(a,b,k)=>a+(b-a)*k, st=t=>Math.floor(t*12)/12, R=Math.PI/180;
+// ---- BEAT TIMES (seconds). Retime here once the voice file arrives.
+const B={q:1.2, market:3.27, goz:5.68, para:8.47, ucuz:11.46, alt:13.25, kirec:15.32, t180:16.95, t80:18.35, yuz:19.88, kural:21.91};
+const END=23.9, HK=.45;
+window.V={sfx:[[0.02,'thud'],[B.market,'whoosh'],[B.goz+.2,'scratch'],[B.para+.6,'pop'],[B.para+.95,'pop'],[B.para+1.3,'pop'],[B.alt+.1,'scratch'],[B.t180,'drop'],[B.t80,'drop'],[B.yuz+.9,'thud'],[B.kural+.5,'whoosh']]};
+// ---- products
+const bottle=(c,lab)=>`<rect x="-34" y="-95" width="68" height="95" rx="10" fill="${c}"/><rect x="-14" y="-120" width="28" height="28" fill="${c}"/><rect x="-18" y="-132" width="36" height="16" rx="4" fill="#243139"/><rect x="-26" y="-70" width="52" height="40" fill="${lab}"/>`;
+const box=(c)=>`<path d="M-36 0 L-34 -112 L36 -110 L35 0Z" fill="${c}"/><rect x="-22" y="-84" width="44" height="34" fill="#FFF8EB"/>`;
+const jar=(c)=>`<rect x="-36" y="-88" width="72" height="88" rx="16" fill="${c}"/><rect x="-30" y="-104" width="60" height="20" rx="5" fill="#243139"/>`;
+const XS=[525,625,725,825], BY=[690,860,1030,1200];
+const rows=[[box('#E8B65C'),jar('#7C9DA5'),box('#8A9B7C'),box('#C56B50')],
+            [null,bottle('#243139','#E8B65C'),bottle('#C56B50','#FFF8EB'),bottle('#E8B65C','#243139')],
+            [jar('#8A9B7C'),box('#7C9DA5'),jar('#C56B50'),box('#E8B65C')],
+            [null,box('#d9d3c4'),jar('#d9d3c4'),box('#cfc8b6')]];
+$('prods').innerHTML=rows.map((r,i)=>r.map((s,j)=>s?`<g class="pr" filter="url(#ps)" transform="translate(${XS[j]} ${BY[i]}) rotate(${((i*7+j*3)%5)-2})">${s}</g>`:'').join('')).join('');
+$('bExp').innerHTML=`<g filter="url(#ps)">${bottle('#7C9DA5','#ff5a1f')}</g>`;
+$('bCheap').innerHTML=`<g filter="url(#ps)">${bottle('#8A9B7C','#FFF8EB')}</g>`;
+$('coins').innerHTML=[0,1,2].map(()=>`<g class="cn"><circle r="26" fill="#E8B65C" stroke="#1c1b18" stroke-width="5"/><text y="9" text-anchor="middle" font-family="Space Mono" font-weight="700" font-size="24" fill="#1c1b18">TL</text></g>`).join('');
+const FY=1260;
+window.seek=function(t){
+  // ---------- camera + furniture
+  const pull=io(p(t,B.market-.1,.6)), push=io(p(t,END-HK,HK));
+  let s=L(1.18,1,pull); s=L(s,1.18,push);
+  $('cam').style.transform=`scale(${s})`;
+  $('furn').style.opacity=pull*(1-push); $('prog').style.width=(cl(t/END)*100)+'%';
+  $('floor').style.opacity=pull*(1-push);
+  $('sv').style.transform=`translateY(${110*pull*(1-push)}px)`;
+  // ---------- hook words (frame 0 complete; collapse at B.market; rebuilt in the last HK seconds)
+  const hk=$('hook'); hk.style.display=(t<B.market+.3||t>=END-HK)?'block':'none';
+  hk.querySelectorAll('.hw').forEach((w,i)=>{let y=0,sc=1,o=1;
+    if(t<B.market+.3){y=-6*Math.sin(t*3)*(i?1:-1)*(1-p(t,1.0,.5));sc=1-io(p(t,B.market-.2+i*.05,.3))}
+    else{const k=oc(p(t,END-HK+i*.06,.33));y=(1-k)*80;o=cl(p(t,END-HK+i*.06,.1)*2)}
+    w.style.transform=`translateY(${y}px) scaleY(${sc})`;w.style.transformOrigin='0 85%';w.style.opacity=o});
+  // ---------- shelf slide (paper arrives / leaves as paper)
+  const sIn=oc(p(st(t),B.market,.6)), sOut=io(p(t,B.kural+.5,.6));
+  const sx=(1-sIn)*760+sOut*760;
+  $('shelf').setAttribute('transform',`translate(${sx} 0)`); $('shelf').style.display=(t>B.market&&t<B.kural+1.15)?'block':'none';
+  // ---------- figure pose
+  const stepL=oc(p(st(t),B.market+.05,.55)), stepR=io(p(st(t),B.kural+.9,.5));
+  const fx=L(L(450,250,stepL),450,stepR);
+  let bend=0, arm=0, kneel=0;
+  if(t<B.market){ // the hook: slow bow on the question, cheeky wobble, back up
+    bend=3*Math.sin(t*3.2)*(1-p(t,.9,.4)) + 38*io(p(t,B.q+.25,.75))*(1-io(p(t,B.market-.45,.35)));
+    if(t>B.q+1.0&&t<B.market-.45) bend+=3*Math.sin((t-B.q-1)*14)*Math.exp(-(t-B.q-1)*3);
+  }
+  // reach to eye-level product
+  const reach=io(p(t,B.goz+.15,.5))*(1-io(p(t,B.para+.2,.4))); arm=98*reach;
+  // look down to bottom shelf / nod between the two price tags
+  const look=io(p(t,B.alt+.05,.45))*(1-io(p(t,B.kirec-.1,.35)));
+  const nod=io(p(t,B.t80-.15,.35))*(1-io(p(t,B.yuz-.1,.3)));
+  bend+=14*look+14*nod;
+  // the move: full bend, grab, rise (stepped)
+  const tq=st(t); const dn=io(p(tq,B.yuz+.25,.65)), up=io(p(tq,B.yuz+1.25,.7));
+  const mv=dn*(1-up); bend+=68*mv; kneel=60*mv;
+  const holdA=20*up*(1-io(p(t,B.kural+.1,.4)));
+  arm+=38*mv+holdA;
+  const hx=fx-kneel*.25, hy=FY-250+kneel, b=bend*R;
+  $('legs').setAttribute('d',`M${fx-46} ${FY} L${hx-52} ${hy} L${hx+52} ${hy} L${fx+44} ${FY}Z`);
+  $('shoes').setAttribute('d',`M${fx-50} ${FY} L${fx-50} ${FY-22} L${fx+62} ${FY-22} Q${fx+86} ${FY-18} ${fx+86} ${FY}Z`);
+  $('up').setAttribute('transform',`translate(${hx} ${hy}) rotate(${bend})`);
+  const loc=(x,y)=>[hx+x*Math.cos(b)-y*Math.sin(b), hy+x*Math.sin(b)+y*Math.cos(b)];
+  const [shx,shy]=loc(4,-172), [ex,ey]=loc(50,-272);
+  $('arm').setAttribute('transform',`translate(${shx} ${shy}) rotate(${-arm})`);
+  const hand=[shx+186*Math.sin(arm*R), shy+186*Math.cos(arm*R)];
+  // ---------- expensive bottle (eye level) + sparkle
+  const pulse=1+.12*Math.sin(Math.PI*p(t,B.goz+.2,.5))+.08*Math.sin(Math.PI*p(t,B.t180,.35));
+  $('bExp').setAttribute('transform',`translate(${XS[0]} ${BY[1]}) scale(${pulse})`);
+  const spk=(t>B.goz+.2&&t<B.para)?ob(p(t,B.goz+.2,.3))*(1-p(t,B.para-.3,.3)):0;
+  $('spark').setAttribute('transform',`translate(${XS[0]+52} ${BY[1]-140}) rotate(${t*40}) scale(${spk})`);
+  // dim the rest while comparing the two
+  const dim=io(p(t,B.kirec,.4))*(1-io(p(t,B.kural,.3)));
+  document.querySelectorAll('#prods .pr').forEach(e=>e.style.opacity=1-.6*dim);
+  // ---------- coins: brand pays the market for the shelf
+  document.querySelectorAll('#coins .cn').forEach((c,i)=>{const a=B.para+.35+i*.35, k=p(st(t),a,.5);
+    const x=L(XS[0],680,k), y=L(BY[1]-140,515,k)-150*Math.sin(Math.PI*k);
+    c.setAttribute('transform',`translate(${x} ${y}) rotate(${k*200})`); c.style.opacity=(k>0&&k<1)?1:0});
+  let bump=0;[0,1,2].forEach(i=>{const a=B.para+.85+i*.35;if(t>a&&t<a+.25)bump=Math.sin(Math.PI*p(t,a,.25))});
+  $('sign').setAttribute('transform',`translate(0 ${-10*bump}) rotate(${-1.5*bump} 680 506)`);
+  // ---------- cheap bottle (bottom shelf) -> hand -> pocket
+  const grab=io(p(tq,B.yuz+.8,.2)); const pocket=io(p(t,B.kural+.1,.4));
+  const wig=(t>B.alt&&t<B.alt+.6)?Math.sin((t-B.alt)*26)*6*Math.exp(-(t-B.alt)*4):0;
+  const cx=L(XS[0]+sx,hand[0],grab), cy=L(BY[3],hand[1]+52,grab);
+  const cOn=(t>B.market&&t<B.kural+.55);
+  $('bCheap').style.display=cOn?'block':'none';
+  $('bCheap').setAttribute('transform',`translate(${cx} ${cy}) rotate(${wig-arm*.25*grab}) scale(${1-pocket})`);
+  // ---------- price tags
+  const tg=(id,nid,a,val,y)=>{const k=ob(p(t,a,.35)), out=io(p(t,B.kural,.25));
+    $(id).setAttribute('transform',`translate(${XS[0]+14} ${y}) rotate(-3) scale(1 ${t>a?k*(1-out):0})`);
+    $(nid).textContent=Math.round(L(0,val,oc(p(t,a,.55))))+' TL'};
+  tg('tag180','n180',B.t180,180,BY[1]+38); tg('tag80','n80',B.t80,80,BY[3]+38);
+  // ---------- ink line: eye level -> knee level
+  const dr=io(p(t,B.goz+.2,.45)), dnk=io(p(t,B.alt,.6)), off=io(p(t,B.kirec-.15,.3));
+  const ly=L(ey, FY-118, dnk), lx0=L(ex+16, fx+70, dnk), lx1=XS[0]-48+sx;
+  const tip=L(lx0,lx1,dr*(1-off)), lon=(t>B.goz+.2&&t<B.kirec+.15);
+  $('ln').setAttribute('d',`M${lx0} ${ly} L${tip} ${ly}`); $('ln').style.opacity=lon?1:0;
+  $('dot').setAttribute('cx',tip); $('dot').setAttribute('cy',ly); $('dot').style.opacity=lon?1:0;
+  const lt=dnk>.5?'DİZ HİZASI':'GÖZ HİZASI'; if($('lnL').textContent!==lt)$('lnL').textContent=lt;
+  $('lnL').setAttribute('x',(lx0+lx1)/2-22); $('lnL').setAttribute('y',ly-26); $('lnL').style.opacity=lon?dr*(1-off)*(1-Math.sin(Math.PI*dnk)):0;
+  // ---------- kinetic lines inside the receipt
+  const lines=[[B.market,B.goz-.15,'Markette diyorum.<br><span class="o">Rafın önünde.</span>'],
+    [B.goz,B.para-.1,'Gözünün önündeki<br><span class="o">kendi gelmedi.</span>'],
+    [B.para,B.ucuz-.15,'Marka o raf için<br><span class="o">para veriyor.</span>'],
+    [B.ucuz,B.alt-.05,'Ucuzu da <span class="o">var.</span>'],
+    [B.alt,B.kirec-.15,'En altta.<br><span class="o">Dizinin hizasında.</span>'],
+    [B.kirec,B.t180-.05,'Aynı iş:<br>kireç çözücü.'],
+    [B.t180,B.t80-.05,'Ortadaki <span class="o">180</span>'],
+    [B.t80,B.yuz-.1,'En alttaki <span class="o">80</span>'],
+    [B.yuz,B.kural-.1,'<span class="o">100 lira</span> için<br>tek hareket.'],
+    [B.kural,END-HK,'Bu işin kuralı <span class="o">belli:</span>']];
+  const tA=$('tA'); let txt='',t0=0;for(const [a,b2,x] of lines) if(t>=a&&t<b2){txt=x;t0=a}
+  if(tA.dataset.t!==txt){tA.innerHTML=txt;tA.dataset.t=txt}
+  const k2=ob(p(t,t0,.4)); tA.style.opacity=txt?cl(p(t,t0,.1)*2)*(1-p(t,END-HK-.15,.15)):0;
+  tA.style.transform=`translateY(${(1-k2)*40}px) scale(${(t>=B.yuz&&t<B.kural-.1)||(t>=B.t180&&t<B.yuz-.1)?1.18:1})`;
+  // ---------- shake on hits
+  const sh=[0.02,B.t180,B.t80,B.yuz+.9].some(a=>t>a&&t<a+.22)?Math.sin(t*90)*7:0;
+  $('rc').style.transform=`translateX(${sh}px)`;
+};
+seek(0);
+</script></body></html>
