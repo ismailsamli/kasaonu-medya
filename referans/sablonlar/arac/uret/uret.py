@@ -72,6 +72,12 @@ VIDS = {
    'Dördüncüsü kardeşlerinin parasını toplamış, üstüne krediyle yedi yüz tavuğa çıkmış: yılda iki yüz bin.',
    'Ama bir salgın gelse: birincisi bir tavuk kaybeder, dördüncüsü her şeyini, kardeşlerininkini de.',
    'Biri sana paranı ver, katlayayım derse tek şey sor:']),
+ 'bolus01': ('v11_bolus.py', ['q','start','toprak','altin','hayvan','su','deniz','hamsi','dur','borc','yani','at','simdi'], [
+   "Türkiye'yi eşit bölsek, sana ne düşerdi?",'Seksen altı milyon parça. Biri senin.','Önce toprak: dokuz bin metrekare. Futbol sahasından büyük.',
+   'Kasadan altın çıkar: altı gram. Üç çeyrek kadar.','Tavuklardan ayda yirmi yumurta. Arılardan yılda bir kilo bal.',
+   'Suyun da var: yılda altmış beş tanker.','Denizden payın: on santim kıyı. Tek ayak sığar.','Asıl sürpriz suyun altında: yılda üç kilo hamsi.',
+   'Ama dur. Fiş daha kapanmadı.','Dış borç da bölünür. Kişi başı altı bin doları geçer.','Yani altının beş katı borç. O da senin.',
+   'Bunu payını hep isteyen arkadaşına at.',"Şimdi bir daha düşün: Türkiye'yi bölsek, sana ne düşerdi?"]),
 }
 
 
@@ -107,8 +113,9 @@ def beats(vid, voice):
     return gen, B, w, gaps, D
 
 
-def render(vid, voice):
+def render(vid, voice, fix=None):
     gen, B, w, gaps, D = beats(vid, voice)
+    if fix: B.update(fix)
     print(vid, 'ses', round(D, 2), 'sn | vuruşlar', B)
     subprocess.check_call(['python3', f'/home/claude/uret/{gen}', json.dumps(B), vid], cwd='/home/claude/uret')
     html = Path(S) / vid / 'index.html'
@@ -137,4 +144,4 @@ def render(vid, voice):
 
 
 if __name__ == '__main__':
-    render(sys.argv[1], sys.argv[2])
+    render(sys.argv[1], sys.argv[2], json.loads(sys.argv[3]) if len(sys.argv) > 3 else None)

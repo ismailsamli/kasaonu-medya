@@ -1,0 +1,215 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../fonts/space-grotesk/700.css"><link rel="stylesheet" href="../../fonts/space-mono/700.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#201f1b}
+#cam{position:absolute;left:0;top:0;width:1080px;height:1920px;transform-origin:540px 960px}
+#rc{position:absolute;left:70px;top:150px;width:940px;height:1620px;background:#f3efe4;filter:drop-shadow(0 14px 18px rgba(0,0,0,.45))}
+.mono{font-family:"Space Mono";font-weight:700}
+.gk{font-family:"Space Grotesk";font-weight:700;color:#1c1b18;letter-spacing:-3px;line-height:.95}
+.o{color:#ff5a1f}
+.abs{position:absolute}
+svg{position:absolute;left:0;top:0;overflow:visible}
+svg text{font-family:"Space Mono";font-weight:700}
+</style></head><body>
+<div id="cam">
+ <div id="rc">
+  <div id="furn">
+   <div class="abs mono" style="left:0;right:0;top:40px;text-align:center;font-size:30px;letter-spacing:8px;color:#1c1b18">✻ KASA ÖNÜ ✻</div>
+   <div class="abs" style="left:60px;right:60px;top:96px;border-top:4px dashed #b9b4a8"></div>
+   <div class="abs mono" style="left:60px;top:116px;font-size:26px;color:#1c1b18">HESAP · 11</div>
+   <div class="abs mono" style="right:60px;top:116px;font-size:26px;color:#8c8880">FİŞ 0016</div>
+   <div class="abs" style="left:60px;right:60px;top:160px;height:6px;background:#e3ded2"><div id="prog" style="height:6px;background:#ff5a1f;width:0"></div></div>
+   <div class="abs mono" style="left:60px;right:60px;bottom:50px;font-size:24px;color:#8c8880;display:flex"><span>KİŞİ BAŞI</span><span style="flex:1;border-bottom:3px dotted #b9b4a8;margin:0 14px 8px"></span><span>1 / 86 MİLYON</span></div>
+  </div>
+  <svg id="sv" width="940" height="1620" viewBox="0 0 940 1620">
+   <defs><filter id="ps" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="6" dy="9" stdDeviation="5" flood-color="#243139" flood-opacity=".28"/></filter></defs>
+   <path id="floor" d="M-40 1262 H980" stroke="#1c1b18" stroke-width="10" stroke-linecap="round"/>
+
+   <defs><clipPath id="mc"><path id="mcp"/></clipPath><clipPath id="jc"><rect x="-80" y="-100" width="160" height="200" rx="26"/></clipPath></defs>
+   <g id="cnt" filter="url(#ps)"><rect x="-210" y="-48" width="420" height="96" fill="#FFF8EB"/><text id="cntT" y="20" font-size="52" text-anchor="middle" fill="#1c1b18"></text><text y="80" font-size="24" text-anchor="middle" fill="#8c8880">PARÇA</text></g>
+   <g id="map"><g filter="url(#ps)"><path id="mp" fill="#C56B50"/></g>
+     <ellipse cx="88" cy="74" rx="44" ry="13" fill="#f3efe4"/>
+     <g clip-path="url(#mc)"><g id="grid"></g><line id="cut" x1="0" y1="168" x2="0" y2="168" stroke="#1c1b18" stroke-width="6" stroke-dasharray="16 10"/></g>
+     <g id="pc"><g filter="url(#ps)"><rect x="-22" y="-22" width="44" height="44" fill="#ff5a1f" stroke="#1c1b18" stroke-width="4"/></g><text y="9" font-size="18" text-anchor="middle" fill="#FFF8EB">SEN</text></g>
+   </g>
+   <g id="knife" filter="url(#ps)"><rect x="-150" y="-16" width="96" height="32" rx="8" fill="#243139"/><circle cx="-126" cy="0" r="5" fill="#E8B65C"/><circle cx="-80" cy="0" r="5" fill="#E8B65C"/><path d="M-56 -24 L66 -24 Q104 -14 96 10 L-56 10Z" fill="#e3ded2"/><path d="M-56 4 L96 4" stroke="#b9b4a8" stroke-width="4"/></g>
+   <g id="fld" filter="url(#ps)"></g>
+   <g id="plot" filter="url(#ps)"></g>
+   <g id="lblA"><text id="la1" x="250" y="1172" font-size="32" text-anchor="middle" fill="#1c1b18">SAHA 7.140 m²</text><text id="la2" x="690" y="1172" font-size="32" text-anchor="middle" fill="#ff5a1f">SENİN 9.100 m²</text></g>
+   <g id="safe" filter="url(#ps)"><rect x="-140" y="-150" width="280" height="300" rx="14" fill="#243139"/><rect x="-118" y="-128" width="236" height="256" fill="#1c1b18"/>
+     <g id="coinsIn"><circle cx="-40" cy="60" r="34" fill="#E8B65C"/><circle cx="30" cy="70" r="34" fill="#E8B65C"/><circle cx="-6" cy="20" r="34" fill="#E8B65C"/></g>
+     <g id="door"><rect x="0" y="-128" width="236" height="256" fill="#7C9DA5"/><circle cx="118" cy="0" r="46" fill="#f3efe4"/><circle cx="118" cy="0" r="10" fill="#1c1b18"/><path d="M118 -46 v20 M118 46 v-20 M72 0 h20 M164 0 h-20" stroke="#1c1b18" stroke-width="6"/></g>
+     <path d="M-120 150 v30 M120 150 v30" stroke="#243139" stroke-width="22"/></g>
+   <g id="coins"></g>
+   <g id="carton" filter="url(#ps)"><rect x="-180" y="-150" width="360" height="300" rx="12" fill="#b9b4a8"/><g id="eggs"></g><text y="200" font-size="30" text-anchor="middle" fill="#1c1b18">20 / AY</text></g>
+   <g id="jar" filter="url(#ps)"><rect x="-80" y="-100" width="160" height="200" rx="26" fill="#FFF8EB"/><g clip-path="url(#jc)"><rect id="honey" x="-80" y="-100" width="160" height="200" fill="#E8B65C"/></g><rect x="-70" y="-136" width="140" height="40" rx="8" fill="#C56B50"/><rect x="-56" y="-18" width="112" height="56" fill="#FFF8EB"/><text y="20" font-size="30" text-anchor="middle" fill="#1c1b18">1 kg</text><text y="150" font-size="30" text-anchor="middle" fill="#1c1b18">BAL / YIL</text></g>
+   <g id="tks"></g>
+   <g id="shore"><path id="wave" fill="#7C9DA5"/><rect x="40" y="900" width="860" height="110" fill="#e3ded2"/><g filter="url(#ps)"><rect id="mine" x="410" y="900" width="120" height="110" fill="#E8B65C"/></g>
+     <path d="M410 1040 v24 h120 v-24" stroke="#ff5a1f" stroke-width="6" fill="none"/><text x="470" y="1110" font-size="40" text-anchor="middle" fill="#ff5a1f">10 cm</text>
+     <text x="225" y="968" font-size="24" text-anchor="middle" fill="#8c8880">BAŞKASININ</text><text x="715" y="968" font-size="24" text-anchor="middle" fill="#8c8880">BAŞKASININ</text></g>
+   <g id="foot" filter="url(#ps)"><path d="M-70 0 Q-80 -60 -50 -150 Q-30 -200 0 -190 Q24 -170 20 -110 Q60 -60 100 -40 Q140 -24 120 0Z" fill="#e9c9a6"/><circle cx="118" cy="-22" r="12" fill="#e9c9a6"/></g>
+   <g id="deep"><rect id="deepR" x="0" y="0" width="940" height="1262" fill="#7C9DA5"/><g id="fish"></g><text id="kg3" x="470" y="1210" font-size="44" text-anchor="middle" fill="#FFF8EB">3 kg / YIL</text></g>
+   <g id="fs" filter="url(#ps)"></g>
+   <g id="bars"></g>
+   <path id="trail" fill="none" stroke="#ff5a1f" stroke-width="6" stroke-dasharray="4 18" stroke-linecap="round"/>
+   <g id="plane" filter="url(#ps)"><path d="M-70 10 L80 -40 L-20 50Z" fill="#ff5a1f"/><path d="M-20 50 L80 -40 L0 20Z" fill="#C56B50"/><path d="M-70 10 L0 20 L-20 50" fill="#FFF8EB"/></g>
+
+  </svg>
+  <div id="tA" class="abs gk" style="left:50px;right:50px;top:270px;font-size:84px;text-align:center"></div>
+ </div>
+ <div id="hook" class="abs gk" style="left:90px;top:300px;width:900px"><div class="hw" style="font-size:150px">Türkiye'yi bölsek</div><div class="hw o" style="font-size:176px">sana ne düşer?</div></div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)), p=(t,a,d)=>cl((t-a)/d);
+const io=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2, oc=x=>1-Math.pow(1-x,3);
+const ob=x=>{const c1=1.7,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+const L=(a,b,k)=>a+(b-a)*k, st=t=>Math.floor(t*12)/12, R=Math.PI/180;
+const tr=(id,s)=>$(id).setAttribute('transform',s);
+const op=(id,v)=>{$(id).style.opacity=v};
+// kanca yazısı 900px'e sığsın
+let FIT=false;function fit(){if(FIT||!document.fonts.check('700 100px "Space Grotesk"'))return;FIT=true;document.querySelectorAll('#hook .hw').forEach(w=>{w.style.whiteSpace='nowrap';w.style.display='inline-block';let f=parseFloat(w.style.fontSize);while(w.offsetWidth>900&&f>60){f-=2;w.style.fontSize=f+'px'}w.style.display='block'})}
+
+const B={"q": 1.2, "start": 4.343, "toprak": 7.09, "altin": 11.13, "hayvan": 14.64, "su": 19.102, "deniz": 21.75, "hamsi": 25.01, "dur": 28.57, "borc": 30.61, "yani": 33.873, "at": 36.64, "simdi": 38.825, "END": 42.837}; const END=B.END;
+window.V={sfx:[[0.02,'thud'],[B.q+.5,'whoosh'],[B.start+.1,'scratch'],[B.start+.5,'pop'],[B.start+.6,'ticks'],[B.toprak+.1,'whoosh'],[B.toprak+.6,'pop'],
+ [B.altin+.3,'scratch'],[B.altin+.8,'drop'],[B.altin+1.1,'drop'],[B.altin+1.4,'drop'],[B.hayvan+.3,'ticks'],[B.hayvan+1.2,'pop'],[B.su+.2,'whoosh'],[B.su+.4,'ticks'],
+ [B.deniz+.2,'whoosh'],[B.deniz+.9,'drop'],[B.hamsi+.1,'whoosh'],[B.dur+.1,'thud'],[B.dur+.4,'ticks'],[B.borc+.3,'thud'],[B.yani+.3,'thud'],[B.yani+.9,'drop'],[B.at+.3,'whoosh'],[B.simdi+.1,'whoosh']]};
+const LINES=[[B.start,B.toprak-.1,'86 milyon parça.<br><span class="o">Biri senin.</span>'],
+ [B.toprak,B.altin-.1,'Toprak: <span class="o">9.100 m²</span><br>Futbol sahasından büyük.'],
+ [B.altin,B.hayvan-.1,'Altın: <span class="o">6 gram</span><br>≈ 3 çeyrek.'],
+ [B.hayvan,B.su-.1,'Ayda <span class="o">20 yumurta</span>,<br>yılda <span class="o">1 kg bal.</span>'],
+ [B.su,B.deniz-.1,'Su: yılda<br><span class="o">65 tanker.</span>'],
+ [B.deniz,B.hamsi-.1,'Kıyı payın:<br><span class="o">10 santim.</span>'],
+ [B.hamsi,B.dur-.1,'Suyun altında:<br><span class="o">3 kg hamsi.</span>'],
+ [B.dur,B.borc-.1,'Ama dur.<br><span class="o">Fiş kapanmadı.</span>'],
+ [B.borc,B.yani-.1,'Dış borç da bölünür:<br><span class="o">kişi başı 6.260 $</span>'],
+ [B.yani,B.at-.1,'Altının <span class="o">5 katı</span> borç.<br>O da senin.'],
+ [B.at,B.simdi-.1,'Payını hep isteyen<br><span class="o">arkadaşına at.</span>'],
+ [B.simdi,END-.45,'Şimdi bir daha düşün:']];
+const BIG=[[B.borc,B.yani-.1]], HITS=[0.02,B.borc+.3,B.yani+.3];
+const FY=1262, MY=820;
+// harita: boylam/enlem -> piksel
+const LL=[[26.3,41.7],[28.0,41.98],[29.1,41.2],[31.4,41.2],[33.0,41.9],[35.0,42.05],[36.1,41.6],[36.6,41.3],[38.0,40.95],[39.7,41.0],[41.5,41.5],[42.8,41.5],[43.5,41.1],[43.7,40.0],[44.8,39.7],[44.4,39.0],[44.2,37.9],[44.8,37.2],[42.3,37.1],[40.2,37.0],[38.5,36.8],[36.7,36.8],[36.6,36.2],[35.9,35.9],[36.2,36.6],[35.5,36.6],[34.6,36.8],[33.0,36.1],[32.0,36.5],[30.6,36.85],[30.4,36.25],[29.4,36.2],[28.2,36.7],[27.4,37.0],[27.2,37.8],[26.4,38.3],[26.8,39.0],[26.1,39.5],[26.6,40.2],[27.0,40.6],[26.1,40.6]];
+const MD='M'+LL.map(([a,b])=>`${((a-26)*40).toFixed(1)} ${((42.1-b)*55).toFixed(1)}`).join(' L')+'Z';
+$('mp').setAttribute('d',MD); $('mcp').setAttribute('d',MD);
+let g='';for(let i=1;i<19;i++)g+=`<line x1="${i*40}" y1="-10" x2="${i*40}" y2="350" stroke="#f3efe4" stroke-width="3"/>`;for(let j=1;j<9;j++)g+=`<line x1="-10" y1="${j*38}" x2="780" y2="${j*38}" stroke="#f3efe4" stroke-width="3"/>`;
+$('grid').innerHTML=g;
+// futbol sahası (3.4 px/m) ve arsa
+const fw=357,fh=231;
+$('fld').innerHTML=`<g transform="translate(${250-fw/2} ${1100-fh})"><rect width="${fw}" height="${fh}" fill="#8A9B7C"/>${[0,1,2,3,4,5,6].map(i=>`<rect x="${i*51}" width="25.5" height="${fh}" fill="#7d8e70"/>`).join('')}<g stroke="#FFF8EB" stroke-width="4" fill="none"><rect x="8" y="8" width="${fw-16}" height="${fh-16}"/><line x1="${fw/2}" y1="8" x2="${fw/2}" y2="${fh-8}"/><circle cx="${fw/2}" cy="${fh/2}" r="31"/><rect x="8" y="${fh/2-68}" width="56" height="136"/><rect x="${fw-64}" y="${fh/2-68}" width="56" height="136"/></g></g>`;
+$('plot').innerHTML=`<g id="plotI"><rect x="0" y="-324" width="324" height="324" fill="#8A9B7C"/>${[1,2,3,4,5,6,7].map(i=>`<path d="M0 ${-i*40.5} H324" stroke="#6f7f62" stroke-width="5"/>`).join('')}<path d="M250 -324 v-90" stroke="#1c1b18" stroke-width="6"/><path d="M250 -414 l70 22 l-70 22z" fill="#ff5a1f"/><text x="276" y="-385" font-size="18" fill="#FFF8EB">SEN</text></g>`;
+// çeyrekler
+$('coins').innerHTML=[0,1,2].map(i=>`<g id="co${i}" filter="url(#ps)"><circle r="62" fill="#E8B65C" stroke="#1c1b18" stroke-width="5"/><circle r="46" fill="none" stroke="#C56B50" stroke-width="4"/><text y="16" font-size="46" text-anchor="middle" fill="#1c1b18">¼</text></g>`).join('');
+// yumurtalar
+$('eggs').innerHTML=Array.from({length:20},(_,i)=>{const c=i%5,r=Math.floor(i/5);return `<g id="e${i}" transform="translate(${-136+c*68} ${-108+r*72})"><ellipse rx="26" ry="32" fill="#FFF8EB"/></g>`}).join('');
+// tankerler
+const tk=(x,y,i)=>`<g id="t${i}" data-x="${x}" data-y="${y}" transform="translate(${x} ${y})"><rect x="-44" y="-22" width="64" height="30" rx="14" fill="#7C9DA5"/><rect x="22" y="-16" width="22" height="24" rx="4" fill="#243139"/><circle cx="-28" cy="12" r="8" fill="#1c1b18"/><circle cx="30" cy="12" r="8" fill="#1c1b18"/></g>`;
+$('tks').innerHTML=Array.from({length:65},(_,i)=>{const c=i%8,r=Math.floor(i/8);return tk(120+c*100,600+r*66,i)}).join('');
+// dalga
+let w='M40 900 L40 780';for(let x=40;x<=900;x+=20)w+=` L${x} ${780+Math.sin(x/30)*12}`;w+=' L900 900Z';$('wave').setAttribute('d',w);
+// hamsiler
+$('fish').innerHTML=Array.from({length:36},(_,i)=>{const c=i%6,r=Math.floor(i/6);return `<g id="fi${i}" data-x="${150+c*120+(r%2)*60}" data-y="${640+r*80}"><path d="M-36 0 Q0 -16 30 0 Q0 14 -36 0Z" fill="#e3ded2"/><path d="M-30 -2 Q0 -14 28 -1" stroke="#243139" stroke-width="5" fill="none"/><path d="M30 0 l16 -12 v24z" fill="#8c8880"/><circle cx="-24" cy="-2" r="3" fill="#1c1b18"/></g>`}).join('');
+// fiş
+const ITEMS=[['TOPRAK','9.100 m²'],['ALTIN','6 g'],['YUMURTA','20 / ay'],['BAL','1 kg'],['SU','65 tanker'],['KIYI','10 cm'],['HAMSİ','3 kg']];
+let zz='M-280 0';for(let x=-280;x<280;x+=28)zz+=` L${x+14} 22 L${x+28} 0`;
+$('fs').innerHTML=`<g id="fsI"><rect x="-280" y="-760" width="560" height="760" fill="#FFF8EB"/><path d="${zz}Z" fill="#FFF8EB"/>
+<text y="-700" font-size="30" text-anchor="middle" fill="#1c1b18" letter-spacing="4">SENİN PAYIN</text><path d="M-240 -672 H240" stroke="#b9b4a8" stroke-width="4" stroke-dasharray="10 8"/>
+${ITEMS.map(([a,b],i)=>`<g id="it${i}"><text x="-240" y="${-612+i*62}" font-size="30" fill="#1c1b18">${a}</text><text x="240" y="${-612+i*62}" font-size="30" text-anchor="end" fill="#1c1b18">${b}</text></g>`).join('')}
+<path d="M-240 -170 H240" stroke="#b9b4a8" stroke-width="4" stroke-dasharray="10 8"/>
+<g id="debt"><rect x="-250" y="-140" width="500" height="80" fill="#ff5a1f"/><text x="-230" y="-88" font-size="32" fill="#FFF8EB">DIŞ BORÇ</text><text x="230" y="-88" font-size="34" text-anchor="end" fill="#FFF8EB">−6.260 $</text></g></g>`;
+// sütunlar: 1 birim = 70 px (1.185 $)
+const U=70;
+$('bars').innerHTML=`<g id="bg" filter="url(#ps)"><rect x="-80" y="${-U}" width="160" height="${U}" fill="#E8B65C"/></g><text id="bgT" x="0" y="50" font-size="28" text-anchor="middle" fill="#1c1b18">ALTIN ≈1.185 $</text>`+
+ [0,1,2,3,4,5].map(i=>`<g id="bd${i}" filter="url(#ps)"><rect x="-80" y="${-U*(i+1)}" width="160" height="${i<5?U-6:U*.28}" fill="#C56B50" stroke="#1c1b18" stroke-width="3"/></g>`).join('')+
+ `<text id="bdT" x="0" y="50" font-size="28" text-anchor="middle" fill="#ff5a1f">BORÇ ≈6.260 $</text>`;
+const fmt=n=>Math.round(n).toLocaleString('tr-TR');
+function scene(t){
+  const W=(a,b)=>(t<a||t>b)?0:ob(p(t,a,.35))*(1-io(p(t,b-.25,.25)));
+  // harita
+  const ms=t<B.simdi-.1?1-io(p(t,B.toprak,.3)):ob(p(t,B.simdi-.1,.45));
+  tr('map',`translate(470 ${MY}) scale(${ms}) translate(-380 -168)`); op('map',ms>.01?1:0);
+  // bıçak
+  const R0=[200,MY-215,-25]; let kx=R0[0],ky=R0[1],kr=R0[2],ks=1;
+  if(t>=B.q+.1&&t<B.start+.4){const a=io(p(t,B.q+.1,.35)); kx=L(R0[0],140,a); ky=L(R0[1],MY,a); kr=L(R0[2],0,a);
+    const b=io(p(t,B.q+.5,B.start-B.q-.7)); kx=L(kx,880,b); ks=1-io(p(t,B.start,.3));}
+  else if(t>=B.start+.4&&t<B.simdi) ks=0; else if(t>=B.simdi) ks=ob(p(t,B.simdi+.1,.4));
+  tr('knife',`translate(${kx} ${ky}) rotate(${kr}) scale(${ks*.85})`);
+  const cutX=(t>=B.q+.5&&t<B.simdi)?Math.min(kx+80,880)-90:0;
+  $('cut').setAttribute('x1',0);$('cut').setAttribute('x2',Math.max(0,cutX));op('cut',t<B.simdi?1:0);
+  op('grid',t<B.simdi?io(p(t,B.start,.5)):0);
+  const pk=io(p(t,B.start+.5,.4)); tr('pc',`translate(${364} ${150-36*pk}) scale(${t>B.start+.45&&t<B.simdi?.6+1.2*pk:0})`);
+  const cw=W(B.start,B.toprak+.25); tr('cnt',`translate(470 ${MY-250}) scale(${cw})`); $('cntT').textContent=fmt(86092168*oc(p(t,B.start+.2,1.4)));
+  // toprak
+  const f1=W(B.toprak,B.altin+.25); tr('fld',`translate(250 1100) scale(${f1}) translate(-250 -1100)`);
+  const f2=t<B.toprak+.4||t>B.altin+.25?0:oc(p(t,B.toprak+.4,.8))*(1-io(p(t,B.altin,.25)));
+  tr('plot',`translate(528 1100) scale(${f2})`);
+  op('lblA',W(B.toprak+.5,B.altin+.25)>0?cl(p(t,B.toprak+.5,.2))*(1-io(p(t,B.altin,.25))):0);
+  // kasa
+  const sw=W(B.altin,B.hayvan+.25); tr('safe',`translate(260 1000) scale(${sw*1.3})`);
+  const dk=io(p(t,B.altin+.2,.5)); tr('door',`translate(-118 0) scale(${L(1,-.25,dk)} 1)`);
+  [0,1,2].forEach(i=>{const a=B.altin+.6+i*.3, k=p(t,a,.5), x=L(260,560+i*140,oc(k)), y=k<1?L(1030,1196,k*k):1196-Math.abs(Math.sin(p(t,a+.5,.4)*Math.PI))*30*(1-p(t,a+.5,.4));
+    const o=1-io(p(t,B.hayvan,.25)); tr('co'+i,`translate(${x} ${y}) rotate(${k*360}) scale(${t>a&&t<B.hayvan+.25?o:0})`)});
+  op('coinsIn',t<B.altin+1.4?1:0);
+  // yumurta ve bal
+  const cw2=W(B.hayvan,B.su+.25); tr('carton',`translate(270 900) scale(${cw2*1.25})`);
+  for(let i=0;i<20;i++){const a=B.hayvan+.3+i*.06; const e=$('e'+i); e.style.opacity=t>a?1:0; e.querySelector('ellipse').setAttribute('transform',`scale(${ob(p(t,a,.25))})`)}
+  const jw=W(B.hayvan+.9,B.su+.25); tr('jar',`translate(700 960) scale(${jw*1.35})`);
+  $('honey').setAttribute('y',L(100,-80,io(p(t,B.hayvan+1.1,1.4))));
+  // tankerler
+  op('tks',t>B.su&&t<B.deniz+.25?1-io(p(t,B.deniz,.25)):0);
+  for(let i=0;i<65;i++){const a=B.su+.25+i*.025, k=oc(p(t,a,.3)); const el=$('t'+i); el.style.opacity=t>a?1:0; el.setAttribute('transform',`translate(${+el.dataset.x-(1-k)*120} ${el.dataset.y})`)}
+  // kıyı
+  const sh=W(B.deniz,B.hamsi+.35); op('shore',sh>0?cl(p(t,B.deniz,.25))*(1-io(p(t,B.hamsi+.1,.25))):0);
+  $('shore').style.transform=`translateY(${(1-oc(p(t,B.deniz,.4)))*80}px)`;
+  const fk=p(t,B.deniz+.6,.35); tr('foot',`translate(470 ${L(420,900,fk*fk)}) scale(${t>B.deniz+.5&&t<B.hamsi+.2?.75*(1-io(p(t,B.hamsi,.2))):0})`);
+  // hamsi: su yükselir
+  const dk2=t<B.hamsi?0:io(p(t,B.hamsi,.5))*(1-io(p(t,B.dur,.3)));
+  $('deepR').setAttribute('y',L(1262,540,dk2)); $('deepR').setAttribute('height',L(0,722,dk2));
+  op('fish',t>B.hamsi+.2&&t<B.dur+.3?cl(p(t,B.hamsi+.2,.3))*(1-io(p(t,B.dur,.3))):0); op('kg3',dk2>.5?(dk2-.5)*2:0);
+  for(let i=0;i<36;i++){const el=$('fi'+i), x=+el.dataset.x+((t*60+i*37)%160)-80, y=+el.dataset.y+Math.sin(t*4+i)*8; el.setAttribute('transform',`translate(${x} ${y})`)}
+  // fiş
+  const fw2=t<B.dur||t>B.yani+.25?0:1; const fsk=oc(p(t,B.dur,.45)), fo=io(p(t,B.yani,.3));
+  tr('fs',`translate(470 ${L(1700,1230,fsk)+fo*900})`); op('fs',fw2);
+  ITEMS.forEach((_,i)=>op('it'+i,t>B.dur+.3+i*.1?1:0));
+  const dd=p(t,B.borc+.3,.15); tr('debt',`translate(0 -100) scale(${t>B.borc+.3?L(1.6,1,io(dd)):0}) translate(0 100)`);
+  // sütunlar
+  const bon=t>B.yani&&t<B.at+.25, bo=1-io(p(t,B.at,.25));
+  tr('bars',`translate(0 0)`); op('bars',bon?bo:0);
+  tr('bg',`translate(290 ${FY-60}) scale(1 ${ob(p(t,B.yani+.2,.4))})`); op('bgT',1);
+  $('bgT').setAttribute('transform',`translate(290 ${FY-60})`); $('bdT').setAttribute('transform',`translate(650 ${FY-60})`);
+  for(let i=0;i<6;i++){const a=B.yani+.5+i*.18, k=p(t,a,.25); tr('bd'+i,`translate(650 ${FY-60-(1-k*k)*500})`); op('bd'+i,t>a?1:0)}
+  op('bdT',t>B.yani+1.4?1:0);
+  // uçak
+  const pk2=io(p(t,B.at+.2,1.6)), pon=t>B.at&&t<B.simdi+.4;
+  const P=(k)=>[L(120,840,k), L(1150,560,k)-Math.sin(k*Math.PI)*260];
+  const [px,py]=P(pk2), [qx,qy]=P(Math.min(1,pk2+.02));
+  tr('plane',`translate(${px} ${py}) rotate(${Math.atan2(qy-py,qx-px)/R+20}) scale(${pon?ob(p(t,B.at,.3))*(1-io(p(t,B.simdi+.1,.3))):0})`);
+  let d='';for(let k=0;k<=pk2;k+=.02){const [x,y]=P(k);d+=(d?' L':'M')+x.toFixed(1)+' '+y.toFixed(1)}
+  $('trail').setAttribute('d',pon?d:''); op('trail',pon?1-io(p(t,B.simdi,.4)):0);
+}
+
+const HK=.45;
+window.seek=function(t){
+  fit();
+  const pull=io(p(t,B.start-.1,.6)), push=io(p(t,END-HK,HK));
+  let s=L(1.18,1,pull); s=L(s,1.18,push);
+  $('cam').style.transform=`scale(${s})`;
+  $('furn').style.opacity=pull*(1-push); $('prog').style.width=(cl(t/END)*100)+'%';
+  $('floor').style.opacity=pull*(1-push);
+  $('sv').style.transform=`translateY(${110*pull*(1-push)}px)`;
+  const hk=$('hook'); hk.style.display=(t<B.start+.3||t>=END-HK)?'block':'none';
+  hk.querySelectorAll('.hw').forEach((w,i)=>{let y=0,sc=1,o=1;
+    if(t<B.start+.3){y=-6*Math.sin(t*3)*(i?1:-1)*(1-p(t,1.0,.5));sc=1-io(p(t,B.start-.2+i*.05,.3))}
+    else{const k=oc(p(t,END-HK+i*.06,.33));y=(1-k)*80;o=cl(p(t,END-HK+i*.06,.1)*2)}
+    w.style.transform=`translateY(${y}px) scaleY(${sc})`;w.style.transformOrigin='0 85%';w.style.opacity=o});
+  scene(t,pull,push);
+  const tA=$('tA'); let txt='',t0=0;for(const [a,b2,x] of LINES) if(t>=a&&t<b2){txt=x;t0=a}
+  if(tA.dataset.t!==txt){tA.innerHTML=txt;tA.dataset.t=txt}
+  const k2=ob(p(t,t0,.4)); tA.style.opacity=txt?cl(p(t,t0,.1)*2)*(1-p(t,END-HK-.15,.15)):0;
+  tA.style.transform=`translateY(${(1-k2)*40}px) scale(${BIG.some(([a,b])=>t>=a&&t<b)?1.15:1})`;
+  const sh=HITS.some(a=>t>a&&t<a+.22)?Math.sin(t*90)*7:0;
+  $('rc').style.transform=`translateX(${sh}px)`;
+};
+seek(0);
+</script></body></html>
