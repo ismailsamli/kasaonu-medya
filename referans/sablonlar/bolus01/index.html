@@ -71,7 +71,7 @@ const op=(id,v)=>{$(id).style.opacity=v};
 // kanca yazısı 900px'e sığsın
 let FIT=false;function fit(){if(FIT||!document.fonts.check('700 100px "Space Grotesk"'))return;FIT=true;document.querySelectorAll('#hook .hw').forEach(w=>{w.style.whiteSpace='nowrap';w.style.display='inline-block';let f=parseFloat(w.style.fontSize);while(w.offsetWidth>900&&f>60){f-=2;w.style.fontSize=f+'px'}w.style.display='block'})}
 
-const B={"q": 1.2, "start": 4.343, "toprak": 7.09, "altin": 11.13, "hayvan": 14.64, "su": 19.102, "deniz": 21.75, "hamsi": 25.01, "dur": 28.57, "borc": 30.61, "yani": 33.873, "at": 36.64, "simdi": 38.825, "END": 42.837}; const END=B.END;
+const B={"q": 0.3, "start": 3.443, "toprak": 6.19, "altin": 10.23, "hayvan": 13.74, "su": 18.202, "deniz": 20.85, "hamsi": 24.11, "dur": 27.67, "borc": 29.71, "yani": 32.973, "at": 35.74, "simdi": 37.925, "END": 41.937}; const END=B.END;
 window.V={sfx:[[0.02,'thud'],[B.q+.5,'whoosh'],[B.start+.1,'scratch'],[B.start+.5,'pop'],[B.start+.6,'ticks'],[B.toprak+.1,'whoosh'],[B.toprak+.6,'pop'],
  [B.altin+.3,'scratch'],[B.altin+.8,'drop'],[B.altin+1.1,'drop'],[B.altin+1.4,'drop'],[B.hayvan+.3,'ticks'],[B.hayvan+1.2,'pop'],[B.su+.2,'whoosh'],[B.su+.4,'ticks'],
  [B.deniz+.2,'whoosh'],[B.deniz+.9,'drop'],[B.hamsi+.1,'whoosh'],[B.dur+.1,'thud'],[B.dur+.4,'ticks'],[B.borc+.3,'thud'],[B.yani+.3,'thud'],[B.yani+.9,'drop'],[B.at+.3,'whoosh'],[B.simdi+.1,'whoosh']]};

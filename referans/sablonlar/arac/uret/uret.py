@@ -7,7 +7,8 @@ _s.path.insert(0, '/home/claude/kasaonu-medya/referans/sablonlar/arac')
 from render import sfx_track  # noqa
 from playwright.sync_api import sync_playwright
 
-INTRO, TAIL, FPS = 1.2, 0.6, 30
+import os
+INTRO, TAIL, FPS = float(os.environ.get('INTRO', 1.2)), 0.6, 30
 S = '/home/claude/kasaonu-medya/referans/sablonlar'
 VIDS = {
  'boy01': ('v1_boy.py', ['q', 'start', 'fiyat', 'ml', 'ml2', 'yirmi', 'orta', 'cunku'], [
