@@ -79,12 +79,12 @@ VIDS = {
    'Suyun da var: yılda altmış beş tanker.','Denizden payın: on santim kıyı. Tek ayak sığar.','Asıl sürpriz suyun altında: yılda üç kilo hamsi.',
    'Ama dur. Fiş daha kapanmadı.','Dış borç da bölünür. Kişi başı altı bin doları geçer.','Yani altının beş katı borç. O da senin.',
    'Bunu payını hep isteyen arkadaşına at.',"Şimdi bir daha düşün: Türkiye'yi bölsek, sana ne düşerdi?"]),
- 'sanayi01': ('v12_sanayi.py', ['q','start','aksam','ne','oysa','hamle','fiyat','parca','usta','ruhsat','ses','wa','hazir','simdi'], [
+ 'sanayi01': ('v12_sanayi.py', ['q','start','aksam','ne','oysa','hamle','fiyat','parca','usta','ruhsat','ses','wa','hazir','demo','simdi'], [
    'Sanayide neyin parasını ödüyorsun?','Sabah sadece yağı değişecek dendi.','Akşam liste uzamış: balata, filtre, bir de şunu da değiştirdik.',
    'Ne değişti, kaça değişti? Elinde tek kâğıt yok.','Oysa yetkili servis sana servis fişi vermek zorunda. İstersen kâğıda yazdırırsın.',
    'Sanayide de tek hamle:','işe başlamadan fiyatı yazılı iste,','değişen parçayı geri iste.','Usta, sen de dinle: müşteri artık fiş istiyor.',
-   'Bazı servisler ruhsatın fotoğrafını çekiyor,','iş emrini sesle açıyor,',"teklifi WhatsApp'tan yolluyor.",'Fişi hazır olan usta tartışmaya girmez.',
-   'Şimdi bir daha sor: sanayide neyin parasını ödüyorsun?']),
+   'Bazı servisler ruhsatın fotoğrafını çekiyor,','iş emrini sesle açıyor,',"teklifi WhatsApp'tan yolluyor.",'Fişi hazır olan usta tartışmaya girmez.',"Yirmi dakikalık ücretsiz demo için Otoişlerim'e yaz.",
+   'Sen de bir daha sor: sanayide neyin parasını ödüyorsun?']),
 }
 
 

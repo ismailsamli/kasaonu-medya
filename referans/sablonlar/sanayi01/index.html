@@ -58,6 +58,12 @@ svg text{font-family:"Space Mono";font-weight:700}
        <g id="snd"><rect x="-120" y="120" width="240" height="80" rx="40" fill="#8A9B7C"/><text y="172" font-size="30" text-anchor="middle" fill="#FFF8EB">GÖNDER</text></g></g>
    </g>
    <g id="pl" filter="url(#ps)"><path d="M-70 10 L80 -40 L-20 50Z" fill="#ff5a1f"/><path d="M-20 50 L80 -40 L0 20Z" fill="#C56B50"/></g>
+   <g id="brand"><g filter="url(#ps)"><rect x="-330" y="-260" width="660" height="520" fill="#243139"/></g>
+     <text y="-140" font-size="74" text-anchor="middle" fill="#FFF8EB" font-family="Space Grotesk" letter-spacing="-2">Otoİşlerim</text>
+     <path d="M-250 -96 H250" stroke="#ff5a1f" stroke-width="6"/>
+     <g id="bd1"><rect x="-300" y="-60" width="600" height="110" fill="#ff5a1f"/><text y="14" font-size="38" text-anchor="middle" fill="#FFF8EB">20 DK ÜCRETSİZ DEMO</text></g>
+     <text id="bd2" y="120" font-size="38" text-anchor="middle" fill="#FFF8EB">otoislerim.com.tr</text>
+     <text id="bd3" y="190" font-size="34" text-anchor="middle" fill="#E8B65C">@otoislerim</text></g>
    <g id="ok"><g filter="url(#ps)"><rect x="-260" y="-200" width="520" height="400" fill="#FFF8EB"/></g><text x="-210" y="-110" font-size="40" fill="#1c1b18">TEKLİF</text><text x="-210" y="0" font-size="40" fill="#1c1b18">ONAY</text><text x="-210" y="110" font-size="40" fill="#1c1b18">FİŞ</text>
      <g stroke="#8A9B7C" stroke-width="14" fill="none" stroke-linecap="round"><path id="o1" d="M120 -126 l24 26 l50 -60"/><path id="o2" d="M120 -16 l24 26 l50 -60"/><path id="o3" d="M120 94 l24 26 l50 -60"/></g></g>
 
@@ -77,21 +83,22 @@ const op=(id,v)=>{$(id).style.opacity=v};
 // kanca yazısı 900px'e sığsın
 let FIT=false;function fit(){if(FIT||!document.fonts.check('700 100px "Space Grotesk"'))return;FIT=true;document.querySelectorAll('#hook .hw').forEach(w=>{w.style.whiteSpace='nowrap';w.style.display='inline-block';let f=parseFloat(w.style.fontSize);while(w.offsetWidth>900&&f>60){f-=2;w.style.fontSize=f+'px'}w.style.display='block'})}
 
-const B={"q": 0.3, "start": 2.66, "aksam": 5.3, "ne": 10.14, "oysa": 13.76, "hamle": 18.95, "fiyat": 20.55, "parca": 22.76, "usta": 24.54, "ruhsat": 27.8, "ses": 30.45, "wa": 31.97, "hazir": 33.73, "simdi": 36.46, "END": 40.227}; const END=B.END;
+const B={"q": 0.3, "start": 2.84, "aksam": 5.43, "ne": 10.18, "oysa": 13.79, "hamle": 17.19, "fiyat": 18.82, "parca": 21.08, "usta": 22.94, "ruhsat": 26.26, "ses": 30.36, "wa": 32.15, "hazir": 35.5, "demo": 38.01, "simdi": 41.76, "END": 45.778}; const END=B.END;
 window.V={sfx:[[0.02,'thud'],[B.start+.1,'pop'],[B.aksam+.1,'whoosh'],[B.aksam+.5,'ticks'],[B.ne+.2,'pop'],[B.ne+2.05,'thud'],[B.oysa+.1,'whoosh'],[B.oysa+1.2,'thud'],[B.oysa+3.4,'ticks'],
- [B.hamle+.1,'whoosh'],[B.fiyat+.3,'scratch'],[B.parca+.3,'scratch'],[B.parca+.6,'drop'],[B.usta+.1,'whoosh'],[B.usta+1.6,'pop'],[B.ruhsat+.1,'whoosh'],[B.ruhsat+1.0,'pop'],[B.ses+.2,'ticks'],[B.wa+.9,'whoosh'],[B.hazir+.3,'pop'],[B.hazir+.6,'pop'],[B.hazir+.9,'pop'],[B.simdi+.1,'whoosh']]};
+ [B.hamle+.1,'whoosh'],[B.fiyat+.3,'scratch'],[B.parca+.3,'scratch'],[B.parca+.6,'drop'],[B.usta+.1,'whoosh'],[B.usta+1.6,'pop'],[B.ruhsat+.1,'whoosh'],[B.ruhsat+1.0,'pop'],[B.ses+.2,'ticks'],[B.wa+.9,'whoosh'],[B.hazir+.3,'pop'],[B.hazir+.6,'pop'],[B.hazir+.9,'pop'],[B.demo+.1,'whoosh'],[B.demo+.6,'thud'],[B.demo+1.2,'pop'],[B.simdi+.1,'whoosh']]};
 const LINES=[[B.start,B.aksam-.1,'Sabah:<br><span class="o">"sadece yağ."</span>'],
  [B.aksam,B.ne-.1,'Akşam<br><span class="o">liste uzamış.</span>'],
  [B.ne,B.oysa-.1,'Ne değişti?<br><span class="o">Kaça değişti?</span>'],
  [B.oysa,B.hamle-.1,'Yetkili serviste<br><span class="o">servis fişi zorunlu.</span>'],
  [B.hamle,B.usta-.1,'Sanayide<br><span class="o">tek hamle:</span>'],
  [B.usta,B.ruhsat-.1,'Usta, dinle:<br><span class="o">müşteri fiş istiyor.</span>'],
- [B.ruhsat,B.ses-.1,'Ruhsatın<br><span class="o">fotoğrafını çek.</span>'],
+ [B.ruhsat,B.ses-.1,'Otoİşlerim ile<br><span class="o">ruhsatı çek.</span>'],
  [B.ses,B.wa-.1,'İş emrini<br><span class="o">sesle aç.</span>'],
- [B.wa,B.hazir-.1,'Teklifi<br><span class="o">telefona yolla.</span>'],
- [B.hazir,B.simdi-.1,'Fişi hazır usta<br><span class="o">tartışmaya girmez.</span>'],
+ [B.wa,B.hazir-.1,'Teklif müşterinin<br><span class="o">telefonuna PDF.</span>'],
+ [B.hazir,B.demo-.1,'Fişi hazır usta<br><span class="o">tartışmaya girmez.</span>'],
+ [B.demo,B.simdi-.1,'Ücretsiz demo için<br><span class="o">@otoislerim</span>'],
  [B.simdi,END-.45,'Şimdi bir daha sor:']];
-const BIG=[[B.ne+1.9,B.oysa-.1]], HITS=[0.02,B.ne+2.05,B.oysa+1.2];
+const BIG=[[B.ne+1.9,B.oysa-.1]], HITS=[0.02,B.ne+2.05,B.oysa+1.2,B.demo+.6];
 const FY=1262;
 const ITEMS=['YAĞ DEĞİŞİMİ','BALATA','FİLTRE','"ŞUNU DA..."'];
 $('rcp').innerHTML=`<rect id="rcpR" x="-230" y="0" width="460" height="0" fill="#FFF8EB"/>`+ITEMS.map((a,i)=>`<g id="ri${i}"><text x="-200" y="${70+i*80}" font-size="32" fill="${i==3?'#ff5a1f':'#1c1b18'}">${a}</text><text id="rq${i}" x="200" y="${70+i*80}" font-size="40" text-anchor="end" fill="#ff5a1f">?</text></g>`).join('')+
@@ -120,7 +127,7 @@ function scene(t){
   // yetkili servis fişi
   tr('fis',`translate(300 900) scale(${W(B.oysa,B.hamle+.25)})`);
   tr('zor',`translate(300 980) rotate(-10) scale(${t>B.oysa+1.2&&t<B.hamle+.25?L(2.2,1,io(p(t,B.oysa+1.2,.15)))*(1-io(p(t,B.hamle,.25))):0})`);
-  tr('prn',`translate(700 1100) scale(${W(B.oysa+3.3,B.hamle+.25)})`); $('prnP').setAttribute('height',140*oc(p(t,B.oysa+3.5,.8)));
+  tr('prn',`translate(700 1100) scale(0)`); $('prnP').setAttribute('height',140*oc(p(t,B.oysa+3.5,.8)));
   // tek hamle
   tr('chk',`translate(470 860) scale(${W(B.hamle,B.usta+.25)})`);
   const c1=p(t,B.fiyat+.3,.3), c2=p(t,B.parca+.3,.3);
@@ -141,7 +148,9 @@ function scene(t){
   const sp=io(p(t,B.wa+.8,1.0)); tr('pdf',`translate(${sp*420} ${-sp*300}) scale(${1-sp*.6})`); op('pdf',sp<1?1:0);
   tr('pl',`translate(${L(470,900,sp)} ${L(860,420,sp)}) rotate(-20) scale(${t>B.wa+.8&&t<B.hazir?ob(p(t,B.wa+.8,.2))*(1-p(t,B.wa+1.6,.2)):0})`);
   // tamam
-  tr('ok',`translate(470 860) scale(${W(B.hazir,B.simdi+.2)})`);
+  tr('ok',`translate(470 860) scale(${W(B.hazir,B.demo+.25)})`);
+  tr('brand',`translate(470 880) scale(${W(B.demo,B.simdi+.3)})`);
+  const bd=p(t,B.demo+.6,.15); tr('bd1',`scale(${t>B.demo+.6?L(1.5,1,io(bd)):0})`); op('bd2',t>B.demo+1.2?1:0); op('bd3',t>B.demo+1.6?1:0);
   ['o1','o2','o3'].forEach((id,i)=>{const k=p(t,B.hazir+.3+i*.3,.25);$(id).style.strokeDasharray='130';$(id).style.strokeDashoffset=130*(1-k)});
 }
 
