@@ -1,0 +1,208 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../fonts/space-grotesk/700.css"><link rel="stylesheet" href="../../fonts/space-mono/700.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#201f1b}
+#cam{position:absolute;left:0;top:0;width:1080px;height:1920px;transform-origin:540px 960px}
+#rc{position:absolute;left:70px;top:150px;width:940px;height:1620px;background:#f3efe4;filter:drop-shadow(0 14px 18px rgba(0,0,0,.45))}
+.mono{font-family:"Space Mono";font-weight:700}
+.gk{font-family:"Space Grotesk";font-weight:700;color:#1c1b18;letter-spacing:-3px;line-height:.95}
+.o{color:#ff5a1f}
+.abs{position:absolute}
+svg{position:absolute;left:0;top:0;overflow:visible}
+svg text{font-family:"Space Mono";font-weight:700}
+</style></head><body>
+<div id="cam">
+ <div id="rc">
+  <div id="furn">
+   <div class="abs mono" style="left:0;right:0;top:40px;text-align:center;font-size:30px;letter-spacing:8px;color:#1c1b18">✻ KASA ÖNÜ ✻</div>
+   <div class="abs" style="left:60px;right:60px;top:96px;border-top:4px dashed #b9b4a8"></div>
+   <div class="abs mono" style="left:60px;top:116px;font-size:26px;color:#1c1b18">VELİ · 15</div>
+   <div class="abs mono" style="right:60px;top:116px;font-size:26px;color:#8c8880">FİŞ 0020</div>
+   <div class="abs" style="left:60px;right:60px;top:160px;height:6px;background:#e3ded2"><div id="prog" style="height:6px;background:#ff5a1f;width:0"></div></div>
+   <div class="abs mono" style="left:60px;right:60px;bottom:50px;font-size:24px;color:#8c8880;display:flex"><span>İŞ BİRLİĞİ</span><span style="flex:1;border-bottom:3px dotted #b9b4a8;margin:0 14px 8px"></span><span>VELIGO</span></div>
+  </div>
+  <svg id="sv" width="940" height="1620" viewBox="0 0 940 1620">
+   <defs><filter id="ps" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="6" dy="9" stdDeviation="5" flood-color="#243139" flood-opacity=".28"/></filter></defs>
+   <path id="floor" d="M-40 1262 H980" stroke="#1c1b18" stroke-width="10" stroke-linecap="round"/>
+
+   <defs>
+    <g id="busG"><g filter="url(#ps)"><rect x="-120" y="-80" width="240" height="120" rx="18" fill="#E8B65C"/></g>
+      <rect x="-100" y="-62" width="44" height="40" rx="6" fill="#FFF8EB"/><rect x="-46" y="-62" width="44" height="40" rx="6" fill="#FFF8EB"/><rect x="8" y="-62" width="44" height="40" rx="6" fill="#FFF8EB"/><rect x="62" y="-62" width="40" height="70" rx="6" fill="#243139"/>
+      <text x="-40" y="22" font-size="24" text-anchor="middle" fill="#1c1b18">SERVİS</text>
+      <circle cx="-70" cy="44" r="24" fill="#1c1b18"/><circle cx="70" cy="44" r="24" fill="#1c1b18"/><circle cx="-70" cy="44" r="9" fill="#b9b4a8"/><circle cx="70" cy="44" r="9" fill="#b9b4a8"/></g>
+   </defs>
+   <g id="sk"><g transform="translate(170 1262)" filter="url(#ps)"><rect x="-110" y="-230" width="220" height="230" fill="#e3ded2"/><path d="M-135 -228 L0 -330 L135 -228z" fill="#C56B50"/><rect x="-34" y="-130" width="68" height="130" fill="#243139"/><circle cx="20" cy="-64" r="6" fill="#E8B65C"/></g>
+     <g transform="translate(790 1262)" filter="url(#ps)"><rect x="-100" y="-340" width="200" height="340" fill="#b9b4a8"/><g fill="#FFF8EB"><rect x="-70" y="-300" width="50" height="50"/><rect x="20" y="-300" width="50" height="50"/><rect x="-70" y="-210" width="50" height="50"/><rect x="20" y="-210" width="50" height="50"/></g></g>
+     <text x="170" y="1310" font-size="30" text-anchor="middle" fill="#1c1b18">KAPI</text><text x="790" y="1310" font-size="30" text-anchor="middle" fill="#1c1b18">KÖŞE</text>
+     <g id="bA"><use href="#busG"/><text id="qA" y="-110" font-size="90" text-anchor="middle" fill="#ff5a1f">?</text></g>
+     <g id="bB"><use href="#busG"/><text id="qB" y="-110" font-size="90" text-anchor="middle" fill="#ff5a1f">?</text></g></g>
+   <g id="clk"><g filter="url(#ps)"><circle r="120" fill="#FFF8EB" stroke="#1c1b18" stroke-width="8"/></g>
+     <g stroke="#1c1b18" stroke-width="6"><path d="M0 -104 V-88 M0 104 V88 M-104 0 H-88 M104 0 H88"/></g>
+     <path id="hh" d="M0 0 V-58" stroke="#1c1b18" stroke-width="12" stroke-linecap="round"/><path id="mh" d="M0 0 V-90" stroke="#ff5a1f" stroke-width="7" stroke-linecap="round"/><circle r="10" fill="#1c1b18"/>
+     <text id="clkT" y="190" font-size="48" text-anchor="middle" fill="#1c1b18">07:30</text></g>
+   <g id="moon"><path d="M0 -70 a70 70 0 1 0 60 105 a56 56 0 1 1 -60 -105z" fill="#E8B65C"/></g>
+   <g id="chat"><g filter="url(#ps)"><rect x="-290" y="-380" width="580" height="770" rx="30" fill="#FFF8EB"/></g>
+     <path d="M-290 -290 v-60 a30 30 0 0 1 30 -30 h520 a30 30 0 0 1 30 30 v60z" fill="#243139"/>
+     <text x="-250" y="-322" font-size="30" fill="#FFF8EB">VELİ GRUBU</text><g transform="translate(205 -332)"><rect x="-70" y="-26" width="140" height="44" rx="22" fill="#ff5a1f"/><text id="cnt" y="8" font-size="26" text-anchor="middle" fill="#FFF8EB">0</text></g>
+     <defs><clipPath id="chc"><rect x="-290" y="-286" width="580" height="660"/></clipPath></defs>
+     <g clip-path="url(#chc)"><g id="bub"></g></g></g>
+   <g id="drv"><g filter="url(#ps)"><circle cx="0" cy="-150" r="62" fill="#e9c9a6"/><path d="M-66 -166 q4 -66 66 -68 q62 2 66 68z" fill="#243139"/><rect x="-36" y="-192" width="120" height="16" fill="#243139"/><path d="M-130 120 q0 -170 130 -170 q130 0 130 170z" fill="#8c8880"/></g>
+     <g id="whl"><circle cx="0" cy="90" r="130" fill="none" stroke="#1c1b18" stroke-width="22"/><path d="M-120 90 H120 M0 90 V210" stroke="#1c1b18" stroke-width="16"/><circle cx="0" cy="90" r="26" fill="#1c1b18"/></g>
+     <g id="dph" transform="translate(190 -110) rotate(14)"><g filter="url(#ps)"><rect x="-44" y="-80" width="88" height="160" rx="14" fill="#1c1b18"/><rect x="-36" y="-68" width="72" height="130" rx="6" fill="#7C9DA5"/></g>
+       <g id="buzz" stroke="#ff5a1f" stroke-width="6" stroke-linecap="round"><path d="M60 -50 l26 -14 M64 0 h30 M60 50 l26 14 M-60 -50 l-26 -14 M-60 50 l-26 14"/></g></g>
+     <g id="warn" transform="translate(-230 -170)"><path d="M0 -60 L56 40 H-56z" fill="#ff5a1f"/><text y="28" font-size="64" text-anchor="middle" fill="#FFF8EB">!</text></g></g>
+   <g id="bq1"><g filter="url(#ps)"><rect x="-170" y="-80" width="340" height="160" fill="#FFF8EB" stroke="#1c1b18" stroke-width="6"/></g><text y="26" font-size="64" text-anchor="middle" fill="#1c1b18">BİNDİ?</text></g>
+   <g id="bq2"><g filter="url(#ps)"><rect x="-170" y="-80" width="340" height="160" fill="#FFF8EB" stroke="#1c1b18" stroke-width="6"/></g><text y="26" font-size="64" text-anchor="middle" fill="#1c1b18">İNDİ?</text></g>
+   <g id="ky"><g filter="url(#ps)"><rect x="-320" y="-70" width="640" height="140" fill="#ff5a1f" stroke="#1c1b18" stroke-width="6"/></g><text y="22" font-size="56" fill="#FFF8EB" text-anchor="middle" letter-spacing="3">KİMSE EMİN DEĞİL</text></g>
+   <g id="kid"><g filter="url(#ps)"><rect x="-108" y="-74" width="64" height="116" rx="16" fill="#C56B50"/><circle cy="-140" r="54" fill="#e9c9a6"/><path d="M-56 -150 q4 -58 56 -58 q52 0 56 58 q-26 -20 -56 -20 q-30 0 -56 20z" fill="#1c1b18"/><path d="M-80 112 q0 -152 80 -152 q80 0 80 152z" fill="#7C9DA5"/></g>
+     <g id="pinq" transform="translate(0 -300)"><g filter="url(#ps)"><path d="M0 80 q-66 -66 -66 -110 a66 66 0 1 1 132 0 q0 44 -66 110z" fill="#ff5a1f"/></g><text y="-6" font-size="76" text-anchor="middle" fill="#FFF8EB">?</text></g></g>
+   <g id="brandS"><g filter="url(#ps)"><rect x="-230" y="-250" width="460" height="500" rx="22" fill="#fff"/></g><image href="img/logo.png" x="-190" y="-216" width="380" height="432"/></g>
+   <g id="ph"><defs><clipPath id="scr"><rect x="-198" y="-418" width="396" height="836" rx="34"/></clipPath></defs>
+     <g filter="url(#ps)"><rect x="-214" y="-434" width="428" height="868" rx="48" fill="#1c1b18"/></g>
+     <g clip-path="url(#scr)"><rect x="-198" y="-418" width="396" height="836" fill="#fff"/>
+       <image id="im1" href="img/harita.png" x="-198" y="-418" width="396" height="860"/>
+       <image id="im2" href="img/liste.png" x="-198" y="-418" width="396" height="882"/>
+       <image id="im3" href="img/veli.png" x="-198" y="-418" width="396" height="860"/>
+       <image id="im4" href="img/sefer.png" x="-198" y="-418" width="396" height="882"/>
+       <path id="route" d="M140 188 Q60 40 -144 73" stroke="#ff5a1f" stroke-width="7" stroke-dasharray="12 10" fill="none"/>
+       <g id="dot"><circle id="dotR" r="22" fill="#ff5a1f" opacity=".3"/><circle r="15" fill="#ff5a1f" stroke="#fff" stroke-width="5"/></g>
+       <g id="eta"><g filter="url(#ps)"><rect x="-160" y="-34" width="320" height="68" rx="34" fill="#243139"/></g><text y="10" font-size="26" text-anchor="middle" fill="#FFF8EB">SERVİS YAKLAŞIYOR</text></g>
+       <g id="ntf"><g filter="url(#ps)"><rect x="-186" y="-56" width="372" height="112" rx="22" fill="#FFF8EB"/></g><rect x="-170" y="-38" width="64" height="76" rx="12" fill="#fff"/><image href="img/logo.png" x="-166" y="-34" width="56" height="64"/>
+         <text x="-92" y="-10" font-size="20" fill="#8c8880">VELIGO · ŞİMDİ</text><text x="-92" y="26" font-size="25" fill="#1c1b18">Ali araca bindi ✓</text></g></g>
+     <rect id="rgL" x="-176" y="134" width="180" height="48" rx="12" fill="none" stroke="#ff5a1f" stroke-width="7"/>
+     <rect id="rgV" x="-186" y="194" width="372" height="102" rx="18" fill="none" stroke="#ff5a1f" stroke-width="8"/>
+     <rect id="rgS" x="-166" y="-142" width="342" height="152" rx="22" fill="none" stroke="#ff5a1f" stroke-width="8"/>
+     <circle id="tap" r="34" fill="#ff5a1f" opacity=".45"/>
+     <g id="okb" transform="translate(0 350)"><g filter="url(#ps)"><rect x="-170" y="-34" width="340" height="68" rx="34" fill="#8A9B7C"/></g><text y="10" font-size="26" text-anchor="middle" fill="#FFF8EB">ŞOFÖRE İLETİLDİ ✓</text></g></g>
+   <g id="pnl"><g filter="url(#ps)"><rect x="-340" y="-250" width="680" height="440" rx="18" fill="#1c1b18"/><path d="M-400 190 h800 l-40 44 h-720z" fill="#8c8880"/></g>
+     <rect x="-320" y="-230" width="640" height="400" fill="#FFF8EB"/><rect x="-320" y="-230" width="640" height="70" fill="#124a85"/>
+     <text x="-296" y="-184" font-size="28" fill="#FFF8EB">VELIGO</text><text x="296" y="-184" font-size="22" text-anchor="end" fill="#b9d0ea">FİRMA PANELİ</text>
+     <g id="tiles"></g>
+     <g id="tk" transform="translate(0 260) rotate(-4)"><g filter="url(#ps)"><rect x="-200" y="-46" width="400" height="92" fill="#ff5a1f" stroke="#1c1b18" stroke-width="5"/></g><text y="16" font-size="44" text-anchor="middle" fill="#FFF8EB">TEK PANEL</text></g></g>
+   <g id="brand"><g filter="url(#ps)"><rect x="-330" y="-330" width="660" height="650" fill="#124a85"/></g>
+     <rect x="-150" y="-300" width="300" height="270" rx="16" fill="#fff"/><image href="img/logo.png" x="-108" y="-290" width="216" height="246"/>
+     <g id="bd1"><rect x="-330" y="0" width="660" height="104" fill="#ff5a1f"/><text y="68" font-size="44" text-anchor="middle" fill="#FFF8EB">SERVİSÇİNE GÖNDER</text></g>
+     <text id="bd2" y="172" font-size="40" text-anchor="middle" fill="#FFF8EB">veligo.com.tr</text><text id="bd3" y="230" font-size="34" text-anchor="middle" fill="#E8B65C">@veligoapp</text>
+     <text id="bd4" y="288" font-size="26" text-anchor="middle" fill="#b9d0ea">App Store · Google Play</text></g>
+
+  </svg>
+  <div id="tA" class="abs gk" style="left:50px;right:50px;top:270px;font-size:84px;text-align:center"></div>
+ </div>
+ <div id="hook" class="abs gk" style="left:90px;top:300px;width:900px"><div class="hw" style="font-size:150px">Çocuğun şu an</div><div class="hw o" style="font-size:176px">nerede?</div></div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)), p=(t,a,d)=>cl((t-a)/d);
+const io=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2, oc=x=>1-Math.pow(1-x,3);
+const ob=x=>{const c1=1.7,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+const L=(a,b,k)=>a+(b-a)*k, st=t=>Math.floor(t*12)/12, R=Math.PI/180;
+const tr=(id,s)=>$(id).setAttribute('transform',s);
+const op=(id,v)=>{$(id).style.opacity=v};
+// kanca yazısı 900px'e sığsın
+let FIT=false;function fit(){if(FIT||!document.fonts.check('700 100px "Space Grotesk"'))return;FIT=true;document.querySelectorAll('#hook .hw').forEach(w=>{w.style.whiteSpace='nowrap';w.style.display='inline-block';let f=parseFloat(w.style.fontSize);while(w.offsetWidth>900&&f>60){f-=2;w.style.fontSize=f+'px'}w.style.display='block'})}
+
+const B={"q": 0.3, "start": 1.95, "sabah": 3.36, "kapi": 4.65, "bilmiyor": 6.71, "grup": 7.69, "kirk": 10.42, "sofor": 12.24, "aksam": 15.56, "bindi": 17.15, "emin": 18.51, "vg": 19.73, "harita": 21.93, "eta": 23.93, "bildirim": 25.65, "gitmeyecek": 29.19, "beklemez": 32.4, "sefer": 34.31, "panel": 36.45, "gonder": 41.41, "cunku": 45.12, "son": 47.53, "END": 49.448}; const END=B.END;
+window.V={sfx:[[0.02,'thud'],[B.sabah+.1,'whoosh'],[B.sabah+.4,'ticks'],[B.kapi+.1,'pop'],[B.kapi+.8,'pop'],[B.bilmiyor,'scratch'],[B.grup+.1,'whoosh'],[B.grup+1.6,'pop'],
+ [B.kirk+.1,'ticks'],[B.kirk+.6,'pop'],[B.kirk+1.1,'pop'],[B.sofor+.1,'whoosh'],[B.sofor+.6,'ticks'],[B.aksam+.1,'whoosh'],[B.bindi+.1,'pop'],[B.bindi+.6,'pop'],[B.emin,'thud'],
+ [B.vg+.1,'whoosh'],[B.vg+.5,'pop'],[B.harita+.1,'whoosh'],[B.eta+.1,'pop'],[B.bildirim+.1,'whoosh'],[B.bildirim+.5,'pop'],[B.gitmeyecek+.1,'whoosh'],[B.gitmeyecek+.9,'pop'],
+ [B.beklemez+.2,'pop'],[B.sefer+.1,'whoosh'],[B.sefer+.9,'pop'],[B.panel+.1,'whoosh'],[B.panel+1.2,'pop'],[B.panel+2.0,'pop'],[B.panel+2.9,'pop'],[B.panel+3.6,'thud'],
+ [B.gonder+.1,'whoosh'],[B.gonder+.6,'thud'],[B.gonder+1.2,'pop']]};
+const LINES=[[B.start,B.sabah-.1,'Bildiğini<br><span class="o">sanıyorsun.</span>'],[B.sabah,B.kapi-.1,'Sabah<br><span class="o">07:30.</span>'],
+ [B.kapi,B.bilmiyor-.1,'Kapıda mı?<br><span class="o">Köşede mi?</span>'],[B.bilmiyor,B.grup-.1,'<span class="o">Bilmiyorsun.</span>'],
+ [B.grup,B.kirk-.1,'Veli grubu:<br><span class="o">"Servis nerede?"</span>'],[B.kirk,B.sofor-.1,'Kırk kişi,<br><span class="o">aynı soru.</span>'],
+ [B.sofor,B.aksam-.1,'Şoför: direksiyon<br><span class="o">+ telefon.</span>'],[B.aksam,B.bindi-.1,'Akşam çocuk<br><span class="o">geç geliyor.</span>'],
+ [B.bindi,B.emin-.1,'Bindi mi?<br><span class="o">İndi mi?</span>'],[B.emin,B.vg-.1,'Kimse<br><span class="o">emin değil.</span>'],
+ [B.vg,B.harita-.1,'Tam bunun için:'],[B.harita,B.bildirim-.1,'Servis haritada,<br><span class="o">canlı.</span>'],
+ [B.bildirim,B.gitmeyecek-.1,'"Araca bindi"<br><span class="o">bildirimi.</span>'],[B.gitmeyecek,B.sefer-.1,'Gitmeyecek mi?<br><span class="o">Tek dokunuş.</span>'],
+ [B.sefer,B.panel-.1,'Şoför seferi<br><span class="o">tek tuşla açar.</span>'],[B.panel,B.gonder-.1,'Firma her şeyi<br><span class="o">tek panelden.</span>'],
+ [B.gonder,B.son-.1,'Bu videoyu<br><span class="o">servisçine gönder.</span>'],[B.son,END-.45,'Çocuğun şu an<br><span class="o">nerede?</span>']];
+const BIG=[[B.emin-.1,B.vg-.1]], HITS=[0.02,B.emin,B.gonder+.6];
+const MS=['Servis nerede?','Servis nerede?','Bizimki de bekliyor','Geçti mi?','Servis nerede??','Arayan var mı?','Hâlâ gelmedi','Servis nerede?','Şoföre ulaşan?','Biz de bekliyoruz','Nerede kaldı?','Servis nerede?','Haber yok mu?','Servis nerede?'];
+$('bub').innerHTML=MS.map((m,i)=>{const me=i===0, w=Math.min(500,m.length*17+50), x=me?250-w:-260;
+ return `<g id="m${i}"><rect x="${x}" y="${-270+i*86}" width="${w}" height="70" rx="20" fill="${me?'#ff5a1f':'#e3ded2'}"/><text x="${x+24}" y="${-224+i*86}" font-size="28" fill="${me?'#FFF8EB':'#1c1b18'}">${m}</text></g>`}).join('');
+const TL=['ARAÇLAR','ÖĞRENCİLER','SEFERLER'];
+$('tiles').innerHTML=TL.map((a,i)=>`<g id="tl${i}" transform="translate(0 ${-110+i*92})"><rect x="-290" y="-36" width="580" height="74" rx="12" fill="#fff" stroke="#e3ded2" stroke-width="3"/><rect x="-270" y="-20" width="42" height="42" rx="8" fill="#124a85"/><text x="-210" y="12" font-size="32" fill="#1c1b18">${a}</text><path id="tc${i}" d="M218 0 l16 16 l34 -36" stroke="#8A9B7C" stroke-width="10" fill="none" stroke-linecap="round"/></g>`).join('');
+function scene(t){
+  const W=(a,b)=>(t<a||t>b)?0:ob(p(t,a,.35))*(1-io(p(t,b-.25,.25)));
+  // çocuk + soru: başta ve sonda (döngü)
+  const hs=t<B.sabah?1-io(p(t,B.sabah,.3)):0, back=t>=B.son?ob(p(t,END-1.2,.5)):0, kv=Math.max(hs,back);
+  tr('kid',`translate(470 1150) scale(${kv})`);
+  const wq=p(t,.3,.4)*(1-p(t,END-.9,.4)); tr('pinq',`translate(0 ${-300+Math.sin(t*3)*10*wq}) rotate(${Math.sin(t*2.4)*6*wq})`);
+  // sabah: sokak + saat
+  const sv=W(B.sabah,B.grup+.25); op('sk',sv>0?1:0); tr('sk',`translate(0 ${(1-sv)*400})`);
+  const morning=t<B.aksam-.2;
+  tr('clk',`translate(470 ${morning?700:640}) scale(${morning?W(B.sabah,B.kapi+.25):W(B.aksam,B.bindi+.25)})`);
+  $('clkT').textContent=morning?'07:30':'17:45';
+  const mm=morning?180+cl(t-B.sabah,0,3)*12:270+cl(t-B.aksam,0,3)*12, hh=morning?225+cl(t-B.sabah,0,3):172.5+cl(t-B.aksam,0,3);
+  tr('mh',`rotate(${mm})`); tr('hh',`rotate(${hh})`);
+  tr('moon',`translate(740 560) scale(${W(B.aksam,B.emin+.25)})`);
+  const kp=t>=B.kapi&&t<B.grup, bl=Math.floor(t*3)%2, unk=t>=B.bilmiyor;
+  tr('bA',`translate(360 1180) scale(${kp?ob(p(t,B.kapi,.3)):0})`); tr('bB',`translate(610 1180) scale(${kp?ob(p(t,B.kapi+.7,.3)):0})`);
+  op('bA',unk?.3:(bl?1:.35)); op('bB',unk?.3:(bl?.35:1));
+  op('qA',1); op('qB',1);
+  // veli grubu
+  tr('chat',`translate(470 900) scale(${W(B.grup,B.sofor+.25)})`);
+  let n=0; MS.forEach((_,i)=>{const at=i===0?B.grup+1.6:B.kirk+(i-1)*.17; const on=t>=at; if(on)n++; op('m'+i,on?1:0)});
+  const sc=Math.max(0,n-7)*86; $('bub').setAttribute('transform',`translate(0 ${-sc})`);
+  $('cnt').textContent=t<B.kirk?(n?'1':'0'):String(Math.round(L(1,40,io(p(t,B.kirk,1.6)))));
+  // şoför
+  tr('drv',`translate(470 1020) scale(${W(B.sofor,B.aksam+.25)})`);
+  tr('whl',`rotate(${Math.sin(t*2.2)*14} 0 90)`); op('buzz',Math.floor(t*6)%2?1:0); op('warn',Math.floor(t*3)%2&&t>B.sofor+1?1:0);
+  $('dph').setAttribute('transform',`translate(190 -110) rotate(${14+Math.sin(t*40)*3*(Math.floor(t*6)%2)})`);
+  // bindi mi indi mi + kimse emin değil
+  tr('bq1',`translate(270 ${930}) rotate(${-6+Math.sin(t*4)*3}) scale(${W(B.bindi,B.vg+.25)})`);
+  tr('bq2',`translate(670 ${1090}) rotate(${5-Math.sin(t*4)*3}) scale(${W(B.bindi+.5,B.vg+.25)})`);
+  tr('ky',`translate(470 1010) rotate(-7) scale(${t>B.emin&&t<B.vg+.25?L(2,1,io(p(t,B.emin,.15)))*(1-io(p(t,B.vg,.25))):0})`);
+  // Veligo
+  tr('brandS',`translate(470 860) scale(${W(B.vg+.2,B.harita+.25)})`);
+  const pw=t>=B.harita&&t<=B.panel+.3, pin=oc(p(t,B.harita,.45)), pout=io(p(t,B.panel,.3));
+  tr('ph',`translate(470 ${L(1800,890,pin)+pout*1000})`); op('ph',pw?1:0);
+  op('im1',t<B.bildirim?1:0); op('im2',t>=B.bildirim&&t<B.gitmeyecek?1:0); op('im3',t>=B.gitmeyecek&&t<B.sefer?1:0); op('im4',t>=B.sefer?1:0);
+  const onMap=t<B.bildirim, rp=$('route'), rk=io(p(t,B.harita+.4,(B.bildirim-B.harita)-.6));
+  op('route',onMap?.9:0); op('dot',onMap&&t>B.harita+.3?1:0);
+  const pt=rp.getPointAtLength(rp.getTotalLength()*rk); tr('dot',`translate(${pt.x} ${pt.y})`);
+  $('dotR').setAttribute('r',22+((t*1.5)%1)*18); $('dotR').style.opacity=.45*(1-((t*1.5)%1));
+  tr('eta',`translate(0 330) scale(${t>=B.eta&&t<B.bildirim?ob(p(t,B.eta,.35)):0})`);
+  tr('ntf',`translate(0 ${t>=B.bildirim+.4&&t<B.gitmeyecek?L(-560,-330,oc(p(t,B.bildirim+.4,.4))):-700})`);
+  const pul=1+Math.sin(t*7)*.02;
+  op('rgL',t>B.bildirim+1.2&&t<B.gitmeyecek?1:0); op('rgV',t>B.gitmeyecek+.6&&t<B.sefer?1:0); op('rgS',t>B.sefer+.6&&t<B.panel?1:0);
+  ['rgL','rgV','rgS'].forEach(id=>$(id).style.transformBox='fill-box');
+  ['rgL','rgV','rgS'].forEach(id=>{$(id).style.transformOrigin='center';$(id).style.transform=`scale(${pul})`});
+  let tp=null; if(t>B.gitmeyecek+.8&&t<B.gitmeyecek+1.4)tp=[0,245,p(t,B.gitmeyecek+.8,.6)]; if(t>B.sefer+.8&&t<B.sefer+1.4)tp=[124,-96,p(t,B.sefer+.8,.6)];
+  if(tp){tr('tap',`translate(${tp[0]} ${tp[1]}) scale(${.5+tp[2]})`);op('tap',.6*(1-tp[2]))}else op('tap',0);
+  tr('okb',`translate(0 350) scale(${t>=B.beklemez&&t<B.sefer?ob(p(t,B.beklemez,.35)):0})`);
+  // firma paneli
+  tr('pnl',`translate(470 900) scale(${W(B.panel,B.gonder+.25)})`);
+  TL.forEach((_,i)=>{const a=B.panel+1.2+i*.85; op('tl'+i,t>a-.5?1:.25); const c=$('tc'+i); c.style.strokeDasharray='80'; c.style.strokeDashoffset=80*(1-p(t,a,.3))});
+  tr('tk',`translate(0 262) rotate(-4) scale(${t>B.panel+3.6?L(1.8,1,io(p(t,B.panel+3.6,.15))):0})`);
+  // kapanış kartı
+  tr('brand',`translate(470 900) scale(${W(B.gonder,END-1.1)})`);
+  const bd=p(t,B.gonder+.6,.15); tr('bd1',`scale(${t>B.gonder+.6?L(1.4,1,io(bd)):0})`); $('bd1').style.transformBox='fill-box'; $('bd1').style.transformOrigin='center';
+  op('bd2',t>B.gonder+1.2?1:0); op('bd3',t>B.gonder+1.6?1:0); op('bd4',t>B.gonder+2.0?1:0);
+}
+
+const HK=.45;
+window.seek=function(t){
+  fit();
+  const pull=io(p(t,B.start-.1,.6)), push=io(p(t,END-HK,HK));
+  let s=L(1.18,1,pull); s=L(s,1.18,push);
+  $('cam').style.transform=`scale(${s})`;
+  $('furn').style.opacity=pull*(1-push); $('prog').style.width=(cl(t/END)*100)+'%';
+  $('floor').style.opacity=pull*(1-push);
+  $('sv').style.transform=`translateY(${110*pull*(1-push)}px)`;
+  const hk=$('hook'); hk.style.display=(t<B.start+.3||t>=END-HK)?'block':'none';
+  hk.querySelectorAll('.hw').forEach((w,i)=>{let y=0,sc=1,o=1;
+    if(t<B.start+.3){y=-6*Math.sin(t*3)*(i?1:-1)*(1-p(t,1.0,.5));sc=1-io(p(t,B.start-.2+i*.05,.3))}
+    else{const k=oc(p(t,END-HK+i*.06,.33));y=(1-k)*80;o=cl(p(t,END-HK+i*.06,.1)*2)}
+    w.style.transform=`translateY(${y}px) scaleY(${sc})`;w.style.transformOrigin='0 85%';w.style.opacity=o});
+  scene(t,pull,push);
+  const tA=$('tA'); let txt='',t0=0;for(const [a,b2,x] of LINES) if(t>=a&&t<b2){txt=x;t0=a}
+  if(tA.dataset.t!==txt){tA.innerHTML=txt;tA.dataset.t=txt}
+  const k2=ob(p(t,t0,.4)); tA.style.opacity=txt?cl(p(t,t0,.1)*2)*(1-p(t,END-HK-.15,.15)):0;
+  tA.style.transform=`translateY(${(1-k2)*40}px) scale(${BIG.some(([a,b])=>t>=a&&t<b)?1.15:1})`;
+  const sh=HITS.some(a=>t>a&&t<a+.22)?Math.sin(t*90)*7:0;
+  $('rc').style.transform=`translateX(${sh}px)`;
+};
+seek(0);
+</script></body></html>
