@@ -79,6 +79,7 @@ VIDS = {
    'Suyun da var: yılda altmış beş tanker.','Denizden payın: on santim kıyı. Tek ayak sığar.','Asıl sürpriz suyun altında: yılda üç kilo hamsi.',
    'Ama dur. Fiş daha kapanmadı.','Dış borç da bölünür. Kişi başı altı bin doları geçer.','Yani altının beş katı borç. O da senin.',
    'Bunu payını hep isteyen arkadaşına at.',"Şimdi bir daha düşün: Türkiye'yi bölsek, sana ne düşerdi?"]),
+ 'ogretmen01': ('v14_ogretmen.py', ['q']+['start', 'kolonya', 'cicek', 'altin', 'ata', 'peki', 'hesap', 'aybuke', 'necmettin', 'teror', 'ikiyuz', 'nisan', 'ayla', 'yedi', 'izin', 'ama', 'yani', 'kesildi', 'maas', 'kira', 'borc', 'b1', 'b2', 'b3', 'kolonya2', 'kagit', 'gerisi', 'simdi', 'kutlu'], ['a']*30),
  'anlasma01': ('v13_anlasma.py', ['q','start','sen','usta','bosluk','kayit','kayit2','oi','ruhsat','plaka','ses','foto','tel','kazanc','platform','bitti','demo'], ['a']*17),
  'sanayi01': ('v12_sanayi.py', ['q','start','aksam','ne','oysa','hamle','fiyat','parca','usta','ruhsat','ses','wa','hazir','demo','simdi'], [
    'Sanayide neyin parasını ödüyorsun?','Sabah sadece yağı değişecek dendi.','Akşam liste uzamış: balata, filtre, bir de şunu da değiştirdik.',
