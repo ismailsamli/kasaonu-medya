@@ -47,10 +47,10 @@ SVG = r'''
 
 SCENE = r'''
 const B=__B__; if(B.start===undefined)B.start=B.sen; const END=B.END;
-window.V={sfx:[[0.02,'thud'],[B.sen+.1,'whoosh'],[B.sen+.8,'pop'],[B.usta+.1,'whoosh'],[B.usta+.8,'pop'],[B.bosluk+.2,'scratch'],[B.bosluk+.5,'ticks'],[B.kayit+.9,'thud'],
- [B.oi+.1,'whoosh'],[B.oi+.5,'pop'],[B.ruhsat+.1,'whoosh'],[B.ruhsat+1.9,'whoosh'],[B.ses+.2,'ticks'],[B.foto+.2,'pop'],[B.foto+1.2,'pop'],[B.tel+.1,'whoosh'],[B.tel+1.0,'pop'],
+window.V={sfx:[[0.02,'thud'],[B.sen+.1,'whoosh'],[B.sen+.8,'pop'],[B.usta+.1,'whoosh'],[B.usta+.8,'pop'],[B.bosluk+.2,'scratch'],[B.bosluk+.5,'ticks'],[B.kayit2,'thud'],
+ [B.oi+.1,'whoosh'],[B.oi+.5,'pop'],[B.ruhsat+.1,'whoosh'],[B.plaka,'whoosh'],[B.ses+.2,'ticks'],[B.foto+.2,'pop'],[B.foto+1.2,'pop'],[B.tel+.1,'whoosh'],[B.tel+1.0,'pop'],
  [B.kazanc+.1,'whoosh'],[B.kazanc+.4,'ticks'],[B.platform+.1,'whoosh'],[B.bitti+.3,'pop'],[B.demo+.1,'whoosh'],[B.demo+.6,'thud'],[B.demo+1.2,'pop']]};
-const LINES=[[B.sen,B.usta-.1,'Sen sesi<br><span class="o">anlatamazsın.</span>'],
+const LINES=[[B.start,B.sen-.1,'Cevap:<br><span class="o">anlaşamamak.</span>'],[B.sen,B.usta-.1,'Sen sesi<br><span class="o">anlatamazsın.</span>'],
  [B.usta,B.bosluk-.1,'Usta yaptığını<br><span class="o">anlatamaz.</span>'],
  [B.bosluk,B.kayit-.1,'Aradaki boşluk<br><span class="o">faturaya yazılır.</span>'],
  [B.kayit,B.oi-.1,'Sorun para değil.<br><span class="o">Kayıt yok.</span>'],
@@ -63,7 +63,7 @@ const LINES=[[B.sen,B.usta-.1,'Sen sesi<br><span class="o">anlatamazsın.</span>
  [B.platform,B.bitti-.1,'Telefonda da,<br><span class="o">bilgisayarda da.</span>'],
  [B.bitti,B.demo-.1,'Anlaşmazlık biter,<br><span class="o">fatura uzamaz.</span>'],
  [B.demo,END-.45,'Ücretsiz demo için<br><span class="o">@otoislerim</span>']];
-const BIG=[[B.kayit+.8,B.oi-.1]], HITS=[0.02,B.kayit+.9,B.demo+.6];
+const BIG=[[B.kayit2-.1,B.oi-.1]], HITS=[0.02,B.kayit2,B.demo+.6];
 const FY=1262;
 const BL=['SES ARANDI','BAKILDI','HALLEDİLDİ','?','?'];
 $('billL').innerHTML=BL.map((a,i)=>`<g id="bl${i}"><text x="-140" y="${56+i*62}" font-size="28" fill="#1c1b18">${a}</text><text x="140" y="${56+i*62}" font-size="32" text-anchor="end" fill="#ff5a1f">???</text></g>`).join('');
@@ -84,7 +84,7 @@ function scene(t){
   const bk=oc(p(t,B.bosluk+.2,1.4)), bo=io(p(t,B.oi,.3));
   tr('bill',`translate(470 ${560+bo*900})`); op('bill',t>B.bosluk&&t<B.oi+.3?1:0); $('billR').setAttribute('height',40+bk*320);
   BL.forEach((_,i)=>op('bl'+i,t>B.bosluk+.4+i*.3?1:0));
-  tr('ky',`translate(470 760) rotate(-8) scale(${t>B.kayit+.9&&t<B.oi+.25?L(2,1,io(p(t,B.kayit+.9,.15)))*(1-io(p(t,B.oi,.25))):0})`);
+  tr('ky',`translate(470 760) rotate(-8) scale(${t>B.kayit2&&t<B.oi+.25?L(2,1,io(p(t,B.kayit2,.15)))*(1-io(p(t,B.oi,.25))):0})`);
   // Otoİşlerim
   tr('brandS',`translate(470 860) scale(${W(B.oi+.2,B.ruhsat+.25)})`);
   const pw=t>=B.ruhsat&&t<=B.foto+.3, pin=oc(p(t,B.ruhsat,.45)), pout=io(p(t,B.foto,.3));
@@ -92,8 +92,8 @@ function scene(t){
   if(pw) tr('ph',`translate(470 ${L(1800,880,pin)+pout*1000})`); else if(pw2) tr('ph',`translate(470 ${L(1800,880,pin2)+pout2*1000})`);
   op('ph',pw||pw2?1:0);
   op('im1',t<B.ses?1:0); op('im2',t>=B.ses&&t<B.tel?1:0); op('im3',t>=B.tel?1:0);
-  const ak=oc(p(t,B.ruhsat+1.9,.45)), ao=io(p(t,B.ses-.1,.3));
-  tr('air',`translate(470 ${L(1600,1030,ak)+ao*700}) rotate(${L(6,-2,ak)})`); op('air',t>B.ruhsat+1.9&&t<B.ses+.3?1:0);
+  const ak=oc(p(t,B.plaka,.45)), ao=io(p(t,B.ses-.1,.3));
+  tr('air',`translate(470 ${L(1600,1030,ak)+ao*700}) rotate(${L(6,-2,ak)})`); op('air',t>B.plaka&&t<B.ses+.3?1:0);
   op('mic',t>B.ses&&t<B.foto?1:0); $('mic').setAttribute('transform',`translate(0 ${(1-oc(p(t,B.ses,.3)))*120})`);
   for(let i=0;i<11;i++){const h=t>B.ses+.2&&t<B.foto?14+Math.abs(Math.sin(t*9+i*1.3))*50:10; const r=$('wb'+i); r.setAttribute('height',h); r.setAttribute('y',150-h/2)}
   const said='yağ filtresi · 2 adet'; $('say').textContent=said.slice(0,Math.floor(said.length*p(t,B.ses+.3,1.0)));
