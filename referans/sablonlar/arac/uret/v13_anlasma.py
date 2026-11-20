@@ -41,7 +41,7 @@ SVG = r'''
      <path d="M-160 -40 H160" stroke="#b9b4a8" stroke-width="4" stroke-dasharray="10 8"/><path id="okc" d="M-70 50 l50 50 l100 -120" stroke="#8A9B7C" stroke-width="22" fill="none" stroke-linecap="round"/></g>
    <g id="brand"><g filter="url(#ps)"><rect x="-330" y="-260" width="660" height="520" fill="#243139"/></g>
      <rect x="-300" y="-236" width="600" height="160" rx="14" fill="#fff"/><image href="img/logo.png" x="-250" y="-236" width="500" height="160"/>
-     <g id="bd1"><rect x="-300" y="-60" width="600" height="110" fill="#ff5a1f"/><text y="14" font-size="38" text-anchor="middle" fill="#FFF8EB">20 DK ÜCRETSİZ DEMO</text></g>
+     <g id="bd1"><rect x="-300" y="-60" width="600" height="110" fill="#ff5a1f"/><text y="14" font-size="40" text-anchor="middle" fill="#FFF8EB">15 GÜN ÜCRETSİZ DENE</text></g>
      <text id="bd2" y="120" font-size="38" text-anchor="middle" fill="#FFF8EB">otoislerim.com.tr</text><text id="bd3" y="190" font-size="34" text-anchor="middle" fill="#E8B65C">@otoislerim</text></g>
 '''
 
@@ -62,7 +62,7 @@ const LINES=[[B.start,B.sen-.1,'Cevap:<br><span class="o">anlaşamamak.</span>']
  [B.kazanc,B.platform-.1,'Kazanç ve alacak<br><span class="o">tek ekranda.</span>'],
  [B.platform,B.bitti-.1,'Telefonda da,<br><span class="o">bilgisayarda da.</span>'],
  [B.bitti,B.demo-.1,'Anlaşmazlık biter,<br><span class="o">fatura uzamaz.</span>'],
- [B.demo,END-.45,'Ücretsiz demo için<br><span class="o">@otoislerim</span>']];
+ [B.demo,END-.45,'15 gün ücretsiz,<br><span class="o">kredi kartı yok.</span>']];
 const BIG=[[B.kayit2-.1,B.oi-.1]], HITS=[0.02,B.kayit2,B.demo+.6];
 const FY=1262;
 const BL=['SES ARANDI','BAKILDI','HALLEDİLDİ','?','?'];
