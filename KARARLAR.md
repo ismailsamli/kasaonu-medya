@@ -17,12 +17,13 @@ Her çalışmaya başlamadan önce bu dosyayı, FORMAT.md'yi ve KONULAR.md'yi ok
 ## İçerik
 - Aynı konu ya da aynı konu ailesi tekrar edilmez → KONULAR.md. Yeni konu önce oraya bakılarak seçilir, yayınlanınca oraya eklenir.
 - Format → FORMAT.md (v3): 45-60 sn, video kısaltılarak "izlenme oranı" şişirilmez; kanca ve hikâye güçlendirilir.
-- Videoda TEK çağrı: sonda "Yarın: …" + küçük takip yazısı. Yorum sorusu / "birine gönder" açıklamada. Çağrı listesi yapılmaz.
+- Videoda TEK çağrı (takip). Kapanış kalıbı: "Yarın Kasa Önü'nde: <net konu + net vaat>. Bu tür taktikler hoşuna gidiyorsa, takip et." Yarın cümlesi ne anlatılacağını açıkça söylemeli (sığ/belirsiz "yarın 2 damga" olmaz). Yorum sorusu / "birine gönder" açıklamada. Çağrı listesi yapılmaz.
 - Yabancı kanalların videoları indirilip çevrilip atılmaz (telif + Instagram'ın kopya içerik cezası). Sadece konu ve kanca fikri alınır; metin ve çizim bizim.
 - Her rakam kaynaktan doğrulanır.
 - Siyasi / tartışma açan içerik serbest (Öğretmenler Günü örneği), ama alaycı değil ciddi ton.
 - Gerçek kişi fotoğrafı/portresi çizilmez, gerçek kişi sesi yapay zekâyla taklit edilmez (Atatürk sesi ve portresi reddedildi; yerine bayrak/"Başöğretmen").
 - Ses: ElevenLabs klonu "İsmail - Kasa Önü" (Inspector'da ses kontrol edilir; başka sese kaymasın).
+- Kısaltmalar Türkçe okunur: seslendirme metninde AVM → "A-Ve-Me" (ya da "alışveriş merkezi"), İngilizce okunuş ("eyviem") yasak. Yapay zekâ gibi duran her şey düzeltilir.
 
 ## İş birlikleri
 - İş birliği videosu gerçek tanıtım olmalı: firmanın kendi logosu ve ekran görüntüleri, net yönlendirme (site, hesap, teklif). Firmanın cümleleri birebir kopyalanmaz; bizim hikâye tarzımızla anlatılır.

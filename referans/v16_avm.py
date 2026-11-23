@@ -3,9 +3,9 @@ import json, sys, re
 from pathlib import Path
 
 B = json.loads(sys.argv[1]) if len(sys.argv) > 1 else {}
-SENTS = json.load(open('/tmp/avm_sents.json'))
-DROP = {'soru','sik','yaz','gonder','takip'}
-KEYS = ['q','start','duvar','pencere','plan','soz','gruen','cephe','avust','bir','tabela','yok','kaybet','etki','ilginc','alici','poset','satici','kose','soru','sik','yaz','gonder','takip','yarin']
+SENTS = json.load(open('/home/claude/uret/avm_sents2.json'))
+DROP = set()
+KEYS = ['q','start','duvar','pencere','plan','soz','gruen','cephe','avust','bir','tabela','yok','kaybet','etki','ilginc','alici','poset','satici','kose','yarin','takip']
 
 # Altyazı: her cümleyi 2-4 kelimelik parçalara böl, cümle süresine harf oranıyla yay
 def subs():
@@ -89,9 +89,10 @@ SVG = r'''
    <g id="fol"><g filter="url(#ps)"><rect x="-320" y="-220" width="640" height="440" rx="24" fill="#FFF8EB"/></g><circle cy="-110" r="70" fill="#ff5a1f"/><text y="-90" font-size="54" text-anchor="middle" fill="#FFF8EB">KÖ</text>
      <text y="10" font-size="44" text-anchor="middle" fill="#1c1b18">@kasaonu.tr</text><g id="fb"><rect x="-200" y="50" width="400" height="80" rx="16" fill="#3b82f6"/><text y="104" font-size="40" text-anchor="middle" fill="#fff">+ TAKİP ET</text></g>
      <text y="180" font-size="30" text-anchor="middle" fill="#8c8880">HER GÜN 1 KASA ÖNÜ TAKTİĞİ</text></g>
-   <g id="yrn"><g filter="url(#ps)"><rect x="-320" y="-230" width="640" height="460" fill="#243139"/></g><text y="-150" font-size="44" text-anchor="middle" fill="#E8B65C">YARIN</text>
+   <g id="yrn"><g filter="url(#ps)"><rect x="-320" y="-230" width="640" height="460" fill="#243139"/></g><text y="-150" font-size="40" text-anchor="middle" fill="#E8B65C">YARIN KASA ÖNÜ'NDE</text>
      <g transform="translate(0 -20)"><rect x="-260" y="-70" width="520" height="140" rx="14" fill="#FFF8EB"/><g id="dm"></g></g>
-     <text y="130" font-size="40" text-anchor="middle" fill="#FFF8EB">Neden 2 damga <tspan fill="#ff5a1f">hediye?</tspan></text><text id="ytk" y="196" font-size="28" text-anchor="middle" fill="#b9d0ea">@kasaonu.tr · takip et, kaçırma</text></g>
+     <text y="118" font-size="36" text-anchor="middle" fill="#FFF8EB">2 hediye damga =</text><text y="170" font-size="36" text-anchor="middle" fill="#ff5a1f">neredeyse 2 kat geri dönüş</text></g>
+   <g id="ytk"><rect x="-210" y="-44" width="420" height="88" rx="18" fill="#3b82f6"/><text y="14" font-size="42" text-anchor="middle" fill="#fff">+ TAKİP ET</text><text y="86" font-size="28" text-anchor="middle" fill="#1c1b18">@kasaonu.tr</text></g>
 '''
 
 SCENE = r'''
@@ -99,12 +100,12 @@ const B=__B__; const END=B.END; const SUBS=__SUBS__;
 window.NOLOOP=true;
 window.V={sfx:[[0.02,'thud'],[B.duvar+.1,'pop'],[B.pencere+.1,'pop'],[B.plan,'thud'],[B.soz+.1,'whoosh'],[B.gruen+.1,'whoosh'],[B.cephe+.2,'ticks'],[B.avust+.1,'whoosh'],[B.avust+.4,'pop'],[B.avust+.8,'pop'],[B.avust+1.2,'pop'],[B.avust+1.6,'pop'],[B.bir+.2,'thud'],
  [B.tabela+.1,'whoosh'],[B.tabela+.5,'ticks'],[B.yok+.1,'scratch'],[B.yok+.9,'scratch'],[B.yok+1.7,'scratch'],[B.kaybet+.2,'ticks'],[B.etki,'thud'],[B.ilginc+.1,'whoosh'],[B.alici+.1,'whoosh'],[B.poset+.1,'ticks'],[B.satici+.1,'whoosh'],[B.kose+.2,'pop'],
- [B.yarin+.1,'whoosh'],[B.yarin+.8,'pop']]};
+ [B.yarin+.1,'whoosh'],[B.yarin+2.2,'pop'],[B.yarin+2.5,'pop'],[B.takip+.1,'pop']]};
 const LINES=[[B.start,B.plan-.1,'Duvarda<br><span class="o">saat yok.</span>'],[B.plan,B.gruen-.1,'Tesadüf değil.<br><span class="o">Plan.</span>'],
  [B.gruen,B.avust-.1,'<span class="o">1956:</span><br>ilk kapalı AVM.'],[B.avust,B.tabela-.1,'4 AVM,<br><span class="o">1 saat.</span>'],[B.tabela,B.yok-.1,'8 dükkân,<br><span class="o">3 dakika.</span>'],
  [B.yok,B.ilginc-.1,'Zaman kaybolur,<br><span class="o">sepet dolar.</span>'],[B.ilginc,B.alici-.1,'Mucidi bile<br><span class="o">pişman.</span>'],
  [B.alici,B.satici-.1,'<span class="o">Alıcıysan:</span><br>alarm kur.'],[B.satici,B.yarin-.1,'<span class="o">Satıcıysan:</span><br>acele ettirme.'],
- [B.yarin,END,'Yarın:<br><span class="o">2 damga sırrı.</span>']];
+ [B.yarin,B.takip-.1,'Yarın<br><span class="o">Kasa Önü\'nde:</span>'],[B.takip,END,'Hoşuna gittiyse<br><span class="o">takip et.</span>']];
 const BIG=[[B.etki-.1,B.ilginc-.1]], HITS=[0.02,B.plan,B.etki];
 $('spk').innerHTML=Array.from({length:14},(_,i)=>`<path id="sp${i}" d="M0 -14 L4 -4 L14 0 L4 4 L0 14 L-4 4 L-14 0 L-4 -4z" fill="#E8B65C" transform="translate(${-240+(i%7)*80} ${-110+Math.floor(i/7)*70+(i%2)*20})"/>`).join('');
 $('itms').innerHTML=Array.from({length:6},(_,i)=>`<rect id="it${i}" x="-30" y="-30" width="60" height="60" rx="8" fill="${['#7C9DA5','#E8B65C','#8A9B7C','#ff5a1f','#243139','#b9b4a8'][i]}"/>`).join('');
@@ -167,8 +168,9 @@ function scene(t){
   tr('fol',`translate(470 900) scale(${W(B.takip,B.yarin+.25)})`);
   tr('fb',`scale(${t>B.takip+.7?L(1.12,1,oc(p(t,B.takip+.7,.3)))+Math.sin(t*6)*.015:1})`); $('fb').style.transformBox='fill-box'; $('fb').style.transformOrigin='center';
   // yarın
-  tr('yrn',`translate(470 900) scale(${t>B.yarin?ob(p(t,B.yarin,.4)):0})`);
-  for(let i=0;i<10;i++){const f=i<2&&t>B.yarin+.8+i*.3; $('d'+i).setAttribute('fill',f?'#ff5a1f':'none')}
+  tr('yrn',`translate(470 ${t>B.takip?L(900,820,io(p(t,B.takip,.4))):900}) scale(${t>B.yarin?ob(p(t,B.yarin,.4)):0})`);
+  tr('ytk',`translate(470 1150) scale(${t>B.takip?ob(p(t,B.takip,.35))*(1+Math.sin(t*6)*.02):0})`);
+  for(let i=0;i<10;i++){const f=i<2&&t>B.yarin+2.2+i*.3; $('d'+i).setAttribute('fill',f?'#ff5a1f':'none')}
   // altyazı
   const sb=$('sub'); let st='';for(const [a,b,x] of SUBS) if(t>=a&&t<b){st=x}
   if(sb.dataset.t!==st){sb.textContent=st;sb.dataset.t=st} sb.style.opacity=(st&&t>=B.start)?1:0;
