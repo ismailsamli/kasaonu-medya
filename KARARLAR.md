@@ -16,7 +16,8 @@ Her çalışmaya başlamadan önce bu dosyayı, FORMAT.md'yi ve KONULAR.md'yi ok
 
 ## İçerik
 - Aynı konu ya da aynı konu ailesi tekrar edilmez → KONULAR.md. Yeni konu önce oraya bakılarak seçilir, yayınlanınca oraya eklenir.
-- Format → FORMAT.md (v3): 45-60 sn, video kısaltılarak "izlenme oranı" şişirilmez; kanca ve hikâye güçlendirilir. Sonda yorum sorusu, "kime gönder", takip çağrısı ve "Yarın: …".
+- Format → FORMAT.md (v3): 45-60 sn, video kısaltılarak "izlenme oranı" şişirilmez; kanca ve hikâye güçlendirilir.
+- Videoda TEK çağrı: sonda "Yarın: …" + küçük takip yazısı. Yorum sorusu / "birine gönder" açıklamada. Çağrı listesi yapılmaz.
 - Yabancı kanalların videoları indirilip çevrilip atılmaz (telif + Instagram'ın kopya içerik cezası). Sadece konu ve kanca fikri alınır; metin ve çizim bizim.
 - Her rakam kaynaktan doğrulanır.
 - Siyasi / tartışma açan içerik serbest (Öğretmenler Günü örneği), ama alaycı değil ciddi ton.

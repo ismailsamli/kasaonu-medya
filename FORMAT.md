@@ -13,7 +13,7 @@
 3. 1–5 sn: "sen de yaşadın" + açık döngü vaadi ("sonunda kurtulma yolunu söyleyeceğim").
 4. 5–35 sn: hikâye, her 6–8 sn'de bir rakamlı ifşa (en az 3 ifşa).
 5. 35–45 sn: "Alıcıysan:" (birine gönderilecek uyarı) + "Satıcıysan:" (kaydedilecek ipucu).
-6. 45–55 sn: kapanış kartı: yorum sorusu (şıklı), "bunu kime göndermelisin", "Takip et — her gün bir taktik", "Yarın: …".
+6. Kapanış: TEK sesli çağrı. Varsayılan: "Yarın: …" merak cümlesi + ekranda küçük "@kasaonu.tr · takip et". Yorum sorusu ve "birine gönder" videoda söylenmez, açıklamaya yazılır. (İsmail, 23 Kas: hepsini tek videoya doldurmak yanlış.)
 7. Konuşmanın altyazısı ekranda (sessiz izleyen için), seri numarası "TAKTİK #NN".
 8. Konu önceliği: para / fiyat / indirim / ödeme anı. KONULAR.md'deki ailelere dokunma.
 9. Açıklama: konu anahtar kelimesi ilk satırda, 2-3 cümle bilgi, soru, en fazla 5 etiket.

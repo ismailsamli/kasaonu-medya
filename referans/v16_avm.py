@@ -4,6 +4,7 @@ from pathlib import Path
 
 B = json.loads(sys.argv[1]) if len(sys.argv) > 1 else {}
 SENTS = json.load(open('/tmp/avm_sents.json'))
+DROP = {'soru','sik','yaz','gonder','takip'}
 KEYS = ['q','start','duvar','pencere','plan','soz','gruen','cephe','avust','bir','tabela','yok','kaybet','etki','ilginc','alici','poset','satici','kose','soru','sik','yaz','gonder','takip','yarin']
 
 # Altyazı: her cümleyi 2-4 kelimelik parçalara böl, cümle süresine harf oranıyla yay
@@ -11,7 +12,10 @@ def subs():
     out = []
     starts = [B[k] for k in KEYS] + [B['END'] - 0.6]
     for i, s in enumerate(SENTS):
-        a, b = starts[i], starts[i + 1] - 0.12
+        if KEYS[i] in DROP: continue
+        a = starts[i]; j = i + 1
+        while j < len(KEYS) and KEYS[j] in DROP: j += 1
+        b = starts[j] - 0.12
         for a_,b_ in [("bin dokuz yüz elli altıda","1956'da"),("dört AVM'yi","4 AVM'yi"),("sekiz dükkân","8 dükkân"),("üç dakikada","3 dakikada"),("bir tane saat","1 tane saat"),("iki damga","2 damga")]: s=s.replace(a_,b_)
         words = s.split()
         chunks, cur = [], []
@@ -87,7 +91,7 @@ SVG = r'''
      <text y="180" font-size="30" text-anchor="middle" fill="#8c8880">HER GÜN 1 KASA ÖNÜ TAKTİĞİ</text></g>
    <g id="yrn"><g filter="url(#ps)"><rect x="-320" y="-230" width="640" height="460" fill="#243139"/></g><text y="-150" font-size="44" text-anchor="middle" fill="#E8B65C">YARIN</text>
      <g transform="translate(0 -20)"><rect x="-260" y="-70" width="520" height="140" rx="14" fill="#FFF8EB"/><g id="dm"></g></g>
-     <text y="140" font-size="40" text-anchor="middle" fill="#FFF8EB">Neden 2 damga <tspan fill="#ff5a1f">hediye?</tspan></text></g>
+     <text y="130" font-size="40" text-anchor="middle" fill="#FFF8EB">Neden 2 damga <tspan fill="#ff5a1f">hediye?</tspan></text><text id="ytk" y="196" font-size="28" text-anchor="middle" fill="#b9d0ea">@kasaonu.tr · takip et, kaçırma</text></g>
 '''
 
 SCENE = r'''
@@ -95,12 +99,12 @@ const B=__B__; const END=B.END; const SUBS=__SUBS__;
 window.NOLOOP=true;
 window.V={sfx:[[0.02,'thud'],[B.duvar+.1,'pop'],[B.pencere+.1,'pop'],[B.plan,'thud'],[B.soz+.1,'whoosh'],[B.gruen+.1,'whoosh'],[B.cephe+.2,'ticks'],[B.avust+.1,'whoosh'],[B.avust+.4,'pop'],[B.avust+.8,'pop'],[B.avust+1.2,'pop'],[B.avust+1.6,'pop'],[B.bir+.2,'thud'],
  [B.tabela+.1,'whoosh'],[B.tabela+.5,'ticks'],[B.yok+.1,'scratch'],[B.yok+.9,'scratch'],[B.yok+1.7,'scratch'],[B.kaybet+.2,'ticks'],[B.etki,'thud'],[B.ilginc+.1,'whoosh'],[B.alici+.1,'whoosh'],[B.poset+.1,'ticks'],[B.satici+.1,'whoosh'],[B.kose+.2,'pop'],
- [B.soru+.1,'whoosh'],[B.sik+.1,'pop'],[B.sik+.7,'pop'],[B.sik+1.3,'pop'],[B.yaz+.1,'pop'],[B.gonder+.1,'whoosh'],[B.takip+.1,'whoosh'],[B.takip+.8,'pop'],[B.yarin+.1,'whoosh'],[B.yarin+.8,'pop']]};
+ [B.yarin+.1,'whoosh'],[B.yarin+.8,'pop']]};
 const LINES=[[B.start,B.plan-.1,'Duvarda<br><span class="o">saat yok.</span>'],[B.plan,B.gruen-.1,'Tesadüf değil.<br><span class="o">Plan.</span>'],
  [B.gruen,B.avust-.1,'<span class="o">1956:</span><br>ilk kapalı AVM.'],[B.avust,B.tabela-.1,'4 AVM,<br><span class="o">1 saat.</span>'],[B.tabela,B.yok-.1,'8 dükkân,<br><span class="o">3 dakika.</span>'],
  [B.yok,B.ilginc-.1,'Zaman kaybolur,<br><span class="o">sepet dolar.</span>'],[B.ilginc,B.alici-.1,'Mucidi bile<br><span class="o">pişman.</span>'],
- [B.alici,B.satici-.1,'<span class="o">Alıcıysan:</span><br>alarm kur.'],[B.satici,B.soru-.1,'<span class="o">Satıcıysan:</span><br>acele ettirme.'],
- [B.soru,B.gonder-.1,'Sen kaç saat<br><span class="o">kaldın?</span>'],[B.gonder,B.takip-.1,'Bunu birine<br><span class="o">gönder.</span>'],[B.takip,B.yarin-.1,'Her gün<br><span class="o">1 taktik.</span>'],[B.yarin,END,'Yarın:<br><span class="o">2 damga sırrı.</span>']];
+ [B.alici,B.satici-.1,'<span class="o">Alıcıysan:</span><br>alarm kur.'],[B.satici,B.yarin-.1,'<span class="o">Satıcıysan:</span><br>acele ettirme.'],
+ [B.yarin,END,'Yarın:<br><span class="o">2 damga sırrı.</span>']];
 const BIG=[[B.etki-.1,B.ilginc-.1]], HITS=[0.02,B.plan,B.etki];
 $('spk').innerHTML=Array.from({length:14},(_,i)=>`<path id="sp${i}" d="M0 -14 L4 -4 L14 0 L4 4 L0 14 L-4 4 L-14 0 L-4 -4z" fill="#E8B65C" transform="translate(${-240+(i%7)*80} ${-110+Math.floor(i/7)*70+(i%2)*20})"/>`).join('');
 $('itms').innerHTML=Array.from({length:6},(_,i)=>`<rect id="it${i}" x="-30" y="-30" width="60" height="60" rx="8" fill="${['#7C9DA5','#E8B65C','#8A9B7C','#ff5a1f','#243139','#b9b4a8'][i]}"/>`).join('');
@@ -150,7 +154,7 @@ function scene(t){
   tr('bell',`translate(0 40) rotate(${t>B.poset?Math.sin(t*30)*14:0})`); op('bell',t<B.poset+.8?1:0);
   tr('pBag',`translate(0 120) scale(${t>B.poset+.6?.8*ob(p(t,B.poset+.6,.35)):0})`);
   // satıcıysan
-  const sv=W(B.satici,B.soru+.25); tr('tagS',`translate(470 560) scale(${sv})`); op('sat',sv>0?1:0);
+  const sv=W(B.satici,B.yarin+.25); tr('tagS',`translate(470 560) scale(${sv})`); op('sat',sv>0?1:0);
   tr('noRush',`translate(0 0) scale(${sv})`); tr('sat',`translate(470 760)`); tr('bench',`translate(0 330) scale(${t>B.kose?ob(p(t,B.kose,.35))*sv:0})`);
   // anket
   const qv=W(B.soru,B.gonder+.25); tr('poll',`translate(470 900) scale(${qv})`);
