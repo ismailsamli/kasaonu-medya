@@ -31,6 +31,7 @@ Kaynak: instagram.com/kasaonu.tr, 23 Kasım 2026 taraması.
 | 22 Kas | DgDQQdquXgE | Otoİşlerim iş birliği | |
 | 23 Kas | (planlı) | Veligo iş birliği, servis nerede | |
 | 24 Kas | (planlı) | Öğretmenler Günü | |
+| 25 Kas | DgLJDLQu8Tp | AVM'de saat/pencere yok (Gruen etkisi) | v3 format |
 
 ## Hazır ama yayınlanmamış
 - uniforma01: self-checkout kasada müşteri kasiyerin işini yapıyor
